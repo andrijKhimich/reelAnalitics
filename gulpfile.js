@@ -44,9 +44,9 @@ let {
   concat = require("gulp-concat"),
   babel = require("gulp-babel"),
   imagemin = require("gulp-imagemin"),
-  webp = require("gulp-webp"),
-  webphtml = require("gulp-webp-html"),
-  webpcss = require("gulp-webpcss"),
+  // webp = require("gulp-webp"),
+  // webphtml = require("gulp-webp-html"),
+  // webpcss = require("gulp-webpcss"),
   svgsprite = require("gulp-svg-sprite"),
   cheerio = require("gulp-cheerio"),
   ttf2woff = require("gulp-ttf2woff"),
@@ -67,7 +67,7 @@ const browserSync = () => {
 const html = () => {
   return src(path.src.html)
     .pipe(fileinclude())
-    .pipe(webphtml())
+    // .pipe(webphtml())
     .pipe(dest(path.build.html))
     .pipe(browsersync.stream())
 }
@@ -82,7 +82,7 @@ const css = () => {
         cascade: true,
       })
     )
-    .pipe(webpcss())
+    // .pipe(webpcss())
     .pipe(sourcemaps.write('./'))
     .pipe(dest(path.build.css))
     .pipe(cleanCss())
@@ -137,9 +137,9 @@ const js = () => {
 
 const img = () => {
   return src(path.src.img)
-    .pipe(webp({
-      quality: 70,
-    }))
+    // .pipe(webp({
+    //   quality: 70,
+    // }))
     .pipe(
       cache(
         imagemin({
@@ -217,9 +217,9 @@ gulp.task("otf2ttf", function () {
 
 
 const fontStyle = async () => {
-  let fileContent = fileSystem.readFileSync(devFolder + '/scss/base/fonts.scss');
+  let fileContent = fileSystem.readFileSync(devFolder + '/scss/base/_fonts.scss');
   if (fileContent == '') {
-    fileSystem.writeFile(devFolder + '/scss/base/fonts.scss', '', cb);
+    fileSystem.writeFile(devFolder + '/scss/base/_fonts.scss', '', cb);
     return fileSystem.readdir(path.build.fonts, function (err, items) {
       if (items) {
         let convertedFontName;
@@ -227,7 +227,7 @@ const fontStyle = async () => {
           let fontName = items[i].split('.');
           fontName = fontName[0];
           if (convertedFontName != fontName) {
-            fileSystem.appendFile(devFolder + '/scss/base/fonts.scss', '@include font("' + fontName + '", "' + fontName + '", "400", "normal");\r\n', cb);
+            fileSystem.appendFile(devFolder + '/scss/base/_fonts.scss', '@include font("' + fontName + '", "' + fontName + '", "400", "normal");\r\n', cb);
           }
           convertedFontName = fontName;
         }

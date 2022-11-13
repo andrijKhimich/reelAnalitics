@@ -14,8 +14,6 @@ html {
 
 body {
   margin: 0; // Remove the margin in all browsers.
-  font-size: 16px;
-  font-family: "Montserrat", sans-serif;
   color: $black;
   -webkit-font-smoothing: antialiased;
   -webkit-backface-visibility: hidden;
@@ -26,7 +24,6 @@ body {
   -webkit-text-size-adjust: 100%;
   backface-visibility: hidden;
   text-rendering: geometricPrecision;
-  background-color: pink;
 }
 
 // custom scrollbar
@@ -50,46 +47,6 @@ body {
 // ::-webkit-scrollbar-thumb:hover {
 //   background: #555;
 // }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  font-weight: normal;
-  // font-family: $font-primary;
-}
-
-h1 {
-  font-size: 100px;
-  line-height: .8em;
-}
-
-h2 {
-  line-height: 1em;
-}
-
-h3 {
-  line-height: 1em;
-}
-
-h4 {
-  font-size: 40px;
-  line-height: 1em;
-}
-
-h5 {
-  font-size: 24px;
-  line-height: 1em;
-}
-
-h6 {
-  font-size: 16px;
-  line-height: 1em;
-
-}
 
 hr {
   box-sizing: content-box; // Add the correct box sizing in Firefox.
@@ -407,7 +364,7 @@ input {
 }
 
 .container {
-  max-width: 1140px;
+  max-width: 1340px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -420,29 +377,4 @@ main {
 
 .locked {
   overflow: hidden;
-}
-
-// project typography
-.title-1 {
-  @extend h1;
-}
-
-.title-2 {
-  @extend h2;
-}
-
-.title-3 {
-  @extend h3;
-}
-
-.title-4 {
-  @extend h4;
-}
-
-.title-5 {
-  @extend h5;
-}
-
-.title-6 {
-  @extend h6;
 }
