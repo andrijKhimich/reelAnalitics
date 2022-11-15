@@ -4,15 +4,34 @@
 @import "base/base";
 @import "base/typography";
 @import "base/icons";
+@import "base/buttons";
+
 
 // libs using in project, uncomment what you need
 
 // @import "../../node_modules/bootstrap-4-grid/css/grid.min.css";
 // @import "../../node_modules/odometer/themes/odometer-theme-default.css"
-// @import "../../node_modules/swiper/swiper-bundle.min.css";
+@import "../../node_modules/swiper/swiper-bundle.min.css";
 // @import "../../node_modules/jquery-nice-select/css/nice-select.css";
 
 @import "components/_header";
 @import "components/_footer";
+@import "components/_tags";
+@import "components/_article-card";
+
+@import "sections/_hero";
+@import "sections/_solution";
+@import "sections/_partners";
+@import "sections/_news";
+@import "sections/_interested";
+@import "sections/_cta";
+@import "sections/_analytics-articles";
+@import "sections/_methodology";
+@import "sections/_talent";
+@import "sections/_testimonials";
+@import "sections/_iga";
+@import "sections/_about";
+@import "sections/_investor";
+
 
 @import "pages/index"

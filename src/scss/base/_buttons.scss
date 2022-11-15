@@ -1,0 +1,101 @@
+.user-link {
+  display: inline-flex;
+  align-items: center;
+  color: $primary;
+  line-height: 1.2em;
+  transition: color $hover-duration $timing;
+
+  svg {
+    fill: $primary;
+  }
+
+  @include rh(992) {
+    &:hover {
+      color: $white;
+
+      svg {
+        fill: $white;
+      }
+    }
+  }
+
+  @include d(992) {
+    margin-right: 20px;
+    margin-left: auto;
+    color: $white;
+    z-index: 1;
+
+    svg {
+      fill: $white;
+    }
+  }
+
+  @include d(480) {
+    span {
+      display: none;
+    }
+  }
+}
+
+.link {
+  position: relative;
+  color: $primary;
+  font-size: 14px;
+  font-weight: 800;
+  padding-right: 25px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+
+  svg {
+    fill: $primary;
+  }
+
+  @include rh(992) {
+    &:hover {
+      svg {
+        transform: translateX(3px);
+      }
+    }
+  }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 16px;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 16px 32px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  position: relative;
+  color: $white;
+
+  @include rh(992) {
+    &:hover {
+      svg {
+        transform: translateX(3px);
+      }
+    }
+  }
+
+  svg {
+    fill: $white;
+    position: static;
+    margin-left: 16px;
+    width: 16px;
+    height: 16px;
+  }
+
+  &_primary {
+    background-color: $primary;
+  }
+
+  &_secondary {
+    background-color: $blue;
+  }
+}

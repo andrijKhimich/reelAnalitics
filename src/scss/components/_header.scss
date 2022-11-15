@@ -1,70 +1,139 @@
 .header {
-  padding: 24px 0;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 100;
   background-color: transparent;
+  color: $white;
 
   &-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
+    border-bottom: 1px solid $gray;
+    padding: 24px 0;
 
-  &__nav {
-    @include d(991) {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background-color: $primary;
-      pointer-events: none;
-      opacity: 0;
-      transform: translateX(-20px);
-      transition: opacity .5s ease-out, transform .5s ease-out;
-
-      &.active {
-        opacity: 1;
-        pointer-events: initial;
-        transform: translateX(0);
-      }
-
-      .nav-list {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 90px 0 0 22px;
-        justify-content: flex-start;
-        font-size: 18px;
-      }
+    @include d(992) {
+      padding: 14px 0;
     }
-
   }
 }
 
 .logo {
   display: inline-block;
-  max-width: 200px;
+  max-width: 113px;
 }
 
 .nav {
+  margin-right: 94px;
+  margin-left: auto;
+
+  @include d(1280) {
+    margin-right: 40px;
+  }
+
+  @include d(992) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    height: 100vh;
+    margin-right: 0;
+    background-color: $primary;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity .5s ease-out, transform .5s ease-out;
+
+    &.active {
+      opacity: 1;
+      pointer-events: initial;
+      transform: translateX(0);
+    }
+
+    @include d(768) {
+      width: 80vw;
+    }
+  }
+
   &-list {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
 
+    @include d(992) {
+      flex-direction: column;
+      align-items: flex-end;
+      padding: 90px 15px 0 0;
+      justify-content: flex-start;
+      font-size: 18px;
+    }
+
     &__item,
     li {
+      position: relative;
+      transition: color $hover-duration $timing;
+
+      &::before {
+        content: "";
+        background-color: $primary;
+        height: 1px;
+        width: calc(100% - 8px);
+        position: absolute;
+        bottom: 0;
+        left: 4px;
+        transform: scaleX(0);
+        transition: transform $hover-duration $timing;
+      }
+
+      @include rh(992) {
+
+        &:hover {
+          color: $primary;
+
+          &::before {
+            transform: scaleX(1);
+          }
+        }
+      }
+
+      &.active {
+        color: $primary;
+
+        @include d(992) {
+          color: $white;
+
+          &::before {
+            background-color: $white;
+          }
+        }
+
+        &::before {
+          transform: scaleX(1);
+        }
+      }
+
       &:not(:last-child) {
-        margin-right: 2px;
+        margin-right: 36px;
+
+        @include d(1280) {
+          margin-right: 20px;
+        }
+
+        @include d(992) {
+          margin-right: 0;
+          margin-bottom: 40px;
+        }
       }
     }
 
     &__link,
     a {
-      padding: 10px 15px;
+      text-transform: uppercase;
+      padding: 4px;
+      font-size: 16px;
+      line-height: 1.2em;
     }
   }
 }
@@ -76,7 +145,7 @@
   z-index: 101;
   display: none;
 
-  @include d(991) {
+  @include d(992) {
     display: inline-block;
   }
 

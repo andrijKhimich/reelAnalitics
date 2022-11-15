@@ -21,38 +21,25 @@ const toggleMenu = () => {
     }
   })
 }
+
 toggleMenu();
 
-// const fixedHeader = () => {
-//   const header = document.querySelector(".header");
-//   const startPoint = 1;
-//   if (window.scrollY >= startPoint) {
-//     header.classList.add("fixed");
-//   } else {
-//     header.classList.remove("fixed");
-//   }
-// }
+let testimonialsSlider = document.querySelector('.testimonials-slider');
 
-// window.addEventListener("scroll", fixedHeader);
-
-
-// check if browser support webp format for images
-const testWebP = (callback) => {
-  let webP = new Image();
-  webP.onload = webP.onerror = function () {
-    callback(webP.height === 2);
-  };
-  webP.src =
-    "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
+if (testimonialsSlider) {
+  testimonialsSlider = new Swiper('.testimonials-slider', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    navigation: {
+      nextEl: ".testimonials-slider_prev",
+      prevEl: ".testimonials-slider_next",
+    },
+    breakpoints: {
+      769: {
+        slidesPerView: 2,
+      }
+    },
+  })
 }
-
-testWebP((support) => {
-  if (support === true) {
-    document.querySelector("body").classList.add("webp");
-  } else {
-    document.querySelector("body").classList.add("no-webp");
-  }
-});
-
 // run for sprite svg support 
 svg4everybody();

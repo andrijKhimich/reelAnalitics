@@ -14,7 +14,7 @@ html {
 
 body {
   margin: 0; // Remove the margin in all browsers.
-  color: $black;
+  color: $textColor;
   -webkit-font-smoothing: antialiased;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
@@ -82,6 +82,7 @@ abbr[title] {
 b,
 strong {
   font-weight: bold; // Add the correct font weight in Chrome, Edge, and Safari.
+  line-height: 1.4em;
 }
 
 code,
@@ -250,9 +251,9 @@ template {
 
 p,
 li {
-  line-height: 1.5em;
+  line-height: 1.6em;
+  font-size: inherit;
   margin: 0;
-  font-size: 16px;
   color: inherit;
 }
 
@@ -375,6 +376,121 @@ main {
   position: relative;
 }
 
+.home-page {
+  .interested {
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta {
+    padding-top: 106px;
+    margin-top: -30px;
+  }
+}
+
+.resources-page {
+  .testimonials {
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta {
+    padding-top: 106px;
+    margin-top: -30px;
+  }
+}
+
+.iga-page {
+
+  .cta {
+    padding-top: 106px;
+    margin-top: -30px;
+  }
+}
+
 .locked {
   overflow: hidden;
+}
+
+.section {
+  padding: 160px 0;
+
+  &.solution {
+    padding-bottom: 0;
+  }
+
+  @include d(1280) {
+    padding: 120px 0;
+  }
+
+  @include d(992) {
+    padding: 80px 0;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+  }
+
+  &__col {
+    padding: 0 15px;
+    flex: 0 0 50%;
+    max-width: 50%;
+
+    @include d(992) {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+
+  &__img {
+    max-width: 640px;
+
+    @include d(992) {
+      margin-bottom: 40px;
+      max-width: 100%;
+    }
+  }
+
+  &__content {
+    max-width: 480px;
+    margin-left: 114px;
+
+    @include d(992) {
+      max-width: 100%;
+    }
+
+    @include d(1280) {
+      margin-left: 40px;
+    }
+
+    @include d(992) {
+      margin-left: 0;
+    }
+
+    p {
+      margin-bottom: 16px;
+
+      &:last-of-type {
+        margin-bottom: 48px;
+      }
+    }
+
+    &_lg {
+      max-width: 530px;
+      margin-left: 0;
+
+      @include d(1280) {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+
+.bg-blue {
+  background-color: $blue;
 }

@@ -1,0 +1,117 @@
+.testimonials {
+  padding-top: 38px;
+  border-radius: 0 0 32px 32px;
+  padding-bottom: 145px;
+  color: $white;
+
+  @include d(1024) {
+    padding-bottom: 120px;
+  }
+
+  @include d(992) {
+    padding-bottom: 80px;
+  }
+
+  &__title {
+    margin-bottom: 48px;
+
+    @include d(992) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &-slider {
+    .swiper-slide {
+      height: auto;
+
+    }
+
+    &__item {
+      padding: 56px;
+      background-color: rgba($blueLight, .4);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @include d(992) {
+        padding: 40px;
+      }
+
+      @include d(768) {
+        padding: 20px;
+      }
+
+      &::before {
+        content: "";
+        width: 60px;
+        height: 48px;
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        background-image: url(../img/quote.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: -1;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.4em;
+        margin-bottom: 32px;
+      }
+    }
+
+    &__footer {
+      display: flex;
+    }
+
+    &__img {
+      width: 80px;
+      height: 80px;
+      flex: 0 0 80px;
+      margin-right: 24px;
+      border-radius: 50%;
+      overflow: hidden;
+      clip-path: border-box;
+    }
+
+    &__author {
+      border-top: 1px solid $primary;
+      padding-top: 17px;
+      max-width: 313px;
+      width: 100%;
+
+      p {
+        margin-bottom: 4px;
+        font-weight: 700;
+      }
+
+      span {
+        color: $textColorLight;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.6em;
+      }
+    }
+
+    &__btns {
+      display: flex;
+      justify-content: space-between;
+      margin: 14px -10px 0 -10px;
+    }
+
+    &__btn {
+      padding: 10px;
+
+      @include rh(1024) {
+        &:hover {
+          svg {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

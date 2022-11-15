@@ -1,6 +1,7 @@
 body {
-  font-size: 16px;
+  font-size: 18px;
   font-family: $font-primary;
+  font-weight: 400;
 }
 
 h1,
@@ -17,22 +18,114 @@ h6 {
 h1 {
   font-size: 80px;
   line-height: 1.1em;
+  text-transform: uppercase;
+  color: $white;
+  margin-bottom: 38px;
+  letter-spacing: -0.01em;
+
+  span {
+    color: $primary;
+  }
+
+  @include d(1280) {
+    font-size: 70px;
+  }
+
+  @include d(992) {
+    font-size: 60px;
+  }
+
+  @include d(768) {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+
+  @include d(576) {
+    font-size: 40px;
+  }
 }
 
 h2 {
   font-size: 52px;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+
+  span {
+    color: $primary;
+  }
+
+  @include d(1280) {
+    font-size: 48px;
+  }
+
+  @include d(992) {
+    font-size: 42px;
+    margin-bottom: 16px;
+  }
+
+  @include d(768) {
+    font-size: 38px;
+  }
+
+  @include d(576) {
+    font-size: 32px;
+  }
 }
 
 h3 {
   font-size: 40px;
+  margin-bottom: 32px;
+  @include d(1280) {
+    font-size: 38px;
+  }
+
+  @include d(992) {
+    font-size: 32px;
+  }
+
+  @include d(768) {
+    font-size: 30px;
+  }
+
+  @include d(576) {
+    font-size: 28px;
+  }
 }
 
 h4 {
   font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 16px;
+
+  @include d(1280) {
+    font-size: 30px;
+  }
+
+  @include d(992) {
+    font-size: 26px;
+  }
+
+  @include d(768) {
+    font-size: 24px;
+  }
+
+  @include d(576) {
+    font-size: 22px;
+  }
 }
 
 h5 {
   font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 12px;
+
+  @include d(1280) {
+    font-size: 22px;
+  }
+
+  @include d(992) {
+    font-size: 20px;
+  }
 }
 
 h6 {

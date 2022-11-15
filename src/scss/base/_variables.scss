@@ -3,16 +3,28 @@ $white: #ffffff;
 $black: #000000;
 $gray: #A2A2A2;
 
-$textColor: #1B2035;
 $textColorLight: #D1D1D1;
 
 $primary: #FF593F;
 $blue: #3B4068;
+$blueDark: #1B2035;
+
 $blueLight: #686F99;
+
+$textColor: $blue;
 
 // timing
 $hover-duration: .5s;
 $duration: .8s;
 $timing: cubic-bezier(.17, .67, .55, 1.05);
 
-$font-primary: "Gilroy", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-primary: "Gilroy",
+-apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+"Helvetica Neue",
+Arial,
+sans-serif,
+"Apple Color Emoji",
+"Segoe UI Emoji",
+"Segoe UI Symbol";

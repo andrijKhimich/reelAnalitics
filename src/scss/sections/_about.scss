@@ -1,0 +1,29 @@
+.about {
+  padding-top: 160px;
+  color:  $white;
+  @include d(1024) {
+    padding-top: 120px;
+  }
+
+  @include d(992) {
+    padding: 80px 0;
+  }
+
+  &__row {
+    &:not(:last-child) {
+      margin-bottom: 160px;
+    }
+  }
+
+  &__content {
+    margin-left: 144px;
+
+    @include d(1280) {
+      margin-left: 40px;
+    }
+
+    @include d(992) {
+      margin-left: 0;
+    }
+  }
+}
