@@ -85,9 +85,11 @@
     .logo {
       max-width: 134px;
       margin-bottom: 160px;
+
       @include d(992) {
         margin-bottom: 100px;
       }
+
       @include d(576) {
         margin-bottom: 0;
       }
@@ -146,6 +148,13 @@
 
       a {
         line-height: 1.4em;
+        transition: $hover-duration $timing;
+
+        @include rh (0124) {
+          &:hover {
+            color: $primary;
+          }
+        }
       }
     }
   }
@@ -167,6 +176,15 @@
   li {
     &:not(:last-child) {
       margin-right: 18px;
+    }
+  }
+  a {
+    @include rh (0124) {
+      &:hover {
+        svg {
+          fill: $primary;
+        }
+      }
     }
   }
 }

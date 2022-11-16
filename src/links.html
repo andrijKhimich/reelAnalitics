@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.min.css">
+  <title>Project | Home</title>
+</head>
+
+<body>
+  @@include("./html/_header.html")
+  <main class="main home-page">
+    <div class="section">
+      <div class="container">
+        <ul class="site-links">
+          <li>
+            <a target="_blank"href="./index.html">Main</a>
+          </li>
+          <li>
+            <a target="_blank"href="./about.html">About</a>
+          </li>
+          <li>
+            <a target="_blank"href="./athletes-and-teams.html">Athletes And Teams</a>
+          </li>
+          <li>
+            <a target="_blank"href="./athletes.html">Athletes</a>
+          </li>
+          <li>
+            <a target="_blank"href="./fans-and-media.html">Fans And Media</a>
+          </li>
+          <li>
+            <a target="_blank"href="./fans.html">Fans</a>
+          </li>
+          <li>
+            <a target="_blank"href="./iga-score.html">Iga Score</a>
+          </li>
+          <li>
+            <a target="_blank"href="./investor.html">Investor</a>
+          </li>
+          <li>
+            <a target="_blank"href="./leaderboard.html">Leaderboard</a>
+          </li>
+          <li>
+            <a target="_blank"href="./media.html">Media</a>
+          </li>
+          <li>
+            <a target="_blank"href="./resources.html">Resources</a>
+          </li>
+          <li>
+            <a target="_blank"href="./scouts-and-coaches.html">Scouts And Coaches</a>
+          </li>
+          <li>
+            <a target="_blank"href="./scouts-and-coaches-2.html">Scouts And Coaches 2</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  <style>
+    .site-links {
+      display: flex;
+      align-items: center;
+      list-style: decimal-leading-zero;
+      flex-wrap: wrap;
+    }
+
+    .site-links li {
+      flex: 0 0 20%;
+      margin-bottom: 20px;
+      list-style: decimal-leading-zero;
+
+    }
+  </style>
+  @@include("./html/_footer.html")
+  <script src="./js/libs.min.js"></script>
+  <script src="./js/script.min.js"></script>
+</body>
+
+</html>
