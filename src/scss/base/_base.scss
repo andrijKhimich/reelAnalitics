@@ -424,10 +424,8 @@ main {
   }
 
   @include d(992) {
-    padding: 80px 0;
+    padding: 80px 0 0 0;
   }
-
-
 
   &__row {
     display: flex;
@@ -442,6 +440,13 @@ main {
     flex: 0 0 50%;
     max-width: 50%;
 
+    &:first-child {
+      @include d(992) {
+        order: 1;
+        padding: 0;
+      }
+    }
+
     @include d(992) {
       flex: 0 0 100%;
       max-width: 100%;
@@ -452,7 +457,6 @@ main {
     max-width: 640px;
 
     @include d(992) {
-      margin-bottom: 40px;
       max-width: 100%;
     }
   }
@@ -461,16 +465,14 @@ main {
     max-width: 480px;
     margin-left: 114px;
 
-    @include d(992) {
-      max-width: 100%;
-    }
-
     @include d(1280) {
       margin-left: 40px;
     }
 
     @include d(992) {
       margin-left: 0;
+      max-width: 100%;
+      margin-bottom: 40px;
     }
 
     p {
@@ -504,9 +506,6 @@ main {
     }
   }
 }
-
-// TODO: section order
-// TODO: img mobile sizes
 
 .bg-blue {
   background-color: $blue;
@@ -543,4 +542,28 @@ main {
   position: absolute;
   top: 8px;
   right: 8px;
+}
+
+.social-icon {
+  width: 22px;
+  margin-top: 5px;
+}
+
+
+.media-from {
+  .section__col {
+    &:first-child {
+      @include d(992) {
+        order: 0;
+        padding: 0 15px;
+      }
+    }
+
+    &:last-child {
+      @include d(992) {
+        padding: 0;
+      }
+    }
+  }
+
 }

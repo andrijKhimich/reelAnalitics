@@ -78,12 +78,12 @@
 
   @include rh(1024) {
     &:hover {
-      background-color: $white;
-      color: $primary;
-      border-color: $primary;
+      // background-color: $white;
+      // color: $primary;
+      // border-color: $primary;
 
       svg {
-        fill: $primary;
+        // fill: $primary;
         transform: translateX(3px);
       }
     }
@@ -107,12 +107,12 @@
 
     @include rh(1024) {
       &:hover {
-        background-color: $white;
-        color: $blue;
-        border-color: transparent;
+        // background-color: $white;
+        // color: $blue;
+        // border-color: transparent;
 
         svg {
-          fill: $blue;
+          // fill: $blue;
           transform: translateX(3px);
         }
       }

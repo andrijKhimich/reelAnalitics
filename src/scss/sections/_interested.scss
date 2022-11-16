@@ -3,7 +3,9 @@
   color: $white;
   border-radius: 0 0 32px 32px;
   overflow: hidden;
-
+  @include d(992) {
+    border-radius: 0 0 16px 16px;
+  }
   &__inner {
     color: $textColor;
     border-radius: 0;

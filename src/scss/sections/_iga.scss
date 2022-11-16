@@ -1,4 +1,10 @@
 .iga {
+  padding: 160px 0;
+
+  @include d(1280) {
+    padding: 120px 0;
+  }
+
   &__img {
     margin-top: 64px;
   }

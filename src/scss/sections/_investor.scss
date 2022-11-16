@@ -12,14 +12,34 @@
 
   &__content {
     max-width: 530px;
+    margin-left: 0;
+
+    @include d(1280) {
+      margin-left: 0;
+    }
 
     @include d(992) {
       margin-bottom: 40px;
     }
   }
+
+  .section__col {
+    &:first-child {
+      order: 0;
+      padding: 0 15px;
+    }
+
+    &:last-child {
+      padding: 0;
+    }
+  }
 }
 
 .sportlist {
+  @include d(992) {
+    padding-bottom: 0;
+  }
+
   &__content {
     max-width: 530px;
   }
@@ -32,16 +52,22 @@
   overflow: hidden;
   z-index: 1;
   position: relative;
+  color: $white;
 
   @include d(1280) {
     padding-top: 0;
   }
 
   @include d(992) {
-    padding-top: 0;
+    padding: 0;
+    border-radius: 0;
   }
 
-  color: $white;
+  &__img {
+    @include d(992) {
+      margin: 0 -15px;
+    }
+  }
 }
 
 .article {
@@ -85,6 +111,12 @@
 
     @include d(992) {
       column-count: 1;
+    }
+  }
+
+  &__img {
+    @include d(992) {
+      margin: 0 -15px;
     }
   }
 }

@@ -5,6 +5,7 @@
 
   @include d(992) {
     padding-bottom: 80px;
+    border-radius: 0 0 16px 16px;
   }
 
   &__title {

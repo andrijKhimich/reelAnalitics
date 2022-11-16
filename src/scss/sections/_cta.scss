@@ -5,7 +5,9 @@
   border-radius: 0 0 32px 32px;
   overflow: hidden;
   color: $white;
-
+  @include d(992) {
+    border-radius: 0 0 16px 16px;
+  }
   &_full {
     .cta__title {
       max-width: 100%;
