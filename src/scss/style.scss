@@ -18,6 +18,9 @@
 @import "components/_footer";
 @import "components/_tags";
 @import "components/_article-card";
+@import "components/_form";
+@import "components/_board";
+
 
 @import "sections/_hero";
 @import "sections/_solution";
@@ -32,6 +35,7 @@
 @import "sections/_iga";
 @import "sections/_about";
 @import "sections/_investor";
-
+@import "sections/analytics";
+@import "sections/choice";
 
 @import "pages/index"

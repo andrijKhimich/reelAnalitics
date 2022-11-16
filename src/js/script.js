@@ -41,5 +41,31 @@ if (testimonialsSlider) {
     },
   })
 }
+
+function openTab(evt, tabName) {
+  let i, tabContent, tabLinks;
+  tabContent = document.getElementsByClassName("board-content");
+  for (i = 0; i < tabContent.length; i++) {
+    tabContent[i].style.display = "none";
+  }
+
+  tabLinks = document.getElementsByClassName("tab-btn");
+  for (i = 0; i < tabLinks.length; i++) {
+    tabLinks[i].className = tabLinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+const tabBtns = document.querySelectorAll(".tab-btn");
+const toggleTab = () => {
+  tabBtns.forEach(tabBtn => {
+    tabBtn.addEventListener("click", (e) => {
+      let target = e.target.getAttribute("data-href");
+      openTab(e, target)
+    })
+  });
+};
+toggleTab()
 // run for sprite svg support 
 svg4everybody();

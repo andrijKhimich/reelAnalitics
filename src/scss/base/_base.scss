@@ -336,22 +336,22 @@ textarea,
 input {
   &::-webkit-input-placeholder {
     font-size: 16px;
-    color: $black;
+    color: $gray;
   }
 
   &::-moz-placeholder {
     font-size: 16px;
-    color: $black;
+    color: $gray;
   }
 
   &:-ms-input-placeholder {
     font-size: 16px;
-    color: $black;
+    color: $gray;
   }
 
   &::placeholder {
     font-size: 16px;
-    color: $black;
+    color: $gray;
   }
 }
 
@@ -427,6 +427,8 @@ main {
     padding: 80px 0;
   }
 
+
+
   &__row {
     display: flex;
     align-items: center;
@@ -488,9 +490,57 @@ main {
       }
     }
   }
+
+  &__form {
+    max-width: 528px;
+    margin-left: 114px;
+
+    p {
+      margin-bottom: 16px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 
+// TODO: section order
+// TODO: img mobile sizes
 
 .bg-blue {
   background-color: $blue;
+}
+
+.media-list {
+  li {
+    position: relative;
+    padding-left: 36px;
+    font-size: 16px;
+    line-height: 1.6em;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    svg {
+      position: absolute;
+      left: 0;
+    }
+  }
+}
+
+.number {
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 17px;
+  color: $white;
+  text-align: center;
+  padding: 6px 11px;
+  background-color: $primary;
+  border-radius: 4px;
+  display: inline-block;
+  position: absolute;
+  top: 8px;
+  right: 8px;
 }

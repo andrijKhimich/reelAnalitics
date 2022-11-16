@@ -7,16 +7,23 @@
   overflow: hidden;
   position: relative;
   min-height: 700px;
-  color: textColorLight;
-
+  color: $textColorLight;
+  @include d(992) {
+    min-height: auto;
+  }
   &__inner {
     .subtitle {
       color: $white;
     }
   }
-
+  &_sm {
+    min-height: 550px;
+    @include d(992) {
+      min-height: auto;
+    }
+  }
   @include d(768) {
-    padding: 160px 0 40px;
+    padding: 160px 0 120px;
   }
 
   &::before {

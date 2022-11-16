@@ -32,4 +32,15 @@ svg {
     opacity: .4;
     transition: opacity $hover-duration $timing;
   }
+
+  &-paperclip {
+    width: 25px;
+    height: 25px;
+    fill: $primary;
+  }
+
+  &-list {
+    width: 24px;
+    height: 24px;
+  }
 }
