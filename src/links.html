@@ -59,19 +59,45 @@
     </div>
   </main>
   <style>
-    .site-links {
+    /* .site-links {
       display: flex;
-      align-items: center;
-      list-style: decimal-leading-zero;
       flex-wrap: wrap;
+      margin-left: 40px;
     }
 
     .site-links li {
-      flex: 0 0 20%;
-      margin-bottom: 20px;
+      padding: 20px;
       list-style: decimal-leading-zero;
+      margin-right: 40px;
+    } */
 
-    }
+    .site-links {
+			list-style-type: none;
+      padding: 20px 40px;
+			margin: 20px auto;
+			width: 100%;
+			max-width: 1280px;
+			border-radius: 8px;
+			box-sizing: border-box;
+			border: 1px solid #eaeaea;
+			background-color: #fff;
+			text-align: left;
+			-webkit-columns: 210px auto;
+			columns: 210px auto;
+			-webkit-column-gap: 50px;
+			column-gap: 50px;
+			-webkit-column-rule: 1px solid #f2f2f2;
+			column-rule: 1px solid #f2f2f2;
+		}
+
+		.site-links li {
+			word-wrap: break-word;
+			display: inline-block;
+			box-sizing: border-box;
+			width: 100%;
+			padding: 10px 15px 10px 40px;
+			position: relative;
+		}
   </style>
   @@include("./html/_footer.html")
   <script src="./js/libs.min.js"></script>

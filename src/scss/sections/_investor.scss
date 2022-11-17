@@ -77,8 +77,8 @@
     flex-wrap: wrap;
     margin: 0 -15px 65px -15px;
 
-    @include d(1024) {
-      margin: 0 -10px 60px -10px;
+    @include d(1280) {
+      margin: 0 -15px 60px -15px;
     }
   }
 
@@ -86,7 +86,7 @@
     padding: 0 15px;
 
     @include d(1280) {
-      padding: 0 10px;
+      // padding: 0 10px;
     }
   }
 
@@ -95,7 +95,7 @@
     max-width: 864px;
 
     @include d(1280) {
-      padding: 0 10px;
+      // padding: 0 10px;
       max-width: 100%;
     }
   }

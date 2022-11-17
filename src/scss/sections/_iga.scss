@@ -8,4 +8,19 @@
   &__img {
     margin-top: 64px;
   }
+
+  .section__col {
+    &:first-child {
+      @include d(992) {
+        padding: 0 15px;
+      }
+    }
+
+    &:last-child {
+      @include d(992) {
+        order: 1;
+        padding: 0;
+      }
+    }
+  }
 }
