@@ -26,6 +26,12 @@
     @include d(992) {
       min-height: auto;
     }
+    .hero__content {
+      p {
+        color: $white;
+      }
+    }
+  
   }
 
   @include d(992) {

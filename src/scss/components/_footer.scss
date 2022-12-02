@@ -12,10 +12,6 @@
     margin: 0 -15px;
     justify-content: flex-end;
 
-    @include d(1280) {
-      // margin: 0 -10px;
-    }
-
     @include d(992) {
       flex-wrap: wrap;
       justify-content: flex-start;
@@ -47,7 +43,8 @@
     &:first-child {
       flex: 0 0 204px;
       margin-right: auto;
-
+      display: flex;
+      flex-direction: column;
       @include d(992) {
         max-width: 50%;
         flex: 0 0 50%;

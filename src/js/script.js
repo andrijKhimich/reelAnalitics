@@ -67,5 +67,63 @@ const toggleTab = () => {
   });
 };
 toggleTab()
+
+
+let fansSubmitBtn = document.querySelector('#fansForm');
+if(fansSubmitBtn) {
+  var fansFormConfig = {
+    container: '#fansForm',
+    validationBy: 'onclick',
+    button: '.btn_submit',
+    validateOnFieldChanges: false,
+    selectors: {
+      required: 'form-input'
+    },
+    onFormSubmit: function(container) {
+      console.log('form submitted')
+      fansSubmitBtn.submit();
+    },
+  };
+  var validator = new VanillaValidator(fansFormConfig);
+}
+
+
+let mediaSubmitBtn = document.querySelector('#mediaForm');
+if(mediaSubmitBtn) {
+  var mediaFormConfig = {
+    container: '#mediaForm',
+    validationBy: 'onclick',
+    button: '.btn_submit',
+    validateOnFieldChanges: false,
+    selectors: {
+      required: 'form-input'
+    },
+    onFormSubmit: function(container) {
+      console.log('form submitted')
+      mediaSubmitBtn.submit();
+    },
+  };
+  var validator = new VanillaValidator(mediaFormConfig);
+}
+
+
+let teamSubmitBtn = document.querySelector('#teamForm');
+if(teamSubmitBtn) {
+  var teamFormConfig = {
+    container: '#teamForm',
+    validationBy: 'onclick',
+    button: '.btn_submit',
+    validateOnFieldChanges: false,
+    selectors: {
+      required: 'form-input'
+    },
+    onFormSubmit: function(container) {
+      console.log('form submitted')
+      teamSubmitBtn.submit();
+    },
+  };
+  var validator = new VanillaValidator(teamFormConfig);
+}
+
 // run for sprite svg support 
 svg4everybody();

@@ -58,7 +58,10 @@
     font-weight: 500;
     line-height: 18px;
     padding: 15px 16px;
-
+    transition: border-color $hover-duration $timing;
+    &.error {
+      border-color: $primary;
+    }
   }
 
   &-file {
@@ -143,4 +146,12 @@
       line-height: 1.6em;
     }
   }
+}
+
+.msg-error {
+  position: absolute;
+  left: 5px;
+  font-size: 12px;
+  color: tomato;
+  bottom: -3px;
 }

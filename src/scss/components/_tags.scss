@@ -6,7 +6,7 @@
 
 .tag {
   display: inline-block;
-  padding: 6px 16px;
+  padding: 6px 14px;
   border-radius: 4px;
   text-transform: uppercase;
   color: $white;
@@ -15,23 +15,26 @@
   text-align: center;
   margin-bottom: 8px;
   white-space: nowrap;
+  pointer-events: none;
+  line-height: 1.2em;
+
   &:not(:last-child) {
     margin-right: 8px;
   }
 
-  &_primary {
+  &_new {
     background-color: $primary;
   }
 
-  &_dark {
+  &_whitepaper {
     background-color: $blueDark;
   }
 
-  &_white {
+  &_news-article {
     background-color: $white;
     color: $blueDark;
   }
-  &_twitter {
+  &_tweet {
     background-color: #75A4EA;
   }
 }

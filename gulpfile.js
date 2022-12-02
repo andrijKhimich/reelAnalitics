@@ -97,7 +97,7 @@ const css = () => {
 const js = () => {
   src([
       // js libs uncomment what you need
-      // "node_modules/jquery/dist/jquery.min.js",
+      "./src/js/validate.js",
 
       // svg support in all browsers
       "node_modules/svg4everybody/dist/svg4everybody.min.js", // no jQuery needed

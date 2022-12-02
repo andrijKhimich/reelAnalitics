@@ -47,10 +47,6 @@
     max-width: 25%;
     margin-bottom: 28px;
 
-    @include d(1024) {
-      // padding: 0 10px;
-    }
-
     @include d(992) {
       flex: 0 0 50%;
       max-width: 50%;
@@ -92,6 +88,10 @@
         &__footer {
           margin-top: auto;
           margin-bottom: 0;
+
+          span {
+            display: none;
+          }
         }
 
         &__banner {
@@ -197,6 +197,7 @@
 
         &__footer {
           padding: 8px 24px 0 24px;
+          margin-top: 0;
 
           @include d(1366) {
             padding: 8px 0 0 0;
@@ -219,7 +220,28 @@
       }
     }
 
-    &:last-child {
+    &_social {
+      margin-bottom: 28px;
+      flex: 0 0 25%;
+      max-width: 25%;
+      padding: 0 15px;
+
+      @include d(992) {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+
+      @include d(768) {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+
+      .news-card__header {
+        img {
+          width: 22px;
+          margin-top: 5px;
+        }
+      }
 
       .news-card {
         background-color: $blueLight;
@@ -227,6 +249,7 @@
 
       .news-card__banner {
         margin-bottom: 32px;
+        position: relative;
       }
 
       h5 {
@@ -242,8 +265,6 @@
       .news-card__footer {
         display: flex;
         align-items: center;
-        margin-top: auto;
-        margin-bottom: 0;
 
         &::before {
           display: none;
@@ -309,7 +330,12 @@
       h5 {
         position: relative;
       }
-
+      p {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
+      }
     }
 
     &__banner {
@@ -336,6 +362,8 @@
       padding: 8px 8px 0 8px;
       display: flex;
       align-items: center;
+      margin-top: auto;
+      margin-bottom: 0;
 
       @include d(1366) {
         padding: 8px 0 0 0;
@@ -363,6 +391,7 @@
 
       span {
         font-size: 10px;
+        flex-shrink: 0;
       }
     }
   }

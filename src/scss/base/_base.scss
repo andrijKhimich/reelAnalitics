@@ -257,6 +257,10 @@ li {
   color: inherit;
 }
 
+p:has(strong) {
+  line-height: 1.4em;
+}
+
 ul,
 ol {
   list-style: none;
@@ -522,9 +526,11 @@ main {
       margin-bottom: 16px;
     }
 
-    svg {
+    img {
       position: absolute;
       left: 0;
+      width: 24px;
+      height: 24px;
     }
   }
 }
@@ -543,12 +549,6 @@ main {
   top: 8px;
   right: 8px;
 }
-
-.social-icon {
-  width: 22px;
-  margin-top: 5px;
-}
-
 
 .media-from {
   .section__col {
