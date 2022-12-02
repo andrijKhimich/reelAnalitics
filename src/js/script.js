@@ -125,5 +125,46 @@ if(teamSubmitBtn) {
   var validator = new VanillaValidator(teamFormConfig);
 }
 
+
+
+const modal = document.querySelector('.modal');
+const modalClose = document.querySelector('.close');
+const overlay = document.querySelector('.overlay');
+
+const modalTrigger = document.querySelector('#subscribeBtn');
+
+modalTrigger.addEventListener('click', (e) => {
+  e.preventDefault();
+  modal.classList.add('show');
+  document.body.style.cssText = `overflow: hidden;`;
+  overlay.classList.add('show');
+});
+
+modalClose.addEventListener('click', (e) => {
+  modal.classList.remove('show');
+  document.body.style.cssText = '';
+  overlay.classList.remove('show');
+});
+
+// close on click on overlay
+
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.classList.remove('show');
+    document.body.style.cssText = '';
+    overlay.classList.remove('show');
+  }
+});
+
+// // close on press of escape button
+
+// document.addEventListener('keydown', (e) => {
+//     if (e.code === "Escape" && modal.classList.contains('show')) {
+//       modal.classList.remove('show');
+//       document.body.style.cssText = '';
+//     }
+//   });
+
+
 // run for sprite svg support 
 svg4everybody();

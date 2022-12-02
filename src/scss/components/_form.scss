@@ -59,6 +59,7 @@
     line-height: 18px;
     padding: 15px 16px;
     transition: border-color $hover-duration $timing;
+
     &.error {
       border-color: $primary;
     }
@@ -154,4 +155,22 @@
   font-size: 12px;
   color: tomato;
   bottom: -3px;
+}
+
+textarea.form-input {
+  min-height: 160px;
+}
+
+.subscribe-form {
+  margin-top: 40px;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  label {
+    margin-right: 24px;
+    width: 100%;
+  }
 }
