@@ -30,9 +30,10 @@ if (testimonialsSlider) {
   testimonialsSlider = new Swiper('.testimonials-slider', {
     slidesPerView: 1,
     spaceBetween: 30,
+    loop: true,
     navigation: {
-      nextEl: ".testimonials-slider_prev",
-      prevEl: ".testimonials-slider_next",
+      nextEl: ".testimonials-slider_next",
+      prevEl: ".testimonials-slider_prev",
     },
     breakpoints: {
       769: {

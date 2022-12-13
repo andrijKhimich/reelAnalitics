@@ -34,7 +34,12 @@
     background-color: $white;
     color: $blueDark;
   }
+
   &_tweet {
     background-color: #75A4EA;
+  }
+
+  &_primary {
+    background-color: $primary;
   }
 }

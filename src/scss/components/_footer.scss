@@ -45,6 +45,7 @@
       margin-right: auto;
       display: flex;
       flex-direction: column;
+
       @include d(992) {
         max-width: 50%;
         flex: 0 0 50%;
@@ -171,10 +172,12 @@
   align-items: center;
 
   li {
+
     &:not(:last-child) {
       margin-right: 18px;
     }
   }
+
   a {
     @include rh (0124) {
       &:hover {
@@ -182,6 +185,11 @@
           fill: $primary;
         }
       }
+    }
+
+    img {
+      width: 20px;
+      height: 18px;
     }
   }
 }

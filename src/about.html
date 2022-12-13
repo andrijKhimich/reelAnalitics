@@ -13,6 +13,14 @@
   @@include("./html/_header.html")
   <main class="main">
     <div class="hero hero__inner" style="background-image: url(./img/home/hero.jpg)">
+      <div class="hero-video">
+        <video loop muted autoplay>
+          <source src="./video/video.mp4" type="video/mp4">
+          <source src="./video/video.ogv" type="video/ogg">
+          <source src="./video/video.webm" type="video/webm">
+          Your browser doesn't support HTML5 video tag.
+        </video>
+      </div>
       <div class="container">
         <div class="hero__content">
           <h1><span>Reel Analytics:</span> Delivering Athletic Data from Video.</h1>
@@ -217,18 +225,18 @@
             </div>
           </div>
           <div class="testimonials-slider__btns">
-            <div class="testimonials-slider__btn testimonials-slider_prev">
+            <button class="testimonials-slider__btn testimonials-slider_prev">
               <svg class="icon-slider">
                 <use xlink:href="img/svg/sprite.svg#left">
                 </use>
               </svg>
-            </div>
-            <div class="testimonials-slider__btn testimonials-slider_next">
+            </button>
+            <button class="testimonials-slider__btn testimonials-slider_next">
               <svg class="icon-slider">
                 <use xlink:href="img/svg/sprite.svg#right">
                 </use>
               </svg>
-            </div>
+            </button>
           </div>
         </div>
       </div>

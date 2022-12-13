@@ -13,6 +13,14 @@
   @@include("./html/_header.html")
   <main class="main">
     <div class="hero hero_sm" style="background-image: url(./img/home/hero.jpg)">
+      <div class="hero-video">
+        <video loop muted autoplay>
+          <source src="./video/video.mp4" type="video/mp4">
+          <source src="./video/video.ogv" type="video/ogg">
+          <source src="./video/video.webm" type="video/webm">
+          Your browser doesn't support HTML5 video tag.
+        </video>
+      </div>
       <div class="container">
         <div class="hero__content">
           <h5 class="subtitle">Get Evaluated & Verified:</h5>
@@ -333,16 +341,16 @@
                     </div>
                   </div>
                   <div class="form__btns form__btns_text">
-                    <a href="#" class="btn btn_primary btn_submit">Pay now
+                    <a href="#" class="btn btn_primary btn_submit">Sign up
                       <svg class="icon-arrow">
                         <use xlink:href="img/svg/sprite.svg#arrow">
                         </use>
                       </svg>
                     </a>
-                    <div class="form-footer">
+                    <!-- <div class="form-footer">
                       <p>$199.99</p>
                       <span>IGA Score will be sent via email within 5 business days.</span>
-                    </div>
+                    </div> -->
                   </div>
                 </form>
               </div>

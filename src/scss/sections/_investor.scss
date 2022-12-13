@@ -84,19 +84,60 @@
 
   &__subtitle {
     padding: 0 15px;
-
-    @include d(1280) {
-      // padding: 0 10px;
-    }
   }
 
   &__content {
     padding: 0 15px;
     max-width: 864px;
 
+    p {
+      margin-bottom: 16px;
+    }
+
+    img {
+      margin: 16px 0;
+    }
+
     @include d(1280) {
-      // padding: 0 10px;
       max-width: 100%;
+    }
+
+    ul {
+      margin: 16px 0;
+
+      li {
+        padding-left: 15px;
+        position: relative;
+
+        &::before {
+          content: "";
+          width: 5px;
+          height: 5px;
+          background-color: $primary;
+          border-radius: 50%;
+          position: absolute;
+          top: 12px;
+          left: 0;
+        }
+      }
+    }
+
+    ol {
+      margin: 16px 0;
+      counter-reset: my-awesome-counter;
+
+      li {
+        position: relative;
+        padding-left: 15px;
+
+        &::before {
+          position: absolute;
+          left: 0;
+          counter-increment: my-awesome-counter;
+          content: counter(my-awesome-counter) ". ";
+          color: $primary;
+        }
+      }
     }
   }
 

@@ -105,7 +105,7 @@
 
     &__btn {
       padding: 10px;
-
+      cursor: pointer;
       @include rh(1024) {
         &:hover {
           svg {
