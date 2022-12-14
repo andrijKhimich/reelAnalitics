@@ -1,3 +1,7 @@
+// const {
+//   doc
+// } = require("prettier");
+
 const toggleMenu = () => {
   const burger = document.querySelector(".js-burger");
   const menu = document.querySelector(".js-header-nav");
@@ -71,7 +75,7 @@ toggleTab()
 
 
 let fansSubmitBtn = document.querySelector('#fansForm');
-if(fansSubmitBtn) {
+if (fansSubmitBtn) {
   var fansFormConfig = {
     container: '#fansForm',
     validationBy: 'onclick',
@@ -80,7 +84,7 @@ if(fansSubmitBtn) {
     selectors: {
       required: 'form-input'
     },
-    onFormSubmit: function(container) {
+    onFormSubmit: function (container) {
       console.log('form submitted')
       fansSubmitBtn.submit();
     },
@@ -90,7 +94,7 @@ if(fansSubmitBtn) {
 
 
 let mediaSubmitBtn = document.querySelector('#mediaForm');
-if(mediaSubmitBtn) {
+if (mediaSubmitBtn) {
   var mediaFormConfig = {
     container: '#mediaForm',
     validationBy: 'onclick',
@@ -99,7 +103,7 @@ if(mediaSubmitBtn) {
     selectors: {
       required: 'form-input'
     },
-    onFormSubmit: function(container) {
+    onFormSubmit: function (container) {
       console.log('form submitted')
       mediaSubmitBtn.submit();
     },
@@ -109,7 +113,7 @@ if(mediaSubmitBtn) {
 
 
 let teamSubmitBtn = document.querySelector('#teamForm');
-if(teamSubmitBtn) {
+if (teamSubmitBtn) {
   var teamFormConfig = {
     container: '#teamForm',
     validationBy: 'onclick',
@@ -118,7 +122,7 @@ if(teamSubmitBtn) {
     selectors: {
       required: 'form-input'
     },
-    onFormSubmit: function(container) {
+    onFormSubmit: function (container) {
       console.log('form submitted')
       teamSubmitBtn.submit();
     },
@@ -129,33 +133,37 @@ if(teamSubmitBtn) {
 
 
 const modal = document.querySelector('.modal');
-const modalClose = document.querySelector('.close');
-const overlay = document.querySelector('.overlay');
-
-const modalTrigger = document.querySelector('#subscribeBtn');
-
-modalTrigger.addEventListener('click', (e) => {
-  e.preventDefault();
-  modal.classList.add('show');
-  document.body.style.cssText = `overflow: hidden;`;
-  overlay.classList.add('show');
-});
-
-modalClose.addEventListener('click', (e) => {
-  modal.classList.remove('show');
-  document.body.style.cssText = '';
-  overlay.classList.remove('show');
-});
 
 // close on click on overlay
+if (modal) {
+  const modalClose = document.querySelector('.close');
+  const overlay = document.querySelector('.overlay');
 
-modal.addEventListener('click', (e) => {
-  if (e.target === modal) {
+  const modalTrigger = document.querySelector('#subscribeBtn');
+
+  modalTrigger.addEventListener('click', (e) => {
+    e.preventDefault();
+    modal.classList.add('show');
+    document.body.style.cssText = `overflow: hidden;`;
+    overlay.classList.add('show');
+  });
+
+  modalClose.addEventListener('click', (e) => {
     modal.classList.remove('show');
     document.body.style.cssText = '';
     overlay.classList.remove('show');
-  }
-});
+  });
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.remove('show');
+      document.body.style.cssText = '';
+      overlay.classList.remove('show');
+    }
+  });
+}
+
+
 
 // // close on press of escape button
 
@@ -165,6 +173,89 @@ modal.addEventListener('click', (e) => {
 //       document.body.style.cssText = '';
 //     }
 //   });
+
+// get file name for download
+var inputs = document.querySelectorAll('.input_file');
+if (inputs) {
+  Array.prototype.forEach.call(inputs, function (input) {
+    var label = input.nextElementSibling,
+      labelVal = label.innerHTML;
+
+    input.addEventListener('change', function (e) {
+      var fileName = '';
+      if (this.files && this.files.length > 1)
+        fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);
+      else
+        fileName = e.target.value.split('\\').pop();
+
+      if (fileName)
+        label.querySelector('span').innerHTML = fileName;
+      else
+        label.innerHTML = labelVal;
+    });
+  });
+}
+
+
+// coaches and scouts form validation and navigation
+
+
+let coachesSubmit = document.querySelector('#coachesForm');
+let stepForm = document.querySelectorAll('.step-form');
+// stepForm[1].style.display = 'none';
+// let currentForm = 0;
+
+
+function nextForm() {
+  console.log(stepForm[0]);
+  stepForm[0].style.display = 'none';
+  stepForm[1].style.display = 'block';
+}
+
+
+function prevForm() {
+  stepForm[1].style.display = 'none';
+  stepForm[0].style.display = 'block';
+}
+
+document.querySelector('#prevForm').addEventListener("click", function () {
+  prevForm();
+});
+
+if (coachesSubmit) {
+
+  var configSteps = {
+    container: '.form-container',
+    button: '.next-step',
+    validationBy: 'onclick',
+    selectors: {
+      required: 'form-input'
+    },
+    onContainerSuccess: function (container) {
+      console.log('container')
+      nextForm();
+      // container.classList.remove('active');
+      // container.nextElementSibling.classList.add('active');
+    }
+  };
+  var validatorSteps = new VanillaValidator(configSteps);
+
+  var configForm = {
+    selectors: {
+      required: 'form-input'
+    },
+
+    onFormSubmit: function (container) {
+      console.log('submit')
+    }
+  };
+  var validatorForm = new VanillaValidator(configForm);
+}
+
+
+
+
+
 
 
 // run for sprite svg support 

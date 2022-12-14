@@ -73,6 +73,10 @@
     width: 100%;
     cursor: pointer;
 
+    .msg-error {
+      bottom: -16px;
+    }
+
     label {
       position: absolute;
       width: 100%;
@@ -98,6 +102,7 @@
       color: transparent;
       width: 0;
       height: 0;
+      padding: 0;
     }
   }
 
@@ -172,5 +177,12 @@ textarea.form-input {
   label {
     margin-right: 24px;
     width: 100%;
+  }
+}
+
+.step-form {
+  display: none;
+  &.active {
+    display: block;
   }
 }
