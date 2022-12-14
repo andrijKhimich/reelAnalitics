@@ -73,6 +73,10 @@
     width: 100%;
     cursor: pointer;
 
+    &:has(input:focus) {
+      border-color: $blueDark;
+    }
+
     .msg-error {
       bottom: -16px;
     }
@@ -182,6 +186,7 @@ textarea.form-input {
 
 .step-form {
   display: none;
+
   &.active {
     display: block;
   }

@@ -224,32 +224,36 @@ document.querySelector('#prevForm').addEventListener("click", function () {
 
 if (coachesSubmit) {
 
-  var configSteps = {
-    container: '.form-container',
-    button: '.next-step',
-    validationBy: 'onclick',
-    selectors: {
-      required: 'form-input'
-    },
-    onContainerSuccess: function (container) {
-      console.log('container')
-      nextForm();
-      // container.classList.remove('active');
-      // container.nextElementSibling.classList.add('active');
-    }
-  };
-  var validatorSteps = new VanillaValidator(configSteps);
+var configSteps = {
+  container: '.form-container',
+  button: '.next-step',
+  validationBy: 'onclick',
+  validateOnFieldChanges: false,
 
-  var configForm = {
-    selectors: {
-      required: 'form-input'
-    },
+  selectors: {
+    required: 'form-input'
+  },
+  onContainerSuccess: function (container) {
+    console.log('container')
+    nextForm();
+    // container.classList.remove('active');
+    // container.nextElementSibling.classList.add('active');
+  }
+};
+var validatorSteps = new VanillaValidator(configSteps);
 
-    onFormSubmit: function (container) {
-      console.log('submit')
-    }
-  };
-  var validatorForm = new VanillaValidator(configForm);
+var configForm = {
+  validateOnFieldChanges: false,
+
+  selectors: {
+    required: 'form-input'
+  },
+
+  onFormSubmit: function (container) {
+    console.log('submit')
+  }
+};
+var validatorForm = new VanillaValidator(configForm);
 }
 
 
