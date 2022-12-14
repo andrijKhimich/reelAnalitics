@@ -224,43 +224,167 @@ document.querySelector('#prevForm').addEventListener("click", function () {
 
 if (coachesSubmit) {
 
-var configSteps = {
-  container: '.form-container',
-  button: '.next-step',
-  validationBy: 'onclick',
-  validateOnFieldChanges: false,
+  var configSteps = {
+    container: '.form-container',
+    button: '.next-step',
+    validationBy: 'onclick',
+    validateOnFieldChanges: false,
 
-  selectors: {
-    required: 'form-input'
-  },
-  onContainerSuccess: function (container) {
-    console.log('container')
-    nextForm();
-    // container.classList.remove('active');
-    // container.nextElementSibling.classList.add('active');
-  }
-};
-var validatorSteps = new VanillaValidator(configSteps);
+    selectors: {
+      required: 'form-input'
+    },
+    onContainerSuccess: function (container) {
+      console.log('container')
+      nextForm();
+    }
+  };
+  var validatorSteps = new VanillaValidator(configSteps);
 
-var configForm = {
-  validateOnFieldChanges: false,
-
-  selectors: {
-    required: 'form-input'
-  },
-
-  onFormSubmit: function (container) {
-    console.log('submit')
-  }
-};
-var validatorForm = new VanillaValidator(configForm);
+  var configForm = {
+    validateOnFieldChanges: false,
+    selectors: {
+      required: 'form-input'
+    },
+    onFormSubmit: function (container) {
+      console.log('submit')
+    }
+  };
+  var validatorForm = new VanillaValidator(configForm);
 }
-
-
-
-
-
-
 
 // run for sprite svg support 
 svg4everybody();
+
+
+const formTemplate =
+  `
+<div class="form-template js-form-template">
+<div class="form__row">
+  <div class="form__col">
+    <div class="form__box">
+      <label class="form-label">
+        <input class="form-input" type="text" placeholder="First Name">
+      </label>
+    </div>
+  </div>
+  <div class="form__col">
+    <div class="form__box">
+      <label class="form-label">
+        <input class="form-input" type="text" placeholder="Last Name">
+      </label>
+    </div>
+  </div>
+</div>
+<div class="form__row">
+  <div class="form__col">
+    <div class="form__box">
+      <label class="form-label">
+        <input class="form-input" type="text" placeholder="Height">
+      </label>
+    </div>
+  </div>
+  <div class="form__col">
+    <div class="form__box">
+      <label class="form-label">
+        <input class="form-input" type="text" placeholder="Weight">
+      </label>
+    </div>
+  </div>
+</div>
+<div class="form__row">
+  <div class="form__col">
+    <div class="form__box">
+      <label class="form-label">
+        <input class="form-input" type="text" placeholder="High School">
+      </label>
+    </div>
+  </div>
+  <div class="form__col">
+    <div class="form__box">
+      <label class="form-label">
+        <input class="form-input" type="text" placeholder="City">
+      </label>
+    </div>
+  </div>
+</div>
+<div class="form__row">
+  <div class="form__col">
+    <div class="form__box">
+      <label class="form-label">
+        <input class="form-input" type="text" placeholder="State">
+      </label>
+    </div>
+  </div>
+  <div class="form__col">
+    <div class="form__box">
+      <label class="form-label">
+        <input class="form-input" type="text" placeholder="Position">
+      </label>
+    </div>
+  </div>
+</div>
+<div class="form__row">
+  <div class="form__col">
+    <div class="form__box">
+      <label class="form-label">
+        <input class="form-input" type="text" placeholder="Year">
+      </label>
+    </div>
+  </div>
+  <div class="form__col">
+    <div class="form__box">
+      <label class="form-label">
+        <input class="form-input" type="text" placeholder="Hudl Link">
+      </label>
+    </div>
+  </div>
+</div>
+<div class="form__remove_btn">
+  <button type="button" class="form-remove" title="Remove prospect"></button>
+</div>
+</div>
+`;
+
+
+const addTemplateBtn = document.getElementById("addFormTemplate");
+// const formBtns = document.querySelector('.js-form-btns');
+const formTemplateWrapper = document.querySelector('.js-form-template-wrapper');
+const removeFormBtns = document.querySelectorAll('.form-remove');
+let formCounter = 1;
+const newForm = document.querySelectorAll('.form-template');
+
+addTemplateBtn.addEventListener('click', function (e) {
+  e.preventDefault();
+  formTemplateWrapper.insertAdjacentHTML('beforeEnd', formTemplate);
+  formCounter++;
+  console.log(formCounter);
+  if(formCounter >= 5) {
+    addTemplateBtn.classList.add('disable');
+  } else {
+    addTemplateBtn.classList.remove('disable');
+  }
+});
+
+// removeFormBtn.forEach()
+// removeFormBtns.forEach(removeBtn => {
+
+// });
+
+// const formWrapper = document.querySelectorAll('.form-template');
+
+// formTemplateWrapper.forEach(form => {
+formTemplateWrapper.addEventListener("click", (e) => {
+  console.log(e.target)
+  if(e.target.classList.contains("form-remove")) {
+    console.log(e.target.parentNode.parentNode);
+    e.target.parentNode.parentNode.remove();
+    formCounter--;
+    console.log(formCounter);
+    if(formCounter >= 5) {
+      addTemplateBtn.classList.add('disable');
+    } else {
+      addTemplateBtn.classList.remove('disable');
+    }
+  };
+})
+// });

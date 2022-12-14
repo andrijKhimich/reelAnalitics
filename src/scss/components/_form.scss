@@ -191,3 +191,34 @@ textarea.form-input {
     display: block;
   }
 }
+
+.form-template {
+  margin-top: 16px;
+  padding-top: 32px;
+
+  &:not(:first-child) {
+    border-top: 1px solid rgba($blue, .4);
+  }
+}
+
+.form-remove {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  border: 2px solid $primary;
+  border-radius: 50%;
+  &::before {
+    content: "";
+    width: 10px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $primary;
+  }
+}
+
+.form__remove_btn {
+  text-align: right;
+}
