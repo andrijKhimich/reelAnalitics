@@ -62,16 +62,16 @@ function openTab(evt, tabName) {
   evt.currentTarget.className += " active";
 }
 
-const tabBtns = document.querySelectorAll(".tab-btn");
-const toggleTab = () => {
-  tabBtns.forEach(tabBtn => {
-    tabBtn.addEventListener("click", (e) => {
-      let target = e.target.getAttribute("data-href");
-      openTab(e, target)
-    })
-  });
-};
-toggleTab()
+// const tabBtns = document.querySelectorAll(".tab-btn");
+// const toggleTab = () => {
+//   tabBtns.forEach(tabBtn => {
+//     tabBtn.addEventListener("click", (e) => {
+//       let target = e.target.getAttribute("data-href");
+//       openTab(e, target)
+//     })
+//   });
+// };
+// toggleTab()
 
 
 let fansSubmitBtn = document.querySelector('#fansForm');
@@ -129,7 +129,6 @@ if (teamSubmitBtn) {
   };
   var validator = new VanillaValidator(teamFormConfig);
 }
-
 
 
 const modal = document.querySelector('.modal');
@@ -202,12 +201,8 @@ if (inputs) {
 
 let coachesSubmit = document.querySelector('#coachesForm');
 let stepForm = document.querySelectorAll('.step-form');
-// stepForm[1].style.display = 'none';
-// let currentForm = 0;
-
 
 function nextForm() {
-  console.log(stepForm[0]);
   stepForm[0].style.display = 'none';
   stepForm[1].style.display = 'block';
 }
@@ -252,8 +247,6 @@ if (coachesSubmit) {
   var validatorForm = new VanillaValidator(configForm);
 }
 
-// run for sprite svg support 
-svg4everybody();
 
 
 const formTemplate =
@@ -353,38 +346,29 @@ const removeFormBtns = document.querySelectorAll('.form-remove');
 let formCounter = 1;
 const newForm = document.querySelectorAll('.form-template');
 
+
 addTemplateBtn.addEventListener('click', function (e) {
   e.preventDefault();
   formTemplateWrapper.insertAdjacentHTML('beforeEnd', formTemplate);
   formCounter++;
-  console.log(formCounter);
-  if(formCounter >= 5) {
+  if (formCounter >= 5) {
     addTemplateBtn.classList.add('disable');
   } else {
     addTemplateBtn.classList.remove('disable');
   }
 });
 
-// removeFormBtn.forEach()
-// removeFormBtns.forEach(removeBtn => {
-
-// });
-
-// const formWrapper = document.querySelectorAll('.form-template');
-
-// formTemplateWrapper.forEach(form => {
 formTemplateWrapper.addEventListener("click", (e) => {
-  console.log(e.target)
-  if(e.target.classList.contains("form-remove")) {
-    console.log(e.target.parentNode.parentNode);
+  if (e.target.classList.contains("form-remove")) {
     e.target.parentNode.parentNode.remove();
     formCounter--;
-    console.log(formCounter);
-    if(formCounter >= 5) {
+    if (formCounter >= 5) {
       addTemplateBtn.classList.add('disable');
     } else {
       addTemplateBtn.classList.remove('disable');
     }
   };
 })
-// });
+
+// run for sprite svg support 
+svg4everybody();

@@ -35,13 +35,13 @@
       border-color: $gray;
       justify-content: center;
 
-      &:first-child {
-        border-radius: 8px 0 0 8px;
-      }
+      // &:first-child {
+      //   border-radius: 8px 0 0 8px;
+      // }
 
-      &:last-child {
-        border-radius: 0 8px 8px 0;
-      }
+      // &:last-child {
+      //   border-radius: 0 8px 8px 0;
+      // }
 
       &.active {
         color: $white;

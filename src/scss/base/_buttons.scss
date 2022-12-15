@@ -74,6 +74,7 @@
   text-transform: uppercase;
   position: relative;
   color: $white;
+  cursor: pointer;
   transition: border-color $hover-duration $timing, background-color $hover-duration $timing, color $hover-duration $timing;
 
   @include rh(1024) {
