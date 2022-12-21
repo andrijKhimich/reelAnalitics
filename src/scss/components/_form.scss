@@ -176,11 +176,26 @@ textarea.form-input {
   &__row {
     display: flex;
     justify-content: space-between;
+
+    @include d(768) {
+      flex-direction: column;
+    }
+
+    .btn {
+      @include d(768) {
+        justify-content: center;
+      }
+    }
   }
 
   label {
     margin-right: 24px;
     width: 100%;
+
+    @include d(768) {
+      margin-right: 0;
+      margin-bottom: 16px;
+    }
   }
 }
 

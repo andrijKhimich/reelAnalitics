@@ -113,6 +113,8 @@ const js = () => {
 
       // swiper slider
       "node_modules/swiper/swiper-bundle.min.js",
+      "./src/js/async.js",
+
     ])
     .pipe(sourcemaps.init())
     .pipe(concat("libs.min.js"))

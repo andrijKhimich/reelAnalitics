@@ -9,6 +9,8 @@
   visibility: hidden;
   opacity: 0;
   transition: opacity $hover-duration $timing;
+  max-width: 720px;
+  width: 80%;
 
   &.show {
     visibility: visible;
@@ -19,12 +21,16 @@
     padding: 40px;
   }
 
+  @include d(575) {
+    width: 95%;
+    padding: 40px 20px 20px 20px;
+  }
+
   &__body {
     p {
       font-size: 16px;
     }
   }
-
 }
 
 .overlay {

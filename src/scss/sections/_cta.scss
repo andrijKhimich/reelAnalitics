@@ -5,16 +5,14 @@
   border-radius: 0 0 32px 32px;
   overflow: hidden;
   color: $white;
+
   @include d(992) {
     border-radius: 0 0 16px 16px;
   }
+
   &_full {
     .cta__title {
       max-width: 100%;
-
-      h2.title-2 {
-        margin-bottom: 32px;
-      }
 
       p {
         max-width: 760px;
@@ -24,7 +22,7 @@
   }
 
   &__title {
-    max-width: 950px;
+    // max-width: 950px;
     margin: 0 auto;
   }
 }

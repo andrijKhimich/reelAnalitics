@@ -85,7 +85,7 @@ if (fansSubmitBtn) {
       required: 'form-input'
     },
     onFormSubmit: function (container) {
-      console.log('form submitted')
+      // console.log('form submitted')
       fansSubmitBtn.submit();
     },
   };
@@ -104,7 +104,7 @@ if (mediaSubmitBtn) {
       required: 'form-input'
     },
     onFormSubmit: function (container) {
-      console.log('form submitted')
+      // console.log('form submitted')
       mediaSubmitBtn.submit();
     },
   };
@@ -123,7 +123,7 @@ if (teamSubmitBtn) {
       required: 'form-input'
     },
     onFormSubmit: function (container) {
-      console.log('form submitted')
+      // console.log('form submitted')
       teamSubmitBtn.submit();
     },
   };
@@ -196,179 +196,206 @@ if (inputs) {
 }
 
 
+
+// fetch('./data/data.json')
+//   .then((response) => response.json())
+//   .then((json) => console.log(json));
+
+
 // coaches and scouts form validation and navigation
 
 
 let coachesSubmit = document.querySelector('#coachesForm');
-let stepForm = document.querySelectorAll('.step-form');
 
-function nextForm() {
-  stepForm[0].style.display = 'none';
-  stepForm[1].style.display = 'block';
-}
-
-
-function prevForm() {
-  stepForm[1].style.display = 'none';
-  stepForm[0].style.display = 'block';
-}
-
-document.querySelector('#prevForm').addEventListener("click", function () {
-  prevForm();
-});
 
 if (coachesSubmit) {
+  let stepForm = document.querySelectorAll('.step-form');
 
-  var configSteps = {
-    container: '.form-container',
-    button: '.next-step',
-    validationBy: 'onclick',
-    validateOnFieldChanges: false,
-
-    selectors: {
-      required: 'form-input'
-    },
-    onContainerSuccess: function (container) {
-      console.log('container')
-      nextForm();
-    }
-  };
-  var validatorSteps = new VanillaValidator(configSteps);
-
-  var configForm = {
-    validateOnFieldChanges: false,
-    selectors: {
-      required: 'form-input'
-    },
-    onFormSubmit: function (container) {
-      console.log('submit')
-    }
-  };
-  var validatorForm = new VanillaValidator(configForm);
-}
-
-
-
-const formTemplate =
-  `
-<div class="form-template js-form-template">
-<div class="form__row">
-  <div class="form__col">
-    <div class="form__box">
-      <label class="form-label">
-        <input class="form-input" type="text" placeholder="First Name">
-      </label>
-    </div>
-  </div>
-  <div class="form__col">
-    <div class="form__box">
-      <label class="form-label">
-        <input class="form-input" type="text" placeholder="Last Name">
-      </label>
-    </div>
-  </div>
-</div>
-<div class="form__row">
-  <div class="form__col">
-    <div class="form__box">
-      <label class="form-label">
-        <input class="form-input" type="text" placeholder="Height">
-      </label>
-    </div>
-  </div>
-  <div class="form__col">
-    <div class="form__box">
-      <label class="form-label">
-        <input class="form-input" type="text" placeholder="Weight">
-      </label>
-    </div>
-  </div>
-</div>
-<div class="form__row">
-  <div class="form__col">
-    <div class="form__box">
-      <label class="form-label">
-        <input class="form-input" type="text" placeholder="High School">
-      </label>
-    </div>
-  </div>
-  <div class="form__col">
-    <div class="form__box">
-      <label class="form-label">
-        <input class="form-input" type="text" placeholder="City">
-      </label>
-    </div>
-  </div>
-</div>
-<div class="form__row">
-  <div class="form__col">
-    <div class="form__box">
-      <label class="form-label">
-        <input class="form-input" type="text" placeholder="State">
-      </label>
-    </div>
-  </div>
-  <div class="form__col">
-    <div class="form__box">
-      <label class="form-label">
-        <input class="form-input" type="text" placeholder="Position">
-      </label>
-    </div>
-  </div>
-</div>
-<div class="form__row">
-  <div class="form__col">
-    <div class="form__box">
-      <label class="form-label">
-        <input class="form-input" type="text" placeholder="Year">
-      </label>
-    </div>
-  </div>
-  <div class="form__col">
-    <div class="form__box">
-      <label class="form-label">
-        <input class="form-input" type="text" placeholder="Hudl Link">
-      </label>
-    </div>
-  </div>
-</div>
-<div class="form__remove_btn">
-  <button type="button" class="form-remove" title="Remove prospect"></button>
-</div>
-</div>
-`;
-
-
-const addTemplateBtn = document.getElementById("addFormTemplate");
-// const formBtns = document.querySelector('.js-form-btns');
-const formTemplateWrapper = document.querySelector('.js-form-template-wrapper');
-const removeFormBtns = document.querySelectorAll('.form-remove');
-let formCounter = 1;
-const newForm = document.querySelectorAll('.form-template');
-
-
-addTemplateBtn.addEventListener('click', function (e) {
-  e.preventDefault();
-  formTemplateWrapper.insertAdjacentHTML('beforeEnd', formTemplate);
-  formCounter++;
-  if (formCounter >= 5) {
-    addTemplateBtn.classList.add('disable');
-  } else {
-    addTemplateBtn.classList.remove('disable');
+  function nextForm() {
+    stepForm[0].style.display = 'none';
+    stepForm[1].style.display = 'block';
   }
-});
 
-formTemplateWrapper.addEventListener("click", (e) => {
-  if (e.target.classList.contains("form-remove")) {
-    e.target.parentNode.parentNode.remove();
-    formCounter--;
+
+  function prevForm() {
+    stepForm[1].style.display = 'none';
+    stepForm[0].style.display = 'block';
+  }
+
+  document.querySelector('#prevForm').addEventListener("click", function () {
+    prevForm();
+  });
+
+  if (coachesSubmit) {
+
+    var configSteps = {
+      container: '.form-container',
+      button: '.next-step',
+      validationBy: 'onclick',
+      validateOnFieldChanges: false,
+
+      selectors: {
+        required: 'form-input'
+      },
+      onContainerSuccess: function (container) {
+        // console.log('container')
+        nextForm();
+      }
+    };
+    var validatorSteps = new VanillaValidator(configSteps);
+
+    var configForm = {
+      validateOnFieldChanges: false,
+      selectors: {
+        required: 'form-input'
+      },
+      onFormSubmit: function (container) {
+        // console.log('submit')
+      }
+    };
+    var validatorForm = new VanillaValidator(configForm);
+  }
+
+  const formTemplate =
+    `
+  <div class="form-template js-form-template">
+  <div class="form__row">
+    <div class="form__col">
+      <div class="form__box">
+        <label class="form-label">
+          <input class="form-input" type="text" placeholder="First Name">
+        </label>
+      </div>
+    </div>
+    <div class="form__col">
+      <div class="form__box">
+        <label class="form-label">
+          <input class="form-input" type="text" placeholder="Last Name">
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form__row">
+    <div class="form__col">
+      <div class="form__box">
+        <label class="form-label">
+          <input class="form-input" type="text" placeholder="Height">
+        </label>
+      </div>
+    </div>
+    <div class="form__col">
+      <div class="form__box">
+        <label class="form-label">
+          <input class="form-input" type="text" placeholder="Weight">
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form__row">
+    <div class="form__col">
+      <div class="form__box">
+        <label class="form-label">
+          <input class="form-input" type="text" placeholder="High School">
+        </label>
+      </div>
+    </div>
+    <div class="form__col">
+      <div class="form__box">
+        <label class="form-label">
+          <input class="form-input" type="text" placeholder="City">
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form__row">
+    <div class="form__col">
+      <div class="form__box">
+        <label class="form-label">
+          <input class="form-input" type="text" placeholder="State">
+        </label>
+      </div>
+    </div>
+    <div class="form__col">
+      <div class="form__box">
+        <label class="form-label">
+          <input class="form-input" type="text" placeholder="Position">
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form__row">
+    <div class="form__col">
+      <div class="form__box">
+        <label class="form-label">
+          <input class="form-input" type="text" placeholder="Year">
+        </label>
+      </div>
+    </div>
+    <div class="form__col">
+      <div class="form__box">
+        <label class="form-label">
+          <input class="form-input" type="text" placeholder="Hudl Link">
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form__remove_btn">
+    <button type="button" class="form-remove" title="Remove prospect"></button>
+  </div>
+  </div>
+  `;
+
+
+  const addTemplateBtn = document.getElementById("addFormTemplate");
+  const formTemplateWrapper = document.querySelector('.js-form-template-wrapper');
+  const removeFormBtns = document.querySelectorAll('.form-remove');
+  let formCounter = 1;
+  const newForm = document.querySelectorAll('.form-template');
+
+
+  addTemplateBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    formTemplateWrapper.insertAdjacentHTML('beforeEnd', formTemplate);
+    formCounter++;
     if (formCounter >= 5) {
       addTemplateBtn.classList.add('disable');
     } else {
       addTemplateBtn.classList.remove('disable');
     }
-  };
-})
+  });
 
+  formTemplateWrapper.addEventListener("click", (e) => {
+    if (e.target.classList.contains("form-remove")) {
+      e.target.parentNode.parentNode.remove();
+      formCounter--;
+      if (formCounter >= 5) {
+        addTemplateBtn.classList.add('disable');
+      } else {
+        addTemplateBtn.classList.remove('disable');
+      }
+    };
+  })
+
+}
+
+
+
+// var $th = $('.board-scroll table').find('thead th')
+// $('.board-scroll table').on('scroll', function() {
+//   $th.css('transform', 'translateY('+ this.scrollTop +'px)');
+// });
+
+// Fix table head
+// Fix table head
+function tableFixHead(e) {
+  const el = e.target,
+    sT = el.scrollTop;
+  el.querySelectorAll("thead th").forEach(th =>
+    th.style.transform = `translateY(${sT}px)`
+  );
+}
+document.querySelectorAll(".board-scroll").forEach(el =>
+  el.addEventListener("scroll", tableFixHead)
+);
 // run for sprite svg support 
 svg4everybody();
