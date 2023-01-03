@@ -70,30 +70,14 @@
                     <div class="form__col">
                       <div class="form__box">
                         <label class="form-label">
-                          <input class="form-input" type="text" placeholder="First Name">
+                          <input class="form-input" id="mediaFirstName" name="mediaFirstName" type="text" placeholder="First Name">
                         </label>
                       </div>
                     </div>
                     <div class="form__col">
                       <div class="form__box">
                         <label class="form-label">
-                          <input class="form-input" type="text" placeholder="Last Name">
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form__row">
-                    <div class="form__col">
-                      <div class="form__box">
-                        <label class="form-label">
-                          <input class="form-input" type="text" placeholder="High School">
-                        </label>
-                      </div>
-                    </div>
-                    <div class="form__col">
-                      <div class="form__box">
-                        <label class="form-label">
-                          <input class="form-input" type="text" placeholder="City">
+                          <input class="form-input" id="mediaLastName" name="mediaLastName" type="text" placeholder="Last Name">
                         </label>
                       </div>
                     </div>
@@ -102,14 +86,14 @@
                     <div class="form__col">
                       <div class="form__box">
                         <label class="form-label">
-                          <input class="form-input" type="text" placeholder="State">
+                          <input class="form-input" id="mediaHightSchool" name="mediaHightSchool" type="text" placeholder="High School">
                         </label>
                       </div>
                     </div>
                     <div class="form__col">
                       <div class="form__box">
                         <label class="form-label">
-                          <input class="form-input" type="text" placeholder="Email">
+                          <input class="form-input" id="mediaCity" name="mediaCity" type="text" placeholder="City">
                         </label>
                       </div>
                     </div>
@@ -118,18 +102,34 @@
                     <div class="form__col">
                       <div class="form__box">
                         <label class="form-label">
-                          <input class="form-input" type="text" placeholder="Cell phone">
+                          <input class="form-input" id="mediaState" name="mediaState" type="text" placeholder="State">
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form__col">
+                      <div class="form__box">
+                        <label class="form-label">
+                          <input class="form-input" id="mediaEmail" name="mediaEmail" type="text" placeholder="Email">
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form__row">
+                    <div class="form__col">
+                      <div class="form__box">
+                        <label class="form-label">
+                          <input class="form-input" id="mediaCellPhone" name="mediaCellPhone" type="text" placeholder="Cell phone">
                         </label>
                       </div>
                     </div>
                   </div>
                   <div class="form__btns">
-                    <a href="#" class="btn btn_primary btn_submit">Sign up
+                    <button type="submit" class="btn btn_primary btn_submit" id="submitMedia">Sign up
                       <svg class="icon-arrow">
                         <use xlink:href="img/svg/sprite.svg#arrow">
                         </use>
                       </svg>
-                    </a>
+                    </button>
                   </div>
                 </form>
               </div>
@@ -158,7 +158,22 @@
       </div>
     </div>
   </main>
+  <div class="overlay">
+
+  </div>
+  <div class="modal" id="succsessModal">
+    <button class="close" type="button">
+    </button>
+    <div class="modal__body">
+      <h2><span>Thank You </span> <br> FOR SUBSCRIBE</h2>
+      <p>Your submission has been received!</p>
+    </div>
+  </div>
   @@include("./html/_footer.html")
+  <script
+  src="https://code.jquery.com/jquery-3.6.3.min.js"
+  integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+  crossorigin="anonymous"></script>
   <script src="./js/libs.min.js"></script>
   <script src="./js/script.min.js"></script>
 </body>

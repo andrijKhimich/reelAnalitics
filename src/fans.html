@@ -42,19 +42,19 @@
               <h2>Fans.</h2>
               <p>Get player tracking data on your favorite athletes and teams</p>
               <div class="form-sign-up">
-                <form action="#" id="fansForm">
+                <form method="POST" id="fansForm">
                   <div class="form__row">
                     <div class="form__col">
                       <div class="form__box">
                         <label class="form-label">
-                          <input class="form-input" type="text" placeholder="First Name">
+                          <input class="form-input" name="fansFirstName" id="fansFirstName" type="text" placeholder="First Name">
                         </label>
                       </div>
                     </div>
                     <div class="form__col">
                       <div class="form__box">
                         <label class="form-label">
-                          <input class="form-input" type="text" placeholder="Last Name">
+                          <input class="form-input" name="fansLastName" id="fansLastName" type="text" placeholder="Last Name">
                         </label>
                       </div>
                     </div>
@@ -63,30 +63,14 @@
                     <div class="form__col">
                       <div class="form__box">
                         <label class="form-label">
-                          <input class="form-input" type="text" placeholder="High School">
+                          <input class="form-input" name="fansHightSchool" id="fansHightSchool" type="text" placeholder="High School">
                         </label>
                       </div>
                     </div>
                     <div class="form__col">
                       <div class="form__box">
                         <label class="form-label">
-                          <input class="form-input" type="text" placeholder="City">
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form__row">
-                    <div class="form__col">
-                      <div class="form__box">
-                        <label class="form-label">
-                          <input class="form-input" type="text" placeholder="State">
-                        </label>
-                      </div>
-                    </div>
-                    <div class="form__col">
-                      <div class="form__box">
-                        <label class="form-label">
-                          <input class="form-input email" type="text" placeholder="Email">
+                          <input class="form-input" name="fansCity" id="fansCity" type="text" placeholder="City">
                         </label>
                       </div>
                     </div>
@@ -95,15 +79,32 @@
                     <div class="form__col">
                       <div class="form__box">
                         <label class="form-label">
-                          <input class="form-input numeric" type="text" placeholder="Cell Phone">
+                          <input class="form-input" name="fansState" id="fansState" type="text" placeholder="State">
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form__col">
+                      <div class="form__box">
+                        <label class="form-label">
+                          <input class="form-input email" name="fansEmail" id="fansEmail" type="text" placeholder="Email">
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form__row">
+                    <div class="form__col">
+                      <div class="form__box">
+                        <label class="form-label">
+                          <input class="form-input numeric" name="fansCellPhone" id="fansCellPhone" type="text"
+                            placeholder="Cell Phone">
                         </label>
                       </div>
                     </div>
                   </div>
                   <div class="form__btns">
-                    <button type="submit" href="#" class="btn btn_primary btn_submit">Sign up
+                    <button type="submit" class="btn btn_primary btn_submit">Sign up
                       <svg class="icon-arrow">
-                        <use xlink:href="img/svg/sprite.svg#arrow">
+                        <use xlink:href="img/svg/sprite.svg#arrow'">
                         </use>
                       </svg>
                     </button>
@@ -129,7 +130,20 @@
       </div>
     </div>
   </main>
+  <div class="overlay">
+
+  </div>
+  <div class="modal" id="succsessModal">
+    <button class="close" type="button">
+    </button>
+    <div class="modal__body">
+      <h2><span>Thank You </span> <br> FOR SUBSCRIBE</h2>
+      <p>Your submission has been received!</p>
+    </div>
+  </div>
   @@include("./html/_footer.html")
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
   <script src="./js/libs.min.js"></script>
   <script src="./js/script.min.js"></script>
 </body>

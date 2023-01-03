@@ -7,17 +7,17 @@
       margin-bottom: 40px;
     }
   }
-
+  .section__row {
+    // @include d(992) {
+    //   flex-direction: column;
+    // }
+  }
   &__col {
     flex: 2;
     padding: 0 15px;
     transition: flex $duration ease;
     overflow: hidden;
     height: 528px;
-
-    @include d(1280) {
-      // padding: 0 10px;
-    }
 
     @include rh(1024) {
       &:hover {

@@ -42,19 +42,19 @@
               <h2>Team.</h2>
               <p>Track the strength and conditioning gains on the field</p>
               <div class="form-sign-up">
-                <form action="#" id="teamForm">
+                <form method="POST" id="teamForm">
                   <div class="form__row">
                     <div class="form__col">
                       <div class="form__box">
                         <label class="form-label">
-                          <input class="form-input" type="text" placeholder="First Name">
+                          <input class="form-input" id="teamFirstName" name="teamFirstName" type="text" placeholder="First Name">
                         </label>
                       </div>
                     </div>
                     <div class="form__col">
                       <div class="form__box">
                         <label class="form-label">
-                          <input class="form-input" type="text" placeholder="Last Name">
+                          <input class="form-input" id="teamLastName" name="teamLastName" type="text" placeholder="Last Name">
                         </label>
                       </div>
                     </div>
@@ -63,30 +63,14 @@
                     <div class="form__col">
                       <div class="form__box">
                         <label class="form-label">
-                          <input class="form-input" type="text" placeholder="High School">
+                          <input class="form-input" id="teamHightSchool" name="teamHightSchool" type="text" placeholder="High School">
                         </label>
                       </div>
                     </div>
                     <div class="form__col">
                       <div class="form__box">
                         <label class="form-label">
-                          <input class="form-input" type="text" placeholder="City">
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form__row">
-                    <div class="form__col">
-                      <div class="form__box">
-                        <label class="form-label">
-                          <input class="form-input" type="text" placeholder="State">
-                        </label>
-                      </div>
-                    </div>
-                    <div class="form__col">
-                      <div class="form__box">
-                        <label class="form-label">
-                          <input class="form-input" type="text" placeholder="Email">
+                          <input class="form-input" id="teamCity" name="teamCity" type="text" placeholder="City">
                         </label>
                       </div>
                     </div>
@@ -95,18 +79,35 @@
                     <div class="form__col">
                       <div class="form__box">
                         <label class="form-label">
-                          <input class="form-input" type="text" placeholder="Cell Phone">
+                          <input class="form-input" id="teamState" name="teamState" type="text" placeholder="State">
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form__col">
+                      <div class="form__box">
+                        <label class="form-label">
+                          <input class="form-input email" id="teamEmail" name="teamEmail" type="text" placeholder="Email">
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form__row">
+                    <div class="form__col">
+                      <div class="form__box">
+                        <label class="form-label">
+                          <input class="form-input numeric" id="teamCellPhone" name="teamCellPhone" type="text"
+                            placeholder="Cell Phone">
                         </label>
                       </div>
                     </div>
                   </div>
                   <div class="form__btns">
-                    <a href="#" class="btn btn_primary btn_submit">Sign up
+                    <button type="submit" class="btn btn_primary btn_submit">Sign up
                       <svg class="icon-arrow">
-                        <use xlink:href="img/svg/sprite.svg#arrow">
+                        <use xlink:href="<?php echo get_template_directory_uri() . '/assets/img/svg/sprite.svg#arrow' ?>">
                         </use>
                       </svg>
-                    </a>
+                    </button>
                   </div>
                 </form>
               </div>
@@ -129,9 +130,26 @@
       </div>
     </div>
   </main>
+  <div class="overlay">
+
+  </div>
+  
+  <div class="modal" id="succsessModal">
+    <button class="close">
+    </button>
+    <div class="modal__body">
+      <h2><span>Thank You </span> <br> FOR SUBSCRIBE</h2>
+      <p>Your submission has been received!</p>
+    </div>
+  </div>
   @@include("./html/_footer.html")
+  <script
+  src="https://code.jquery.com/jquery-3.6.3.min.js"
+  integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+  crossorigin="anonymous"></script>
   <script src="./js/libs.min.js"></script>
   <script src="./js/script.min.js"></script>
 </body>
 
 </html>
+

@@ -1,12 +1,12 @@
 .iga {
-  padding: 160px 0;
+  padding: 160px 0 0 0;
 
   @include d(1280) {
-    padding: 120px 0;
+    padding: 120px 0 0 0;
   }
 
   @include d(992) {
-    padding: 80px 0;
+    padding: 80px 0 0 0;
   }
 
   &__img {

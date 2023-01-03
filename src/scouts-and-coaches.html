@@ -50,14 +50,16 @@
                     <div class="form__col">
                       <div class="form__box">
                         <label class="form-label">
-                          <input class="form-input" type="text" placeholder="First Name">
+                          <input class="form-input" value="test1" name="coachName" id="coachName" type="text"
+                            placeholder="First Name">
                         </label>
                       </div>
                     </div>
                     <div class="form__col">
                       <div class="form__box">
                         <label class="form-label">
-                          <input class="form-input" type="text" placeholder="Last Name">
+                          <input class="form-input" value="test1" name="coachLastName" id="coachLastName" type="text"
+                            placeholder="Last Name">
                         </label>
                       </div>
                     </div>
@@ -66,14 +68,16 @@
                     <div class="form__col">
                       <div class="form__box">
                         <label class="form-label">
-                          <input class="form-input" type="text" placeholder="Title">
+                          <input class="form-input" value="test1" name="coachTitle" id="coachTitle" type="text"
+                            placeholder="Title">
                         </label>
                       </div>
                     </div>
                     <div class="form__col">
                       <div class="form__box">
                         <label class="form-label">
-                          <input class="form-input email" type="text" placeholder="Email Address">
+                          <input class="form-input email" value="test1@re.com" name="coachEmail" id="coachEmail"
+                            type="text" placeholder="Email Address">
                         </label>
                       </div>
                     </div>
@@ -82,27 +86,19 @@
                     <div class="form__col">
                       <div class="form__box">
                         <label class="form-label">
-                          <input class="form-input integer" type="text" placeholder="Cell Phone">
+                          <input class="form-input integer" value="23" name="coachPhone" id="coachPhone" type="text"
+                            placeholder="Cell Phone">
                         </label>
                       </div>
                     </div>
                     <div class="form__col">
                       <div class="form__box">
                         <label class="form-label">
-                          <input class="form-input" type="text" placeholder="University/College">
+                          <input class="form-input" value="test1" name="coachUniversity" id="coachUniversity"
+                            type="text" placeholder="University/College">
                         </label>
                       </div>
                     </div>
-                  </div>
-                  <div class="form-file">
-                    <input type="file" id="inputFile" class="input_file form-input">
-                    <label for="inputFile">
-                      <svg class="icon-paperclip">
-                        <use xlink:href="img/svg/sprite.svg#paperclip">
-                        </use>
-                      </svg>
-                      <span>Add resume file</span>
-                    </label>
                   </div>
                   <div class="form__btns form__btns_end">
                     <button type="button" href="scouts-and-coaches-2.html" class="btn btn_primary next-step"
@@ -114,10 +110,11 @@
                     </button>
                   </div>
                 </div>
-                <div class="form-sign-up step-form">
+                <div class="form-sign-up step-form form-valid">
                   <div class="form__title">
                     <h5>Prospect:</h5>
-                    <a href="#" class="btn btn_secondary btn_sm" id="addFormTemplate">add Prospect </a>
+                    <button type="button" class="btn btn_secondary btn_sm addFormTemplate disable"
+                      id="addFormTemplate">add Prospect </button>
                   </div>
                   <div class="form-template-wrapper js-form-template-wrapper">
                     <div class="form-template js-form-template">
@@ -125,14 +122,36 @@
                         <div class="form__col">
                           <div class="form__box">
                             <label class="form-label">
-                              <input class="form-input" type="text" placeholder="First Name">
+                              <input class="form-input custom-validate" data-counter="1" name="coachProspectName1"
+                                data-validate-key="coachData" id="coachProspectName1" type="text"
+                                placeholder="First Name">
                             </label>
                           </div>
                         </div>
                         <div class="form__col">
                           <div class="form__box">
                             <label class="form-label">
-                              <input class="form-input" type="text" placeholder="Last Name">
+                              <input class="form-input custom-validate" data-counter="1" data-validate-key="coachData"
+                                name="coachProspectLastName1" id="coachProspectLastName1" type="text"
+                                placeholder="Last Name">
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- <div class="form__row">
+                        <div class="form__col">
+                          <div class="form__box">
+                            <label class="form-label">
+                              <input class="form-input integer" name="coachProspect1Height" id="coachProspect1Height"
+                                type="text" placeholder="Height">
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form__col">
+                          <div class="form__box">
+                            <label class="form-label">
+                              <input class="form-input integer" name="coachProspect1Weight" 1id="coachProspect1Weight"
+                                type="text" placeholder="Weight">
                             </label>
                           </div>
                         </div>
@@ -141,14 +160,16 @@
                         <div class="form__col">
                           <div class="form__box">
                             <label class="form-label">
-                              <input class="form-input" type="text" placeholder="Height">
+                              <input class="form-input" type="text" name="coachProspect1School"
+                                id="coachProspect1School" placeholder="High School">
                             </label>
                           </div>
                         </div>
                         <div class="form__col">
                           <div class="form__box">
                             <label class="form-label">
-                              <input class="form-input" type="text" placeholder="Weight">
+                              <input class="form-input" name="coachesProspect1City" id="coachesProspect1City"
+                                type="text" placeholder="City">
                             </label>
                           </div>
                         </div>
@@ -157,14 +178,16 @@
                         <div class="form__col">
                           <div class="form__box">
                             <label class="form-label">
-                              <input class="form-input" type="text" placeholder="High School">
+                              <input class="form-input" name="coachesProspect1State" id="coachesProspect1State"
+                                type="text" placeholder="State">
                             </label>
                           </div>
                         </div>
                         <div class="form__col">
                           <div class="form__box">
                             <label class="form-label">
-                              <input class="form-input" type="text" placeholder="City">
+                              <input class="form-input" name="coachesProspect1Position" id="coachesProspect1Position"
+                                type="text" placeholder="Position">
                             </label>
                           </div>
                         </div>
@@ -173,35 +196,449 @@
                         <div class="form__col">
                           <div class="form__box">
                             <label class="form-label">
-                              <input class="form-input" type="text" placeholder="State">
+                              <input class="form-input integer" name="coachesProspect1Year" id="coachesProspect1Year"
+                                type="text" placeholder="Year">
                             </label>
                           </div>
                         </div>
                         <div class="form__col">
                           <div class="form__box">
                             <label class="form-label">
-                              <input class="form-input" type="text" placeholder="Position">
+                              <input class="form-input url" name="coachesProspect1Link" id="coachesProspect1Link"
+                                type="text" placeholder="Hudl Link">
                             </label>
                           </div>
                         </div>
-                      </div>
-                      <div class="form__row">
-                        <div class="form__col">
-                          <div class="form__box">
-                            <label class="form-label">
-                              <input class="form-input" type="text" placeholder="Year">
-                            </label>
-                          </div>
-                        </div>
-                        <div class="form__col">
-                          <div class="form__box">
-                            <label class="form-label">
-                              <input class="form-input" type="text" placeholder="Hudl Link">
-                            </label>
-                          </div>
-                        </div>
+                      </div> -->
+                      <p>or</p>
+                      <div class="form-file">
+                        <input type="file" data-validate-key="coachProspectFile" data-counter="1" accept=".doc,.docx,.pdf"
+                          id="inputFile1" name="inputFile1" class="input_file custom-validate">
+                        <label for="inputFile1">
+                          <svg class="icon-paperclip">
+                            <use xlink:href="img/svg/sprite.svg#paperclip">
+                            </use>
+                          </svg>
+                          <span>Add resume file</span>
+                        </label>
                       </div>
                     </div>
+                    <!-- <div class="form-template js-form-template">
+                      <div class="form__row">
+                        <div class="form__col">
+                          <div class="form__box">
+                            <label class="form-label">
+                              <input class="form-input" name="coachProspect2Name" id="coachProspect2Name" type="text"
+                                placeholder="First Name">
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form__col">
+                          <div class="form__box">
+                            <label class="form-label">
+                              <input class="form-input" name="coachProspect2LastName" id="coachProspect2LastName"
+                                type="text" placeholder="Last Name">
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__row">
+                        <div class="form__col">
+                          <div class="form__box">
+                            <label class="form-label">
+                              <input class="form-input integer" name="coachProspect2Height" id="coachProspect2Height"
+                                type="text" placeholder="Height">
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form__col">
+                          <div class="form__box">
+                            <label class="form-label">
+                              <input class="form-input integer" name="coachProspect2Weight" id="coachProspect2Weight"
+                                type="text" placeholder="Weight">
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__row">
+                        <div class="form__col">
+                          <div class="form__box">
+                            <label class="form-label">
+                              <input class="form-input" type="text" name="coachProspect2School"
+                                id="coachProspect2School" placeholder="High School">
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form__col">
+                          <div class="form__box">
+                            <label class="form-label">
+                              <input class="form-input" name="coachesProspect2City" id="coachesProspect2City"
+                                type="text" placeholder="City">
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__row">
+                        <div class="form__col">
+                          <div class="form__box">
+                            <label class="form-label">
+                              <input class="form-input" name="coachesProspect2State" id="coachesProspect2State"
+                                type="text" placeholder="State">
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form__col">
+                          <div class="form__box">
+                            <label class="form-label">
+                              <input class="form-input" name="coachesProspect2Position" id="coachesProspect2Position"
+                                type="text" placeholder="Position">
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__row">
+                        <div class="form__col">
+                          <div class="form__box">
+                            <label class="form-label">
+                              <input class="form-input integer" name="coachesProspect2Year" id="coachesProspect2Year"
+                                type="text" placeholder="Year">
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form__col">
+                          <div class="form__box">
+                            <label class="form-label">
+                              <input class="form-input url" name="coachesProspect2Link" id="coachesProspect2Link"
+                                type="text" placeholder="Hudl Link">
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <p>or</p>
+                      <div class="form-file">
+                        <input type="file" accept=".doc,.docx,.pdf" id="inputFile2" name="inputFile2"
+                          class="input_file">
+                        <label for="inputFile2">
+                          <svg class="icon-paperclip">
+                            <use xlink:href="img/svg/sprite.svg#paperclip">
+                            </use>
+                          </svg>
+                          <span>Add resume file</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form-template js-form-template">
+                      <div class="form__row">
+                        <div class="form__col">
+                          <div class="form__box">
+                            <label class="form-label">
+                              <input class="form-input" name="coachProspect3Name" id="coachProspect3Name" type="text"
+                                placeholder="First Name">
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form__col">
+                          <div class="form__box">
+                            <label class="form-label">
+                              <input class="form-input" name="coachProspect3LastName" id="coachProspect3LastName"
+                                type="text" placeholder="Last Name">
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__row">
+                        <div class="form__col">
+                          <div class="form__box">
+                            <label class="form-label">
+                              <input class="form-input integer" name="coachProspect3Height" id="coachProspect3Height"
+                                type="text" placeholder="Height">
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form__col">
+                          <div class="form__box">
+                            <label class="form-label">
+                              <input class="form-input integer" name="coachProspect3Weight" id="coachProspect3Weight"
+                                type="text" placeholder="Weight">
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__row">
+                        <div class="form__col">
+                          <div class="form__box">
+                            <label class="form-label">
+                              <input class="form-input" type="text" name="coachProspect3School"
+                                id="coachProspect3School" placeholder="High School">
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form__col">
+                          <div class="form__box">
+                            <label class="form-label">
+                              <input class="form-input" name="coachesProspect3City" id="coachesProspect3City"
+                                type="text" placeholder="City">
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__row">
+                        <div class="form__col">
+                          <div class="form__box">
+                            <label class="form-label">
+                              <input class="form-input" name="coachesProspect3State" id="coachesProspect3State"
+                                type="text" placeholder="State">
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form__col">
+                          <div class="form__box">
+                            <label class="form-label">
+                              <input class="form-input" name="coachesProspect3Position" id="coachesProspect3Position"
+                                type="text" placeholder="Position">
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__row">
+                        <div class="form__col">
+                          <div class="form__box">
+                            <label class="form-label">
+                              <input class="form-input integer" name="coachesProspect3Year" id="coachesProspect3Year"
+                                type="text" placeholder="Year">
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form__col">
+                          <div class="form__box">
+                            <label class="form-label">
+                              <input class="form-input url" name="coachesProspect3Link" id="coachesProspect3Link"
+                                type="text" placeholder="Hudl Link">
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <p>or</p>
+                      <div class="form-file">
+                        <input type="file" accept=".doc,.docx,.pdf" id="inputFile3" name="inputFile3"
+                          class="input_file">
+                        <label for="inputFile3">
+                          <svg class="icon-paperclip">
+                            <use xlink:href="img/svg/sprite.svg#paperclip">
+                            </use>
+                          </svg>
+                          <span>Add resume file</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form-template js-form-template">
+                      <div class="form__row">
+                        <div class="form__col">
+                          <div class="form__box">
+                            <label class="form-label">
+                              <input class="form-input" name="coachProspect4Name" id="coachProspect4Name" type="text"
+                                placeholder="First Name">
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form__col">
+                          <div class="form__box">
+                            <label class="form-label">
+                              <input class="form-input" name="coachProspect4LastName" id="coachProspect4LastName"
+                                type="text" placeholder="Last Name">
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__row">
+                        <div class="form__col">
+                          <div class="form__box">
+                            <label class="form-label">
+                              <input class="form-input integer" name="coachProspect4Height" id="coachProspect4Height"
+                                type="text" placeholder="Height">
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form__col">
+                          <div class="form__box">
+                            <label class="form-label">
+                              <input class="form-input integer" name="coachProspect4Weight" id="coachProspect4Weight"
+                                type="text" placeholder="Weight">
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__row">
+                        <div class="form__col">
+                          <div class="form__box">
+                            <label class="form-label">
+                              <input class="form-input" type="text" name="coachProspect4School"
+                                id="coachProspect4School" placeholder="High School">
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form__col">
+                          <div class="form__box">
+                            <label class="form-label">
+                              <input class="form-input" name="coachesProspect4City" id="coachesProspect4City"
+                                type="text" placeholder="City">
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__row">
+                        <div class="form__col">
+                          <div class="form__box">
+                            <label class="form-label">
+                              <input class="form-input" name="coachesProspect4State" id="coachesProspect4State"
+                                type="text" placeholder="State">
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form__col">
+                          <div class="form__box">
+                            <label class="form-label">
+                              <input class="form-input" name="coachesProspect4Position" id="coachesProspect4Position"
+                                type="text" placeholder="Position">
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__row">
+                        <div class="form__col">
+                          <div class="form__box">
+                            <label class="form-label">
+                              <input class="form-input integer" name="coachesProspect4Year" id="coachesProspect4Year"
+                                type="text" placeholder="Year">
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form__col">
+                          <div class="form__box">
+                            <label class="form-label">
+                              <input class="form-input url" name="coachesProspect4Link" id="coachesProspect4Link"
+                                type="text" placeholder="Hudl Link">
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <p>or</p>
+                      <div class="form-file">
+                        <input type="file" accept=".doc,.docx,.pdf" id="inputFile4" name="inputFile4"
+                          class="input_file">
+                        <label for="inputFile4">
+                          <svg class="icon-paperclip">
+                            <use xlink:href="img/svg/sprite.svg#paperclip">
+                            </use>
+                          </svg>
+                          <span>Add resume file</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form-template js-form-template">
+                      <div class="form__row">
+                        <div class="form__col">
+                          <div class="form__box">
+                            <label class="form-label">
+                              <input class="form-input" name="coachProspect5Name" id="coachProspect5Name" type="text"
+                                placeholder="First Name">
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form__col">
+                          <div class="form__box">
+                            <label class="form-label">
+                              <input class="form-input" name="coachProspect5LastName" id="coachProspect5LastName"
+                                type="text" placeholder="Last Name">
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__row">
+                        <div class="form__col">
+                          <div class="form__box">
+                            <label class="form-label">
+                              <input class="form-input integer" name="coachProspect5Height" id="coachProspect5Height"
+                                type="text" placeholder="Height">
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form__col">
+                          <div class="form__box">
+                            <label class="form-label">
+                              <input class="form-input integer" name="coachProspect5Weight" id="coachProspect5Weight"
+                                type="text" placeholder="Weight">
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__row">
+                        <div class="form__col">
+                          <div class="form__box">
+                            <label class="form-label">
+                              <input class="form-input" type="text" name="coachProspect5School"
+                                id="coachProspect5School" placeholder="High School">
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form__col">
+                          <div class="form__box">
+                            <label class="form-label">
+                              <input class="form-input" name="coachesProspect5City" id="coachesProspect5City"
+                                type="text" placeholder="City">
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__row">
+                        <div class="form__col">
+                          <div class="form__box">
+                            <label class="form-label">
+                              <input class="form-input" name="coachesProspect5State" id="coachesProspect5State"
+                                type="text" placeholder="State">
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form__col">
+                          <div class="form__box">
+                            <label class="form-label">
+                              <input class="form-input" name="coachesProspect5Position" id="coachesProspect5Position"
+                                type="text" placeholder="Position">
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__row">
+                        <div class="form__col">
+                          <div class="form__box">
+                            <label class="form-label">
+                              <input class="form-input integer" name="coachesProspect5Year" id="coachesProspect5Year"
+                                type="text" placeholder="Year">
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form__col">
+                          <div class="form__box">
+                            <label class="form-label">
+                              <input class="form-input url" name="coachesProspect5Link" id="coachesProspect5Link"
+                                type="text" placeholder="Hudl Link">
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <p>or</p>
+                      <div class="form-file">
+                        <input type="file" accept=".doc,.docx,.pdf" id="inputFile5" name="inputFile5"
+                          class="input_file">
+                        <label for="inputFile5">
+                          <svg class="icon-paperclip">
+                            <use xlink:href="img/svg/sprite.svg#paperclip">
+                            </use>
+                          </svg>
+                          <span>Add resume file</span>
+                        </label>
+                      </div>
+                    </div> -->
                   </div>
                   <div class="form__btns form__btns_justify js-form-btns">
                     <button type="button" href="scouts-and-coaches.html" class="btn btn_border btn_sm" id="prevForm">
@@ -210,7 +647,7 @@
                         </use>
                       </svg>
                       Back</button>
-                    <button type="submit" href="#" class="btn btn_primary" id="submitBtn">Sign up
+                    <button type="submit" href="#" class="btn btn_primary submitBtn" id="submitBtn">Sign up
                       <svg class="icon-arrow">
                         <use xlink:href="img/svg/sprite.svg#arrow">
                         </use>
@@ -239,6 +676,19 @@
     </div>
   </main>
   @@include("./html/_footer.html")
+  <div class="overlay">
+
+  </div>
+  <div class="modal" id="succsessModal">
+    <button class="close" type="button">
+    </button>
+    <div class="modal__body">
+      <h2><span>Thank You </span> <br> FOR SUBSCRIBE</h2>
+      <p>Your submission has been received!</p>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
   <script src="./js/libs.min.js"></script>
   <script src="./js/script.min.js"></script>
 </body>

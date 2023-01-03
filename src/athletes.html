@@ -243,19 +243,19 @@
               <h2>sign up form required fields: </h2>
               <p>Increase your exposure to college coaches by sharing your verified IGA Score</p>
               <div class="form-sign-up">
-                <form action="#">
+                <form action="#" id="athletesForm">
                   <div class="form__row">
                     <div class="form__col">
                       <div class="form__box">
                         <label class="form-label">
-                          <input class="form-input" type="text" placeholder="First Name">
+                          <input class="form-input" id="athletesFirstName" name="athletesFirstName"  type="text" placeholder="First Name">
                         </label>
                       </div>
                     </div>
                     <div class="form__col">
                       <div class="form__box">
                         <label class="form-label">
-                          <input class="form-input" type="text" placeholder="Last Name">
+                          <input class="form-input" id="athletesLastName" name="athletesLastName" type="text" placeholder="Last Name">
                         </label>
                       </div>
                     </div>
@@ -264,30 +264,14 @@
                     <div class="form__col">
                       <div class="form__box">
                         <label class="form-label">
-                          <input class="form-input" type="text" placeholder="Height">
+                          <input class="form-input numeric" id="athletesHeight" name="athletesHeight" type="text" placeholder="Height">
                         </label>
                       </div>
                     </div>
                     <div class="form__col">
                       <div class="form__box">
                         <label class="form-label">
-                          <input class="form-input" type="text" placeholder="Weight">
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form__row">
-                    <div class="form__col">
-                      <div class="form__box">
-                        <label class="form-label">
-                          <input class="form-input" type="text" placeholder="High School">
-                        </label>
-                      </div>
-                    </div>
-                    <div class="form__col">
-                      <div class="form__box">
-                        <label class="form-label">
-                          <input class="form-input" type="text" placeholder="City">
+                          <input class="form-input numeric"  id="athletesWeight" name="athletesWeight" type="text" placeholder="Weight">
                         </label>
                       </div>
                     </div>
@@ -296,30 +280,14 @@
                     <div class="form__col">
                       <div class="form__box">
                         <label class="form-label">
-                          <input class="form-input" type="text" placeholder="State">
+                          <input class="form-input" id="athletesHighSchool" name="athletesHighSchool" type="text" placeholder="High School">
                         </label>
                       </div>
                     </div>
                     <div class="form__col">
                       <div class="form__box">
                         <label class="form-label">
-                          <input class="form-input" type="text" placeholder="Position">
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form__row">
-                    <div class="form__col">
-                      <div class="form__box">
-                        <label class="form-label">
-                          <input class="form-input" type="text" placeholder="Year">
-                        </label>
-                      </div>
-                    </div>
-                    <div class="form__col">
-                      <div class="form__box">
-                        <label class="form-label">
-                          <input class="form-input" type="text" placeholder="Hudl Link">
+                          <input class="form-input" id="athletesCity" name="athletesCity" type="text" placeholder="City">
                         </label>
                       </div>
                     </div>
@@ -328,29 +296,57 @@
                     <div class="form__col">
                       <div class="form__box">
                         <label class="form-label">
-                          <input class="form-input" type="text" placeholder="Twitter">
+                          <input class="form-input" id="athletesState" name="athletesState" type="text" placeholder="State">
                         </label>
                       </div>
                     </div>
                     <div class="form__col">
                       <div class="form__box">
                         <label class="form-label">
-                          <input class="form-input" type="text" placeholder="Email">
+                          <input class="form-input" id="athletesPosition" name="athletesPosition"  type="text" placeholder="Position">
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form__row">
+                    <div class="form__col">
+                      <div class="form__box">
+                        <label class="form-label">
+                          <input class="form-input numeric" id="athletesYear" name="athletesYear" type="text" placeholder="Year">
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form__col">
+                      <div class="form__box">
+                        <label class="form-label">
+                          <input class="form-input url" id="athletesLink" name="athletesLink" type="text" placeholder="Hudl Link">
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form__row">
+                    <div class="form__col">
+                      <div class="form__box">
+                        <label class="form-label">
+                          <input class="form-input url" id="athletesTwitter" name="athletesTwitter" type="text" placeholder="Twitter">
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form__col">
+                      <div class="form__box">
+                        <label class="form-label">
+                          <input class="form-input email" id="athletesEmail" name="athletesEmail" type="text" placeholder="Email">
                         </label>
                       </div>
                     </div>
                   </div>
                   <div class="form__btns form__btns_text">
-                    <a href="#" class="btn btn_primary btn_submit">Sign up
+                    <button type="submit" class="btn btn_primary btn_submit">Sign up
                       <svg class="icon-arrow">
                         <use xlink:href="img/svg/sprite.svg#arrow">
                         </use>
                       </svg>
-                    </a>
-                    <!-- <div class="form-footer">
-                      <p>$199.99</p>
-                      <span>IGA Score will be sent via email within 5 business days.</span>
-                    </div> -->
+                    </button>
                   </div>
                 </form>
               </div>
@@ -373,7 +369,23 @@
       </div>
     </div>
   </main>
+  <div class="overlay">
+
+  </div>
+  
+  <div class="modal" id="succsessModal">
+    <button class="close">
+    </button>
+    <div class="modal__body">
+      <h2><span>Thank You </span> <br> FOR SUBSCRIBE</h2>
+      <p>Your submission has been received!</p>
+    </div>
+  </div>
   @@include("./html/_footer.html")
+  <script
+  src="https://code.jquery.com/jquery-3.6.3.min.js"
+  integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+  crossorigin="anonymous"></script>
   <script src="./js/libs.min.js"></script>
   <script src="./js/script.min.js"></script>
 </body>

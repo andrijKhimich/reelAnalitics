@@ -12,7 +12,7 @@
 //Media queries
 @mixin rh($width) {
   @media only screen and (min-width: #{$width}px),
-  (any-hover: hover) {
+  (hover: hover) {
     @content;
   }
 }

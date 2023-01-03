@@ -176,6 +176,8 @@ textarea.form-input {
   &__row {
     display: flex;
     justify-content: space-between;
+    position: relative;
+    padding-bottom: 13px;
 
     @include d(768) {
       flex-direction: column;
@@ -213,6 +215,11 @@ textarea.form-input {
 
   &:not(:first-child) {
     border-top: 1px solid rgba($blue, .4);
+    // display: none;
+  }
+
+  &>p {
+    margin-bottom: 10px !important;
   }
 }
 

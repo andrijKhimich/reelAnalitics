@@ -509,6 +509,15 @@ main {
       }
     }
   }
+  &__btns {
+    display: flex;
+    align-items: center;
+    .btn {
+      &:not(:last-child) {
+        margin-right: 16px;
+      }
+    }
+  }
 }
 
 .bg-blue {
