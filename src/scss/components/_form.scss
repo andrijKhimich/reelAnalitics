@@ -221,6 +221,14 @@ textarea.form-input {
   &>p {
     margin-bottom: 10px !important;
   }
+
+  &.visible {
+    display: block;
+  }
+
+  &.hidden {
+    display: none;
+  }
 }
 
 .form-remove {

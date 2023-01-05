@@ -128,13 +128,13 @@ const js = () => {
       presets: ['@babel/env']
     }))
     .pipe(dest(path.build.js))
-    // .pipe(uglify())
+    .pipe(uglify())
     .pipe(rename({
       extname: ".min.js"
     }))
     // .pipe(sourcemaps.write('./'))
     .pipe(dest(path.build.js))
-    // .pipe(browsersync.stream())
+    .pipe(browsersync.stream())
 }
 
 const img = () => {
