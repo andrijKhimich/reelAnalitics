@@ -116,23 +116,23 @@ const js = () => {
       "./src/js/async.js",
 
     ])
-    // .pipe(sourcemaps.init())
+    .pipe(sourcemaps.init())
     .pipe(concat("libs.min.js"))
-    // .pipe(sourcemaps.write('./'))
+    .pipe(sourcemaps.write('./'))
     .pipe(dest(path.build.js))
   return src(
       path.src.js,
     )
-    // .pipe(sourcemaps.init())
+    .pipe(sourcemaps.init())
     .pipe(babel({
       presets: ['@babel/env']
     }))
     .pipe(dest(path.build.js))
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(rename({
       extname: ".min.js"
     }))
-    // .pipe(sourcemaps.write('./'))
+    .pipe(sourcemaps.write('./'))
     .pipe(dest(path.build.js))
     .pipe(browsersync.stream())
 }

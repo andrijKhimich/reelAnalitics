@@ -28,6 +28,7 @@
 
   &_whitepaper {
     background-color: $blueDark;
+    pointer-events: initial;
   }
 
   &_news-article {

@@ -59,32 +59,65 @@ function openTab(evt, tabName) {
 }
 
 
-const modal = document.querySelector('.modal');
-const modalClose = document.querySelector('.close');
-if (modalClose) {
-  modalClose.addEventListener('click', () => {
-    closeModal();
+const successModal = document.querySelector('#successModal');
+const formModal = document.querySelector('#formModal');
+
+const modalCloseBtns = document.querySelectorAll('.close');
+if (modalCloseBtns) {
+  modalCloseBtns.forEach((closeBtn) => {
+    closeBtn.addEventListener('click', () => {
+      closeSuccessModal();
+      closeFormModal();
+    });
+  })
+}
+
+const openFormModalBtn = document.querySelector('#subscribeModal');
+if (openFormModalBtn) {
+  openFormModalBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    openFormModal();
   });
 }
-// close on click on overlay
-// if (modal) {
+
+
 const overlay = document.querySelector('.overlay');
+overlay.addEventListener('click', () => {
+  closeSuccessModal();
+  closeFormModal();
+});
 
-
-const openModal = () => {
-  modal.classList.add('show');
+const openSuccessModal = () => {
+  successModal.classList.add('show');
   document.body.style.cssText = `overflow: hidden;`;
   overlay.classList.add('show');
 }
-const closeModal = () => {
-  modal.classList.remove('show');
+const closeSuccessModal = () => {
+  successModal.classList.remove('show');
   document.body.style.cssText = '';
   overlay.classList.remove('show');
 }
 
-modal.addEventListener('click', (e) => {
-  if (e.target === modal) {
-    closeModal();
+const openFormModal = () => {
+  formModal.classList.add('show');
+  document.body.style.cssText = `overflow: hidden;`;
+  overlay.classList.add('show');
+}
+const closeFormModal = () => {
+  formModal.classList.remove('show');
+  document.body.style.cssText = '';
+  overlay.classList.remove('show');
+}
+
+successModal.addEventListener('click', (e) => {
+  if (e.target === successModal) {
+    closeSuccessModal();
+  }
+});
+
+formModal.addEventListener('click', (e) => {
+  if (e.target === formModal) {
+    closeFormModal();
   }
 });
 
@@ -140,7 +173,7 @@ if (fansForm) {
         url: ajaxurl,
         data: data,
         success: function (res) {
-          openModal();
+          openSuccessModal();
           clearForm();
         },
       });
@@ -195,7 +228,7 @@ if (mediaForm) {
         },
       });
 
-      openModal();
+      openSuccessModal();
       clearForm();
     }
   };
@@ -261,7 +294,7 @@ if (athletesForm) {
         },
       });
 
-      openModal();
+      openSuccessModal();
       clearForm();
     }
   };
@@ -312,7 +345,7 @@ if (teamForm) {
           // console.log(res)
         },
       });
-      openModal();
+      openSuccessModal();
       clearForm();
     }
   };
@@ -352,7 +385,7 @@ if (subscribeForm) {
         },
       });
 
-      openModal();
+      openSuccessModal();
       clearForm();
     }
   };
@@ -666,7 +699,7 @@ if (coachesSubmit) {
       formCounter = 1;
 
       addTemplateBtn.classList.add('disable');
-      openModal();
+      openSuccessModal();
       clearForm();
       clearInputFile();
       prevForm();

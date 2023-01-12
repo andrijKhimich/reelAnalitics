@@ -74,11 +74,14 @@
   &__row {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-    margin: 0 -15px 65px -15px;
+    margin: 0 -15px;
 
     @include d(1280) {
-      margin: 0 -15px 60px -15px;
+      flex-wrap: wrap;
+    }
+
+    @include d(992) {
+      margin: 0;
     }
   }
 
@@ -92,6 +95,10 @@
 
     p {
       margin-bottom: 16px;
+    }
+
+    a {
+      color: $primary;
     }
 
     img {

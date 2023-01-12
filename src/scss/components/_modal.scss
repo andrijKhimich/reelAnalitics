@@ -11,7 +11,10 @@
   transition: opacity $hover-duration $timing;
   max-width: 720px;
   width: 80%;
-
+  &__form {
+    width: 100%;
+    max-width: 840px;
+  }
   &.show {
     visibility: visible;
     opacity: 1;
