@@ -749,6 +749,37 @@ if (coachesSubmit) {
       }
     };
   });
+  $('#submitBtn').click(function () {
+    // Making the image file object
+    var file1 = $('#inputFile1').prop("files")[0];
+    var file2 = $('#inputFile2').prop("files")[0];
+    var file3 = $('#inputFile3').prop("files")[0];
+    var file4 = $('#inputFile4').prop("files")[0];
+    var file5 = $('#inputFile5').prop("files")[0];
+    // For Multiple Files:
+    // var file = $('#imageButton').prop("files");
+    // Making the form object
+    var form = new FormData();
+    // Adding the image to the form
+    form.append("inputFile1", file1);
+    form.append("inputFile2", file2);
+    form.append("inputFile3", file3);
+    form.append("inputFile4", file4);
+    form.append("inputFile5", file5);
+    // form.append("image[]", file) // for multiple files
+    // The AJAX call
+    $.ajax({
+      url: "../wp-content/themes/reelanalytics/assets/php/upload.php",
+      type: "POST",
+      data:  form,
+      contentType: false,
+      processData: false,
+      success: function (result) {
+        // document.write(result);
+        console.log(result)
+      }
+    });
+  });
 }
 
 // Fix table head
