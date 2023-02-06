@@ -1,0 +1,398 @@
+.news {
+  color: $white;
+  padding-bottom: 130px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 64px;
+
+    @include d(992) {
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__subtitle {
+    margin-left: 144px;
+    max-width: 415px;
+
+    @include d(1280) {
+      margin-left: 40px;
+    }
+
+    @include d(992) {
+      max-width: 100%;
+      margin-left: 0;
+    }
+
+    p {
+      margin-bottom: 48px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+
+    @include d(1024) {
+      margin: 0 -10px;
+    }
+  }
+
+  &__col {
+    padding: 0 15px;
+    flex: 0 0 25%;
+    max-width: 25%;
+    margin-bottom: 28px;
+
+    @include d(992) {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    @include d(768) {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    &:first-child,
+    &:nth-child(5) {
+
+      .news-card {
+        &__header {
+          margin-bottom: 32px;
+
+          .tags {
+            // margin-bottom: 40px;
+          }
+
+          img {
+            display: none;
+          }
+        }
+
+        &__body {
+          margin-bottom: 75px;
+
+          @include d(1024) {
+            margin-bottom: 30px;
+          }
+
+          h5 {
+            margin-bottom: 24px;
+          }
+        }
+
+        &__footer {
+          margin-top: auto;
+          margin-bottom: 0;
+
+          span {
+            display: none;
+          }
+        }
+
+        &__banner {
+          display: none;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      .news-card {
+        &__header {
+          img {
+            margin-left: 11px;
+            max-width: 54px;
+            margin-top: 5px;
+          }
+        }
+
+        &__banner {
+          margin-bottom: 48px;
+
+          @include d(1024) {
+            margin-bottom: 30px;
+          }
+        }
+
+        &__body {
+          h5 {
+            margin-bottom: 16px;
+            font-size: 20px;
+            line-height: 1.4em;
+          }
+
+          p {
+            display: none;
+          }
+        }
+
+        &__footer {
+          p {
+            font-size: 10px;
+            font-weight: 700;
+          }
+
+          span {
+            line-height: 1.2em;
+            color: #B8BBD0;
+          }
+        }
+      }
+    }
+
+    &:nth-child(3),
+    &:nth-child(4) {
+      flex: 0 0 50%;
+      max-width: 50%;
+
+      @include d(768) {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+
+      .news-card {
+        padding-bottom: 40px;
+
+        &__header {
+          img {
+            max-width: 108px;
+
+            @include d(992) {
+              max-width: 54px;
+              margin-top: 5px;
+            }
+          }
+        }
+
+        &__body {
+          margin-top: auto;
+          margin-bottom: 20px;
+          padding: 0 24px;
+
+          @include d(1366) {
+            padding: 0;
+          }
+
+          h5 {
+            font-size: 32px;
+          }
+
+          p {
+            display: none;
+          }
+        }
+
+        &__banner {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          // z-index: -1;
+        }
+
+        &__footer {
+          padding: 8px 24px 0 24px;
+          margin-top: 0;
+
+          @include d(1366) {
+            padding: 8px 0 0 0;
+          }
+
+          p,
+          span {
+            font-size: 16px;
+            line-height: 1.6em;
+          }
+
+          &::before {
+            left: 24px;
+
+            @include d(1366) {
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+
+    &_social {
+      margin-bottom: 28px;
+      flex: 0 0 25%;
+      max-width: 25%;
+      padding: 0 15px;
+
+      @include d(992) {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+
+      @include d(768) {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+
+      .news-card__header {
+        img {
+          width: 22px;
+          margin-top: 5px;
+        }
+      }
+
+      .news-card {
+        background-color: $blueLight;
+      }
+
+      .news-card__banner {
+        margin-bottom: 32px;
+        position: relative;
+      }
+
+      h5 {
+        display: none;
+      }
+
+      p {
+        a {
+          color: #75A4EA;
+        }
+      }
+
+      .news-card__footer {
+        display: flex;
+        align-items: center;
+
+        &::before {
+          display: none;
+        }
+
+        h6 {
+          color: $primary;
+        }
+
+        img {
+          width: 40px;
+          height: 40px;
+          flex: 0 0 40px;
+          border-radius: 50%;
+          overflow: hidden;
+          margin-right: 16px;
+        }
+
+        p {
+          font-size: 10px;
+          font-weight: 700;
+        }
+
+        span {
+          line-height: 1.2em;
+          color: #b8bbd0;
+        }
+      }
+    }
+  }
+
+  &-card {
+    border: 1px solid $blueLight;
+    padding: 16px 16px 32px 16px;
+    position: relative;
+    min-height: 448px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    // justify-content: space-between;
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 24px;
+      position: relative;
+      z-index: 1;
+
+      img {
+        height: auto;
+      }
+    }
+
+    &__body {
+      padding: 0 8px;
+      font-size: 16px;
+
+      @include d(1366) {
+        padding: 0;
+      }
+
+      h5 {
+        position: relative;
+      }
+      p {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
+      }
+    }
+
+    &__banner {
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(59, 64, 104, 0.4);
+      }
+
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__footer {
+      position: relative;
+      padding: 8px 8px 0 8px;
+      display: flex;
+      align-items: center;
+      margin-top: auto;
+      margin-bottom: 0;
+
+      @include d(1366) {
+        padding: 8px 0 0 0;
+      }
+
+      &::before {
+        content: "";
+        width: 80px;
+        height: 1px;
+        background-color: $primary;
+        position: absolute;
+        top: 0;
+        left: 8px;
+
+        @include d(1366) {
+          left: 0;
+        }
+      }
+
+      p {
+        font-size: 12px;
+        font-weight: 500;
+        margin-right: 4px;
+      }
+
+      span {
+        font-size: 10px;
+        flex-shrink: 0;
+      }
+    }
+  }
+}

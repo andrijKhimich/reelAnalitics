@@ -1,0 +1,38 @@
+.partners {
+  overflow: hidden;
+  padding: 80px 0;
+  flex-shrink: 0;
+  display: flex;
+  will-change: transform;
+  animation-play-state: paused;
+
+  @include d(992) {
+    padding: 40px 0;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    height: 72px;
+    will-change: transform;
+    transform: translateX(-100%);
+    animation: runItems 60s linear infinite forwards;
+  }
+
+  &__item {
+    flex-shrink: 0;
+    margin: 0 70px;
+  }
+}
+
+
+@keyframes runItems {
+  0% {
+    transform: translateX(0)
+  }
+
+  100% {
+    transform: translateX(-100%)
+  }
+}

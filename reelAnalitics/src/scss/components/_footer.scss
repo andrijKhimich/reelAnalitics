@@ -1,0 +1,195 @@
+// footer
+.footer {
+  padding: 80px 0 40px 0;
+  font-size: 16px;
+
+  @include d(992) {
+    padding-bottom: 0;
+  }
+
+  &__row {
+    display: flex;
+    margin: 0 -15px;
+    justify-content: flex-end;
+
+    @include d(992) {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+  }
+
+  &__col {
+    padding: 0 15px;
+    margin-right: 80px;
+    max-width: 254px;
+    flex: 0 0 254px;
+
+    @include d(1280) {
+      margin-right: 20px;
+    }
+
+    @include d(992) {
+      max-width: 50%;
+      flex: 0 0 50%;
+      margin-right: 0;
+      margin-bottom: 40px;
+    }
+
+    @include d(576) {
+      max-width: 100%;
+      flex: 0 0 100%;
+    }
+
+    &:first-child {
+      flex: 0 0 204px;
+      margin-right: auto;
+      display: flex;
+      flex-direction: column;
+
+      @include d(992) {
+        max-width: 50%;
+        flex: 0 0 50%;
+        margin-right: 0;
+        order: 2;
+      }
+
+      @include d(576) {
+        max-width: 100%;
+        flex: 0 0 100%;
+        text-align: center;
+      }
+    }
+
+    &:nth-child(2) {
+      flex: 0 0 142px;
+
+      @include d(992) {
+        max-width: 50%;
+        flex: 0 0 50%;
+        order: 1;
+      }
+
+      @include d(576) {
+        max-width: 100%;
+        flex: 0 0 100%;
+      }
+
+    }
+
+    @include d(1280) {
+      // padding: 0 10px;
+    }
+  }
+
+  &__logo {
+    max-width: 134px;
+    // margin-bottom: 160px;
+
+    @include d(992) {
+      // margin-bottom: 100px;
+    }
+
+    @include d(576) {
+      margin: 0 auto 30px auto;
+    }
+  }
+
+  &__box {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+
+      @include d(992) {
+        margin-bottom: 20px;
+      }
+    }
+
+    h6 {
+      color: $primary;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+    }
+
+    p a {
+      position: relative;
+      color: $primary;
+
+      @include rh(1024) {
+        &:hover {
+          &::before {
+            width: 80%;
+          }
+        }
+      }
+
+      &::before {
+        content: "";
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-color: $primary;
+        transition: width $hover-duration $timing;
+      }
+    }
+  }
+
+  &__nav {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 140%;
+
+    li {
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+
+      a {
+        line-height: 1.4em;
+        transition: $hover-duration $timing;
+
+        @include rh (0124) {
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+.copyright {
+  font-size: 12px;
+  font-weight: 500;
+  color: $blue;
+  opacity: .5;
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.social-list {
+  display: flex;
+  align-items: center;
+
+  li {
+
+    &:not(:last-child) {
+      margin-right: 18px;
+    }
+  }
+
+  a {
+    @include rh (0124) {
+      &:hover {
+        svg {
+          fill: $primary;
+        }
+      }
+    }
+
+    img {
+      width: 20px;
+      height: 18px;
+    }
+  }
+}

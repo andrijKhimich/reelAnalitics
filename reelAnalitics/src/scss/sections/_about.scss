@@ -1,0 +1,49 @@
+.about {
+  padding: 160px 0 0 0;
+  color: $white;
+
+  @include d(1024) {
+    padding: 120px 0 0 0;
+  }
+
+  @include d(992) {
+    padding: 80px 0 0 0;
+  }
+
+  &__cta {
+    border-radius: 32px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @include d(992) {
+      border-radius: 16px;
+      margin-bottom: 80px;
+    }
+  }
+
+  &__row {
+    &:not(:last-child) {
+      margin-bottom: 160px;
+
+      @include d(1280) {
+        margin-bottom: 120px;
+      }
+
+      @include d(992) {
+        margin-bottom: 80px;
+      }
+    }
+  }
+
+  &__content {
+    margin-left: 144px;
+
+    @include d(1280) {
+      margin-left: 40px;
+    }
+
+    @include d(992) {
+      margin-left: 0;
+    }
+  }
+}

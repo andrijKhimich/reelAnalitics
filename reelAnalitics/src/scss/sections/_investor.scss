@@ -1,0 +1,170 @@
+.investor {
+  color: $white;
+  padding-bottom: 0;
+
+  @include d(1280) {
+    padding-bottom: 0;
+  }
+
+  @include d(992) {
+    padding-bottom: 0;
+  }
+
+  &__content {
+    max-width: 530px;
+    margin-left: 0;
+
+    @include d(1280) {
+      margin-left: 0;
+    }
+
+    @include d(992) {
+      margin-bottom: 40px;
+    }
+  }
+
+  .section__col {
+    &:first-child {
+      order: 0;
+      padding: 0 15px;
+    }
+
+    &:last-child {
+      padding: 0;
+    }
+  }
+}
+
+.sportlist {
+  @include d(992) {
+    padding-bottom: 0;
+  }
+
+  &__content {
+    max-width: 530px;
+  }
+}
+
+
+.panoramic {
+  padding-top: 0;
+  border-radius: 0 0 32px 32px;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+  color: $white;
+
+  @include d(1280) {
+    padding-top: 0;
+  }
+
+  @include d(992) {
+    padding: 0;
+    border-radius: 0;
+  }
+
+  &__img {
+    @include d(992) {
+      margin: 0 -15px;
+    }
+  }
+}
+
+.article {
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -15px;
+
+    @include d(1280) {
+      flex-wrap: wrap;
+    }
+
+    @include d(992) {
+      margin: 0;
+    }
+  }
+
+  &__subtitle {
+    padding: 0 15px;
+  }
+
+  &__content {
+    padding: 0 15px;
+    max-width: 864px;
+
+    p {
+      margin-bottom: 16px;
+    }
+
+    a {
+      color: $primary;
+    }
+
+    img {
+      margin: 16px 0;
+    }
+
+    @include d(1280) {
+      max-width: 100%;
+    }
+
+    ul {
+      margin: 16px 0;
+
+      li {
+        padding-left: 15px;
+        position: relative;
+
+        &::before {
+          content: "";
+          width: 5px;
+          height: 5px;
+          background-color: $primary;
+          border-radius: 50%;
+          position: absolute;
+          top: 12px;
+          left: 0;
+        }
+      }
+    }
+
+    ol {
+      margin: 16px 0;
+      counter-reset: my-awesome-counter;
+
+      li {
+        position: relative;
+        padding-left: 15px;
+
+        &::before {
+          position: absolute;
+          left: 0;
+          counter-increment: my-awesome-counter;
+          content: counter(my-awesome-counter) ". ";
+          color: $primary;
+        }
+      }
+    }
+  }
+
+  &__double {
+    column-count: 2;
+    column-gap: 30px;
+    margin-top: 24px;
+
+    p {
+      margin-bottom: 24px;
+    }
+
+    @include d(992) {
+      column-count: 1;
+    }
+  }
+
+  &__img {
+    @include d(992) {
+      margin: 0 -15px;
+    }
+  }
+}
