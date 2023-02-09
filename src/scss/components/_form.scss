@@ -51,13 +51,15 @@
 
   &-input {
     width: 100%;
-    border-radius: 8px;
-    border: 1px solid $gray;
+    border-radius: 3px;
     font-size: 16px;
-    letter-spacing: 0.01em;
     font-weight: 500;
-    line-height: 18px;
-    padding: 15px 16px;
+    padding: 0 15px;
+    height: 40px;
+    line-height: 40px;
+    color: #33475b;
+    border: 1px solid #cbd6e2;
+    background-color: #f5f8fa;
     transition: border-color $hover-duration $timing;
 
     &.error {
