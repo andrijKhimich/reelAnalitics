@@ -270,6 +270,10 @@ textarea.form-input {
   }
 }
 
+.wpcf7 form {
+  position: relative;
+}
+
 .wpcf7 form .wpcf7-response-output {
   padding: 0;
   margin: 10px 0 0 0;
@@ -303,4 +307,8 @@ textarea.form-input {
 .wpcf7 form.sent .wpcf7-response-output {
   border-color: transparent;
   color: #1d751d;
+}
+
+#submitBtn.disable {
+  pointer-events: none;
 }
