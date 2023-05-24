@@ -1,3 +1,4 @@
+console.log("Hello");
 const toggleMenu = () => {
   const burger = document.querySelector(".js-burger");
   const menu = document.querySelector(".js-header-nav");
@@ -461,7 +462,7 @@ if (coachesSubmit) {
     }
   };
 
-  var wpcf7Elm = document.querySelector('.wpcf7-form');
+  // var wpcf7Elm = document.querySelector('.wpcf7-form');
   // wpcf7Elm.addEventListener('wpcf7submit', function (event) {
   //   console.log(event)
 
@@ -784,10 +785,10 @@ if (coachesSubmit) {
 
       addTemplateBtn.classList.add('disable');
       submitBtn.classList.add('disable');
-      // openSuccessModal();
+      openSuccessModal();
       // clearForm();
       // clearInputFile();
-      // prevForm();
+      prevForm();
     },
   };
 
@@ -837,6 +838,7 @@ if (coachesSubmit) {
 
       } else {
         addTemplateBtn.classList.remove('disable');
+        submitBtn.classList.remove('disable');
       }
     };
   });
