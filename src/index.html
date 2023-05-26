@@ -1,423 +1,484 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/style.min.css" />
+		<title>Project | Home</title>
+	</head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/style.min.css">
-  <title>Project | Home</title>
-</head>
+	<body>
+		@@include("./html/_header.html")
+		<main class="main home-page">
+			<div class="hero" style="background-image: url(./img/home/hero.jpg)">
+				<div class="hero-video">
+					<video loop muted autoplay>
+						<source src="./video/video.mp4" type="video/mp4" />
+						<source src="./video/video.ogv" type="video/ogg" />
+						<source src="./video/video.webm" type="video/webm" />
+						Your browser doesn't support HTML5 video tag.
+					</video>
+				</div>
+				<div class="container">
+					<div class="hero__content">
+						<h5 class="subtitle">Free Demo</h5>
+						<h1>
+							Verified In-Game Athleticism Data <span>Powered by AI.</span>
+						</h1>
+						<p>
+							Analyzing game film to verify athleticism for more accurate player
+							evaluation
+						</p>
+					</div>
+					<div class="hero__row">
+						<div class="hero__box">
+							<p>Discover & Evaluate Talent:</p>
+							<h4>Scouts & Coaches</h4>
+							<a href="#" class="link"
+								>FREE Verified Athleticism Data
+								<svg class="icon-arrow">
+									<use xlink:href="img/svg/sprite.svg#arrow"></use>
+								</svg>
+							</a>
+						</div>
+						<div class="hero__box">
+							<p>Get Evaluated & Verified:</p>
+							<h4>Athletes & Teams</h4>
+							<a href="#" class="link"
+								>Get Verified IGA Scores
+								<svg class="icon-arrow">
+									<use xlink:href="img/svg/sprite.svg#arrow"></use>
+								</svg>
+							</a>
+						</div>
+						<div class="hero__box">
+							<p>Deeper Player Insights:</p>
+							<h4>Fans & Media</h4>
+							<a href="#" class="link"
+								>Get Player Insights and Content
+								<svg class="icon-arrow">
+									<use xlink:href="img/svg/sprite.svg#arrow"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section solution">
+				<div class="container">
+					<div class="section__row">
+						<div class="section__col">
+							<div class="section__img">
+								<img src="./img/home/solution.jpg" alt="solution" />
+							</div>
+						</div>
+						<div class="section__col">
+							<div class="section__content">
+								<h2>Reel Analytics Solutions <span>for Everyone.</span></h2>
+								<p>
+									Combine the power of AI, predictive analytics and advanced
+									performance data to automate college football and Combine the
+									power of AI,
+								</p>
+								<div class="section__btns">
+									<a href="#" class="btn btn_primary"
+										>SCHEDULE A DEMO
+										<svg class="icon-arrow">
+											<use xlink:href="img/svg/sprite.svg#arrow"></use>
+										</svg>
+									</a>
+									<a href="#" class="btn btn_primary"
+										>SIGN UP
+										<svg class="icon-arrow">
+											<use xlink:href="img/svg/sprite.svg#arrow"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section iga">
+				<div class="container">
+					<div class="section__row">
+						<div class="section__col">
+							<div class="section__content section__content_lg">
+								<h2>IGA <span>Score.</span></h2>
+								<p>
+									<strong
+										>Using position-specific metrics extracted directly from
+										prospects' film, we created the In-Game Athleticism (IGA)
+										Score to measure players' athleticism in the context of a
+										game.</strong
+									>
+								</p>
+								<p>
+									We trained our scoring model by measuring the in-game
+									athleticism of more than 15,000 college and NFL players for
+									current and historical context.
+								</p>
+								<p>
+									Our IGA Scores have been used by several FBS and FCS programs,
+									including the University of Georgia, University of Michigan,
+									and Jackson State University to verify the athletic ability of
+									high school and transfer portal prospects and players on their
+									roster.
+								</p>
+							</div>
+						</div>
+						<div class="section__col">
+							<div class="section__img">
+								<img src="./img/home/solution.jpg" alt="solution" />
+							</div>
+						</div>
+					</div>
+					<div class="iga__img">
+						<img src="./img/about/chart.svg" alt="data" />
+					</div>
+				</div>
+			</div>
+			<div class="partners">
+				<div class="partners__row">
+					<a href="#" target="_blank" class="partners__item">
+						<img src="./img/home/partner-1.svg" alt="partners" />
+					</a>
+					<a href="#" target="_blank" class="partners__item">
+						<img src="./img/home/partner-2.svg" alt="partners" />
+					</a>
+					<a href="#" target="_blank" class="partners__item">
+						<img src="./img/home/partner-3.svg" alt="partners" />
+					</a>
+					<a href="#" target="_blank" class="partners__item">
+						<img src="./img/home/partner-4.svg" alt="partners" />
+					</a>
+					<a href="#" target="_blank" class="partners__item">
+						<img src="./img/home/partner-5.svg" alt="partners" />
+					</a>
+					<a href="#" target="_blank" class="partners__item">
+						<img src="./img/home/partner-6.svg" alt="partners" />
+					</a>
+					<a href="#" target="_blank" class="partners__item">
+						<img src="./img/home/partner-7.svg" alt="partners" />
+					</a>
+					<a href="#" target="_blank" class="partners__item">
+						<img src="./img/home/partner-8.svg" alt="partners" />
+					</a>
+				</div>
+				<div class="partners__row">
+					<a href="#" target="_blank" class="partners__item">
+						<img src="./img/home/partner-1.svg" alt="partners" />
+					</a>
+					<a href="#" target="_blank" class="partners__item">
+						<img src="./img/home/partner-2.svg" alt="partners" />
+					</a>
+					<a href="#" target="_blank" class="partners__item">
+						<img src="./img/home/partner-3.svg" alt="partners" />
+					</a>
+					<a href="#" target="_blank" class="partners__item">
+						<img src="./img/home/partner-4.svg" alt="partners" />
+					</a>
+					<a href="#" target="_blank" class="partners__item">
+						<img src="./img/home/partner-5.svg" alt="partners" />
+					</a>
+					<a href="#" target="_blank" class="partners__item">
+						<img src="./img/home/partner-6.svg" alt="partners" />
+					</a>
+					<a href="#" target="_blank" class="partners__item">
+						<img src="./img/home/partner-7.svg" alt="partners" />
+					</a>
+					<a href="#" target="_blank" class="partners__item">
+						<img src="./img/home/partner-8.svg" alt="partners" />
+					</a>
+				</div>
+			</div>
+			<div class="section news bg-blue">
+				<div class="container">
+					<div class="news__header">
+						<div class="news__title">
+							<h2>RA <span>News, Content & Tweets.</span></h2>
+						</div>
+						<div class="news__subtitle">
+							<p>
+								Get the latest in recruiting innovation, RA whitepapers and
+								other recruitment news.
+							</p>
+							<button
+								class="btn btn_primary"
+								data-href="subscribeModal"
+								id="subscribeModal">
+								SUBSCRIBE FOR UPDATES
+								<svg class="icon-arrow">
+									<use xlink:href="img/svg/sprite.svg#arrow"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<div class="news__container">
+						<div class="news__col">
+							<div class="news-card">
+								<div class="news-card__header">
+									<div class="tags">
+										<div class="tag tag_new">New!</div>
+										<div class="tag tag_whitepaper">WHITEPAPER</div>
+									</div>
+									<img src="./img/espn.png" alt="espn" />
+								</div>
+								<div class="news-card__body">
+									<div class="news-card__banner">
+										<img src="./img/home/news.jpg" alt="news" />
+									</div>
+									<h5>Technology That Wins</h5>
+									<p>
+										The how and the why to gaining a competitive advantage using
+										tracking data from computer vision for objective talent
+										evaluation and advanced scouting
+									</p>
+								</div>
+								<div class="news-card__footer">
+									<p>Cory Yates, MBA | David Hahn, PHD | Kratik Malhotra, MS</p>
+								</div>
+							</div>
+						</div>
+						<div class="news__col">
+							<div class="news-card">
+								<div class="news-card__header">
+									<div class="tags">
+										<div class="tag tag_new">New!</div>
+										<div class="tag tag_news-article">NEWS ARTICLE</div>
+									</div>
+									<img src="./img/espn.png" alt="espn" />
+								</div>
+								<div class="news-card__body">
+									<div class="news-card__banner">
+										<img src="./img/home/news.jpg" alt="news" />
+									</div>
+									<h5>
+										2021 NFL analytics survey: Most and least analytically
+										inclined teams, future GM candidates, more
+									</h5>
+									<p>
+										The how and the why to gaining a competitive advantage using
+										tracking data from computer vision for objective talent
+										evaluation and advanced scouting
+									</p>
+								</div>
+								<div class="news-card__footer">
+									<p>Seth Walder,</p>
+									<span>October 6. 2021</span>
+								</div>
+							</div>
+						</div>
+						<div class="news__col">
+							<div class="news-card">
+								<div class="news-card__header">
+									<div class="tags">
+										<div class="tag tag_new">New!</div>
+										<div class="tag tag_whitepaper">NEWS ARTICLE</div>
+									</div>
+									<img src="./img/espn.png" alt="espn" />
+								</div>
+								<div class="news-card__body">
+									<div class="news-card__banner">
+										<img src="./img/home/news.jpg" alt="news" />
+									</div>
+									<h5>
+										2021 NFL analytics survey: Most and least analytically
+										inclined teams, future GM candidates, more
+									</h5>
+									<p>
+										The how and the why to gaining a competitive advantage using
+										tracking data from computer vision for objective talent
+										evaluation and advanced scouting
+									</p>
+								</div>
+								<div class="news-card__footer">
+									<p>Seth Walder,</p>
+									<span>October 6. 2021</span>
+								</div>
+							</div>
+						</div>
+						<div class="news__col">
+							<div class="news-card">
+								<div class="news-card__header">
+									<div class="tags">
+										<div class="tag tag_new">New!</div>
+										<div class="tag tag_news-article">NEWS ARTICLE</div>
+									</div>
+									<img src="./img/espn.png" alt="espn" />
+								</div>
+								<div class="news-card__body">
+									<div class="news-card__banner">
+										<img src="./img/home/news.jpg" alt="news" />
+									</div>
+									<h5>
+										2021 NFL analytics survey: Most and least analytically
+										inclined teams, future GM candidates, more
+									</h5>
+									<p>
+										The how and the why to gaining a competitive advantage using
+										tracking data from computer vision for objective talent
+										evaluation and advanced scouting
+									</p>
+								</div>
+								<div class="news-card__footer">
+									<p>Seth Walder,</p>
+									<span>October 6. 2021</span>
+								</div>
+							</div>
+						</div>
+						<div class="news__col">
+							<div class="news-card">
+								<div class="news-card__header">
+									<div class="tags">
+										<div class="tag tag_new">New!</div>
+										<div class="tag tag_whitepaper">WHITEPAPER</div>
+									</div>
+									<img src="./img/espn.png" alt="espn" />
+								</div>
+								<div class="news-card__body">
+									<div class="news-card__banner">
+										<img src="./img/home/news.jpg" alt="news" />
+									</div>
+									<h5>Technology That Wins</h5>
+									<p>
+										The how and the why to gaining a competitive advantage using
+										tracking data from computer vision for objective talent
+										evaluation and advanced scouting
+									</p>
+								</div>
+								<div class="news-card__footer">
+									<p>Cory Yates, MBA | David Hahn, PHD | Kratik Malhotra, MS</p>
+								</div>
+							</div>
+						</div>
+						<div class="news__col_social">
+							<div class="news-card">
+								<div class="news-card__header">
+									<div class="tags">
+										<div class="tag tag_new">New!</div>
+										<div class="tag tag_tweet">tweet</div>
+									</div>
+									<img
+										class="social-icon"
+										src="./img/home/twitter.svg"
+										alt="twitter" />
+								</div>
+								<div class="news-card__body">
+									<div class="news-card__banner">
+										<img src="./img/home/news.jpg" alt="news" />
+									</div>
+									<h5>Technology That Wins</h5>
+									<p>
+										<a href="#" target="_blank">#undercruited</a> Glynn
+										Academy’s Tyson Rooks (6050, 180) is the quintessential
+										hidden gem with elite-level traits found…
+										<a href="#" target="_blank">View Tweet</a>
+									</p>
+								</div>
 
-<body>
-  @@include("./html/_header.html")
-  <main class="main home-page">
-    <div class="hero" style="background-image: url(./img/home/hero.jpg)">
-      <div class="hero-video">
-        <video loop muted autoplay>
-          <source src="./video/video.mp4" type="video/mp4">
-          <source src="./video/video.ogv" type="video/ogg">
-          <source src="./video/video.webm" type="video/webm">
-          Your browser doesn't support HTML5 video tag.
-        </video>
-      </div>
-      <div class="container">
-        <div class="hero__content">
-          <h5 class="subtitle">Free Demo</h5>
-          <h1>Verified In-Game Athleticism Data <span>Powered by AI.</span></h1>
-          <p>Analyzing game film to verify athleticism for more accurate player evaluation</p>
-        </div>
-        <div class="hero__row">
-          <div class="hero__box">
-            <p>Discover & Evaluate Talent:</p>
-            <h4>Scouts & Coaches</h4>
-            <a href="#" class="link">FREE Verified Athleticism Data
-              <svg class="icon-arrow">
-                <use xlink:href="img/svg/sprite.svg#arrow">
-                </use>
-              </svg>
-            </a>
-          </div>
-          <div class="hero__box">
-            <p>Get Evaluated & Verified:</p>
-            <h4>Athletes & Teams</h4>
-            <a href="#" class="link">Get Verified IGA Scores
-              <svg class="icon-arrow">
-                <use xlink:href="img/svg/sprite.svg#arrow">
-                </use>
-              </svg>
-            </a>
-          </div>
-          <div class="hero__box">
-            <p>Deeper Player Insights:</p>
-            <h4>Fans & Media</h4>
-            <a href="#" class="link">Get Player Insights and Content
-              <svg class="icon-arrow">
-                <use xlink:href="img/svg/sprite.svg#arrow">
-                </use>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section solution">
-      <div class="container">
-        <div class="section__row">
-          <div class="section__col">
-            <div class="section__img">
-              <img src="./img/home/solution.jpg" alt="solution">
-            </div>
-          </div>
-          <div class="section__col">
-            <div class="section__content">
-              <h2>Reel Analytics Solutions <span>for Everyone.</span></h2>
-              <p>Combine the power of AI, predictive analytics and advanced performance data to automate college
-                football and Combine the power of AI, </p>
-              <div class="section__btns">
-                <a href="#" class="btn btn_primary">SCHEDULE A DEMO
-                  <svg class="icon-arrow">
-                    <use xlink:href="img/svg/sprite.svg#arrow">
-                    </use>
-                  </svg>
-                </a>
-                <a href="#" class="btn btn_primary">SIGN UP
-                  <svg class="icon-arrow">
-                    <use xlink:href="img/svg/sprite.svg#arrow">
-                    </use>
-                  </svg>
-                </a>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section iga">
-      <div class="container">
-        <div class="section__row">
-          <div class="section__col">
-            <div class="section__content section__content_lg">
-              <h2>IGA <span>Score.</span> </h2>
-              <p><strong>Using position-specific metrics extracted directly from prospects' film, we created the In-Game
-                  Athleticism (IGA) Score to measure players' athleticism in the context of a game.</strong></p>
-              <p>We trained our scoring model by measuring the in-game athleticism of more than 15,000 college and NFL
-                players for current and historical context. </p>
-              <p>Our IGA Scores have been used by several FBS and FCS programs, including the University of Georgia,
-                University of Michigan, and Jackson State University to verify the athletic ability of high school and
-                transfer portal prospects and players on their roster.</p>
-            </div>
-          </div>
-          <div class="section__col">
-            <div class="section__img">
-              <img src="./img/home/solution.jpg" alt="solution">
-            </div>
-          </div>
-        </div>
-        <div class="iga__img">
-          <img src="./img/about/chart.svg" alt="data">
-        </div>
-      </div>
-    </div>
-    <div class="partners">
-      <div class="partners__row">
-        <a href="#" target="_blank" class="partners__item">
-          <img src="./img/home/partner-1.svg" alt="partners">
-        </a>
-        <a href="#" target="_blank" class="partners__item">
-          <img src="./img/home/partner-2.svg" alt="partners">
-        </a>
-        <a href="#" target="_blank" class="partners__item">
-          <img src="./img/home/partner-3.svg" alt="partners">
-        </a>
-        <a href="#" target="_blank" class="partners__item">
-          <img src="./img/home/partner-4.svg" alt="partners">
-        </a>
-        <a href="#" target="_blank" class="partners__item">
-          <img src="./img/home/partner-5.svg" alt="partners">
-        </a>
-        <a href="#" target="_blank" class="partners__item">
-          <img src="./img/home/partner-6.svg" alt="partners">
-        </a>
-        <a href="#" target="_blank" class="partners__item">
-          <img src="./img/home/partner-7.svg" alt="partners">
-        </a>
-        <a href="#" target="_blank" class="partners__item">
-          <img src="./img/home/partner-8.svg" alt="partners">
-        </a>
-      </div>
-      <div class="partners__row">
-        <a href="#" target="_blank" class="partners__item">
-          <img src="./img/home/partner-1.svg" alt="partners">
-        </a>
-        <a href="#" target="_blank" class="partners__item">
-          <img src="./img/home/partner-2.svg" alt="partners">
-        </a>
-        <a href="#" target="_blank" class="partners__item">
-          <img src="./img/home/partner-3.svg" alt="partners">
-        </a>
-        <a href="#" target="_blank" class="partners__item">
-          <img src="./img/home/partner-4.svg" alt="partners">
-        </a>
-        <a href="#" target="_blank" class="partners__item">
-          <img src="./img/home/partner-5.svg" alt="partners">
-        </a>
-        <a href="#" target="_blank" class="partners__item">
-          <img src="./img/home/partner-6.svg" alt="partners">
-        </a>
-        <a href="#" target="_blank" class="partners__item">
-          <img src="./img/home/partner-7.svg" alt="partners">
-        </a>
-        <a href="#" target="_blank" class="partners__item">
-          <img src="./img/home/partner-8.svg" alt="partners">
-        </a>
-      </div>
-    </div>
-    <div class="section news bg-blue">
-      <div class="container">
-        <div class="news__header">
-          <div class="news__title">
-            <h2>RA <span>News, Content & Tweets.</span></h2>
-          </div>
-          <div class="news__subtitle">
-            <p>Get the latest in recruiting innovation, RA whitepapers and other recruitment news.</p>
-            <button class="btn btn_primary" data-href="subscribeModal" id="subscribeModal">SUBSCRIBE FOR UPDATES
-              <svg class="icon-arrow">
-                    <use xlink:href="img/svg/sprite.svg#arrow">
-                    </use>
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div class="news__container">
-          <div class="news__col">
-            <div class="news-card">
-              <div class="news-card__header">
-                <div class="tags">
-                  <div class="tag tag_new">New!</div>
-                  <div class="tag tag_whitepaper">WHITEPAPER</div>
-                </div>
-                <img src="./img/espn.png" alt="espn">
-              </div>
-              <div class="news-card__body">
-                <div class="news-card__banner">
-                  <img src="./img/home/news.jpg" alt="news">
-                </div>
-                <h5>Technology That Wins</h5>
-                <p>The how and the why to gaining a competitive advantage using tracking data from computer vision for
-                  objective talent evaluation and advanced scouting</p>
-              </div>
-              <div class="news-card__footer">
-                <p>Cory Yates, MBA | David Hahn, PHD | Kratik Malhotra, MS</p>
-              </div>
-            </div>
-          </div>
-          <div class="news__col">
-            <div class="news-card">
-              <div class="news-card__header">
-                <div class="tags">
-                  <div class="tag tag_new">New!</div>
-                  <div class="tag tag_news-article">NEWS ARTICLE</div>
-                </div>
-                <img src="./img/espn.png" alt="espn">
-              </div>
-              <div class="news-card__body">
-                <div class="news-card__banner">
-                  <img src="./img/home/news.jpg" alt="news">
-                </div>
-                <h5>2021 NFL analytics survey: Most and least analytically inclined teams, future GM candidates, more
-                </h5>
-                <p>The how and the why to gaining a competitive advantage using tracking data from computer vision for
-                  objective talent evaluation and advanced scouting</p>
-              </div>
-              <div class="news-card__footer">
-                <p>Seth Walder,</p>
-                <span>October 6. 2021</span>
-              </div>
-            </div>
-          </div>
-          <div class="news__col">
-            <div class="news-card">
-              <div class="news-card__header">
-                <div class="tags">
-                  <div class="tag tag_new">New!</div>
-                  <div class="tag tag_whitepaper">NEWS ARTICLE</div>
-                </div>
-                <img src="./img/espn.png" alt="espn">
-              </div>
-              <div class="news-card__body">
-                <div class="news-card__banner">
-                  <img src="./img/home/news.jpg" alt="news">
-                </div>
-                <h5>2021 NFL analytics survey: Most and least analytically inclined teams, future GM candidates, more
-                </h5>
-                <p>The how and the why to gaining a competitive advantage using tracking data from computer vision for
-                  objective talent evaluation and advanced scouting</p>
-              </div>
-              <div class="news-card__footer">
-                <p>Seth Walder,</p>
-                <span>October 6. 2021</span>
-              </div>
-            </div>
-          </div>
-          <div class="news__col">
-            <div class="news-card">
-              <div class="news-card__header">
-                <div class="tags">
-                  <div class="tag tag_new">New!</div>
-                  <div class="tag tag_news-article">NEWS ARTICLE</div>
-                </div>
-                <img src="./img/espn.png" alt="espn">
-              </div>
-              <div class="news-card__body">
-                <div class="news-card__banner">
-                  <img src="./img/home/news.jpg" alt="news">
-                </div>
-                <h5>2021 NFL analytics survey: Most and least analytically inclined teams, future GM candidates, more
-                </h5>
-                <p>The how and the why to gaining a competitive advantage using tracking data from computer vision for
-                  objective talent evaluation and advanced scouting</p>
-              </div>
-              <div class="news-card__footer">
-                <p>Seth Walder,</p>
-                <span>October 6. 2021</span>
-              </div>
-            </div>
-          </div>
-          <div class="news__col">
-            <div class="news-card">
-              <div class="news-card__header">
-                <div class="tags">
-                  <div class="tag tag_new">New!</div>
-                  <div class="tag tag_whitepaper">WHITEPAPER</div>
-                </div>
-                <img src="./img/espn.png" alt="espn">
-              </div>
-              <div class="news-card__body">
-                <div class="news-card__banner">
-                  <img src="./img/home/news.jpg" alt="news">
-                </div>
-                <h5>Technology That Wins</h5>
-                <p>The how and the why to gaining a competitive advantage using tracking data from computer vision for
-                  objective talent evaluation and advanced scouting</p>
-              </div>
-              <div class="news-card__footer">
-                <p>Cory Yates, MBA | David Hahn, PHD | Kratik Malhotra, MS</p>
-              </div>
-            </div>
-          </div>
-          <div class="news__col_social">
-
-            <div class="news-card">
-              <div class="news-card__header">
-                <div class="tags">
-                  <div class="tag tag_new">New!</div>
-                  <div class="tag tag_tweet">tweet</div>
-                </div>
-                <img class="social-icon" src="./img/home/twitter.svg" alt="twitter">
-              </div>
-              <div class="news-card__body">
-                <div class="news-card__banner">
-                  <img src="./img/home/news.jpg" alt="news">
-                </div>
-                <h5>Technology That Wins</h5>
-                <p> <a href="#" target="_blank">#undercruited</a> Glynn Academy’s Tyson Rooks (6050, 180) is the
-                  quintessential hidden gem with elite-level traits found… <a href="#" target="_blank">View Tweet</a>
-                </p>
-              </div>
-
-              <div class="news-card__footer">
-                <img src="./img/home/author.jpg" alt="name">
-                <div class="news-card_author">
-                  <h6>@RAanalytics</h6>
-                  <p>Recruiting Analytics,
-                    <span>October 6. 2021</span></p>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="interested bg-blue">
-      <div class="container">
-        <div class="interested__header">
-          <h2>Interested in <span>Recruiting Analytics?</span></h2>
-          <p>Get the latest in recruiting innovation, RA whitepapers and other recruitment news.</p>
-        </div>
-        <div class="interested__row">
-          <div class="interested__col">
-            <div class="article-card">
-              <a href="#" class="article-card__img">
-                <img src="./img/home/article-1.jpg" alt="article">
-              </a>
-              <a class="title-5" href="#">Media Inquiries</a>
-              <p>Get the latest in recruiting innovation, RA whitepapers and other recruitment news.</p>
-              <a href="#" class="link">LEARN MORE
-                <svg class="icon-arrow">
-                  <use xlink:href="img/svg/sprite.svg#arrow">
-                  </use>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <div class="interested__col">
-            <div class="article-card">
-              <a href="#" class="article-card__img">
-                <img src="./img/home/article-2.jpg" alt="article">
-              </a>
-              <a class="title-5" href="#">Investor Relations</a>
-              <p>Get the latest in recruiting innovation, RA whitepapers and other recruitment news.</p>
-              <a href="#" class="link">LEARN MORE
-                <svg class="icon-arrow">
-                  <use xlink:href="img/svg/sprite.svg#arrow">
-                  </use>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <div class="interested__col">
-            <div class="article-card">
-              <a href="#" class="article-card__img">
-                <img src="./img/home/article-3.jpg" alt="article">
-              </a>
-              <a class="title-5" href="#">RA Careers</a>
-              <p>Get the latest in recruiting innovation, RA whitepapers and other recruitment news.</p>
-              <a href="#" class="link">LEARN MORE
-                <svg class="icon-arrow">
-                  <use xlink:href="img/svg/sprite.svg#arrow">
-                  </use>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="cta">
-      <div class="container">
-        <div class="cta__title">
-          <h2 class="title-1">Ready to see what Reel Analytics can do for you?</h2>
-          <a href="#" class="btn btn_secondary">Get started
-            <svg class="icon-arrow">
-              <use xlink:href="img/svg/sprite.svg#arrow">
-              </use>
-            </svg>
-          </a>
-        </div>
-      </div>
-    </div>
-  </main>
-  @@include("./html/_footer.html")
-  @@include("./html/_modal.html")
-  <script
-  src="https://code.jquery.com/jquery-3.6.3.min.js"
-  integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
-  crossorigin="anonymous"></script>
-  <script src="./js/libs.min.js"></script>
-  <script src="./js/script.min.js"></script>
-</body>
-
+								<div class="news-card__footer">
+									<img src="./img/home/author.jpg" alt="name" />
+									<div class="news-card_author">
+										<h6>@RAanalytics</h6>
+										<p>Recruiting Analytics, <span>October 6. 2021</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="interested bg-blue">
+				<div class="container">
+					<div class="interested__header">
+						<h2>Interested in <span>Recruiting Analytics?</span></h2>
+						<p>
+							Get the latest in recruiting innovation, RA whitepapers and other
+							recruitment news.
+						</p>
+					</div>
+					<div class="interested__row">
+						<div class="interested__col">
+							<div class="article-card">
+								<a href="#" class="article-card__img">
+									<img src="./img/home/article-1.jpg" alt="article" />
+								</a>
+								<a class="title-5" href="#">Media Inquiries</a>
+								<p>
+									Get the latest in recruiting innovation, RA whitepapers and
+									other recruitment news.
+								</p>
+								<a href="#" class="link"
+									>LEARN MORE
+									<svg class="icon-arrow">
+										<use xlink:href="img/svg/sprite.svg#arrow"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<div class="interested__col">
+							<div class="article-card">
+								<a href="#" class="article-card__img">
+									<img src="./img/home/article-2.jpg" alt="article" />
+								</a>
+								<a class="title-5" href="#">Investor Relations</a>
+								<p>
+									Get the latest in recruiting innovation, RA whitepapers and
+									other recruitment news.
+								</p>
+								<a href="#" class="link"
+									>LEARN MORE
+									<svg class="icon-arrow">
+										<use xlink:href="img/svg/sprite.svg#arrow"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<div class="interested__col">
+							<div class="article-card">
+								<a href="#" class="article-card__img">
+									<img src="./img/home/article-3.jpg" alt="article" />
+								</a>
+								<a class="title-5" href="#">RA Careers</a>
+								<p>
+									Get the latest in recruiting innovation, RA whitepapers and
+									other recruitment news.
+								</p>
+								<a href="#" class="link"
+									>LEARN MORE
+									<svg class="icon-arrow">
+										<use xlink:href="img/svg/sprite.svg#arrow"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="cta">
+				<div class="container">
+					<div class="cta__title">
+						<h2 class="title-1">
+							Ready to see what Reel Analytics can do for you?
+						</h2>
+						<a href="#" class="btn btn_secondary"
+							>Get started
+							<svg class="icon-arrow">
+								<use xlink:href="img/svg/sprite.svg#arrow"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</main>
+		@@include("./html/_footer.html") @@include("./html/_modal.html")
+		<script
+			src="https://code.jquery.com/jquery-3.6.3.min.js"
+			integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+			crossorigin="anonymous"></script>
+		<script src="./js/libs.min.js"></script>
+		<script src="./js/script.min.js"></script>
+	</body>
 </html>

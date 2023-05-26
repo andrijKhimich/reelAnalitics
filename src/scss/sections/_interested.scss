@@ -1,66 +1,68 @@
 .interested {
-  padding-bottom: 145px;
-  color: $white;
-  border-radius: 0 0 32px 32px;
-  overflow: hidden;
-  @include d(992) {
-    border-radius: 0 0 16px 16px;
-  }
-  &__inner {
-    color: $textColor;
-    border-radius: 0;
-    padding: 160px 0 160px 0;
+	padding-bottom: 145px;
+	color: $white;
+	border-radius: 0 0 32px 32px;
+	overflow: hidden;
 
-    @include d(1280) {
-      padding: 120px 0;
-    }
+	@include d(992) {
+		border-radius: 0 0 16px 16px;
+	}
 
-    @include d(992) {
-      padding: 80px 0;
-    }
+	&__inner {
+		color: $textColor;
+		border-radius: 0;
+		padding: 160px 0 160px 0;
 
-    .interested__header {
-      max-width: 750px;
-    }
-  }
+		@include d(1280) {
+			padding: 120px 0;
+		}
 
-  @include d(1280) {
-    padding-bottom: 120px;
-  }
+		@include d(992) {
+			padding: 80px 0;
+		}
 
-  @include d(992) {
-    padding-bottom: 80px;
-  }
+		.interested__header {
+			max-width: 750px;
+		}
+	}
 
-  &__header {
-    margin-bottom: 64px;
+	@include d(1280) {
+		padding-bottom: 120px;
+	}
 
-    @include d(992) {
-      margin-bottom: 40px;
-    }
-  }
+	@include d(992) {
+		padding-bottom: 80px;
+	}
 
-  &__row {
-    display: flex;
-    margin: 0 -15px;
-    flex-wrap: wrap;
+	&__header {
+		margin-bottom: 64px;
 
-    @include d(1024) {
-      // margin: 0 -10px;
-    }
-  }
+		@include d(992) {
+			margin-bottom: 40px;
+		}
+	}
 
-  &__col {
-    flex: 0 0 33.333%;
-    padding: 0 15px;
+	&__row {
+		display: flex;
+		margin: 0 -15px;
+		flex-wrap: wrap;
 
-    @include d(1024) {
-      // padding: 0 10px;
-    }
+		@include d(1024) {
+			// margin: 0 -10px;
+		}
+	}
 
-    @include d(768) {
-      flex: 0 0 100%;
-      margin-bottom: 40px;
-    }
-  }
+	&__col {
+		flex: 0 0 33.333%;
+		padding: 0 15px;
+
+		@include d(1024) {
+			// padding: 0 10px;
+		}
+
+		@include d(768) {
+			flex: 0 0 100%;
+			margin-bottom: 40px;
+		}
+	}
 }

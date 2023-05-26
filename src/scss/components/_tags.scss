@@ -1,46 +1,46 @@
 .tags {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
 }
 
 .tag {
-  display: inline-block;
-  padding: 6px 14px;
-  border-radius: 4px;
-  text-transform: uppercase;
-  color: $white;
-  font-weight: 800;
-  font-size: 14px;
-  text-align: center;
-  margin-bottom: 8px;
-  white-space: nowrap;
-  pointer-events: none;
-  line-height: 1.2em;
+	display: inline-block;
+	padding: 6px 14px;
+	border-radius: 4px;
+	text-transform: uppercase;
+	color: $white;
+	font-weight: 800;
+	font-size: 14px;
+	text-align: center;
+	margin-bottom: 8px;
+	white-space: nowrap;
+	pointer-events: none;
+	line-height: 1.2em;
 
-  &:not(:last-child) {
-    margin-right: 8px;
-  }
+	&:not(:last-child) {
+		margin-right: 8px;
+	}
 
-  &_new {
-    background-color: $primary;
-  }
+	&_new {
+		background-color: $primary;
+	}
 
-  &_whitepaper {
-    background-color: $blueDark;
-    pointer-events: initial;
-  }
+	&_whitepaper {
+		background-color: $blueDark;
+		pointer-events: initial;
+	}
 
-  &_news-article {
-    background-color: $white;
-    color: $blueDark;
-  }
+	&_news-article {
+		background-color: $white;
+		color: $blueDark;
+	}
 
-  &_tweet {
-    background-color: #75A4EA;
-  }
+	&_tweet {
+		background-color: #75a4ea;
+	}
 
-  &_primary {
-    background-color: $primary;
-  }
+	&_primary {
+		background-color: $primary;
+	}
 }

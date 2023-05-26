@@ -6,7 +6,6 @@
 @import "base/icons";
 @import "base/buttons";
 
-
 // libs using in project, uncomment what you need
 
 // @import "../../node_modules/bootstrap-4-grid/css/grid.min.css";
@@ -21,8 +20,6 @@
 @import "components/_form";
 @import "components/_board";
 @import "components/_modal";
-
-
 
 @import "sections/_hero";
 @import "sections/_solution";
@@ -41,4 +38,4 @@
 @import "sections/choice";
 @import "sections/contact";
 
-@import "pages/index"
+@import "pages/index";

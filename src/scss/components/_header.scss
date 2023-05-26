@@ -1,191 +1,190 @@
 .header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
-  background-color: transparent;
-  color: $white;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	background-color: transparent;
+	color: $white;
 
-  &-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid $gray;
-    padding: 24px 0;
+	&-row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-bottom: 1px solid $gray;
+		padding: 24px 0;
 
-    @include d(992) {
-      padding: 14px 0;
-    }
-  }
+		@include d(992) {
+			padding: 14px 0;
+		}
+	}
 }
 
 .logo {
-  display: inline-block;
-  max-width: 113px;
+	display: inline-block;
+	max-width: 113px;
 }
 
 .nav {
-  margin-right: 94px;
-  margin-left: auto;
+	margin-right: 94px;
+	margin-left: auto;
 
-  @include d(1280) {
-    margin-right: 40px;
-  }
+	@include d(1280) {
+		margin-right: 40px;
+	}
 
-  @include d(992) {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 50vw;
-    height: 100vh;
-    margin-right: 0;
-    background-color: $primary;
-    pointer-events: none;
-    opacity: 0;
-    transform: translateX(20px);
-    transition: opacity .5s ease-out, transform .5s ease-out;
+	@include d(992) {
+		position: fixed;
+		top: 0;
+		right: 0;
+		width: 50vw;
+		height: 100vh;
+		margin-right: 0;
+		background-color: $primary;
+		pointer-events: none;
+		opacity: 0;
+		transform: translateX(20px);
+		transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 
-    &.active {
-      opacity: 1;
-      pointer-events: initial;
-      transform: translateX(0);
-    }
+		&.active {
+			opacity: 1;
+			pointer-events: initial;
+			transform: translateX(0);
+		}
 
-    @include d(768) {
-      width: 80vw;
-    }
-  }
+		@include d(768) {
+			width: 80vw;
+		}
+	}
 
-  &-list {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+	&-list {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
 
-    @include d(992) {
-      flex-direction: column;
-      align-items: flex-end;
-      padding: 90px 15px 0 0;
-      justify-content: flex-start;
-      font-size: 18px;
-    }
+		@include d(992) {
+			flex-direction: column;
+			align-items: flex-end;
+			padding: 90px 15px 0 0;
+			justify-content: flex-start;
+			font-size: 18px;
+		}
 
-    &__item,
-    li {
-      position: relative;
-      transition: color $hover-duration $timing;
+		&__item,
+		li {
+			position: relative;
+			transition: color $hover-duration $timing;
 
-      &::before {
-        content: "";
-        background-color: $primary;
-        height: 1px;
-        width: calc(100% - 8px);
-        position: absolute;
-        bottom: 0;
-        left: 4px;
-        transform: scaleX(0);
-        transition: transform $hover-duration $timing;
-      }
+			&::before {
+				content: "";
+				background-color: $primary;
+				height: 1px;
+				width: calc(100% - 8px);
+				position: absolute;
+				bottom: 0;
+				left: 4px;
+				transform: scaleX(0);
+				transition: transform $hover-duration $timing;
+			}
 
-      @include rh(992) {
+			@include rh(992) {
+				&:hover {
+					color: $primary;
 
-        &:hover {
-          color: $primary;
+					&::before {
+						transform: scaleX(1);
+					}
+				}
+			}
 
-          &::before {
-            transform: scaleX(1);
-          }
-        }
-      }
+			&.active {
+				color: $primary;
 
-      &.active {
-        color: $primary;
+				@include d(992) {
+					color: $white;
 
-        @include d(992) {
-          color: $white;
+					&::before {
+						background-color: $white;
+					}
+				}
 
-          &::before {
-            background-color: $white;
-          }
-        }
+				&::before {
+					transform: scaleX(1);
+				}
+			}
 
-        &::before {
-          transform: scaleX(1);
-        }
-      }
+			&:not(:last-child) {
+				margin-right: 36px;
 
-      &:not(:last-child) {
-        margin-right: 36px;
+				@include d(1280) {
+					margin-right: 20px;
+				}
 
-        @include d(1280) {
-          margin-right: 20px;
-        }
+				@include d(992) {
+					margin-right: 0;
+					margin-bottom: 40px;
+				}
+			}
+		}
 
-        @include d(992) {
-          margin-right: 0;
-          margin-bottom: 40px;
-        }
-      }
-    }
-
-    &__link,
-    a {
-      text-transform: uppercase;
-      padding: 4px;
-      font-size: 16px;
-      line-height: 1.2em;
-    }
-  }
+		&__link,
+		a {
+			text-transform: uppercase;
+			padding: 4px;
+			font-size: 16px;
+			line-height: 1.2em;
+		}
+	}
 }
 
 .burger {
-  position: relative;
-  width: 22px;
-  height: 16px;
-  z-index: 101;
-  display: none;
+	position: relative;
+	width: 22px;
+	height: 16px;
+	z-index: 101;
+	display: none;
 
-  @include d(992) {
-    display: inline-block;
-  }
+	@include d(992) {
+		display: inline-block;
+	}
 
-  &_item {
-    position: absolute;
-    width: 22px;
-    height: 2px;
-    background-color: $white;
-    left: 0;
-    transition: .5s ease-out;
+	&_item {
+		position: absolute;
+		width: 22px;
+		height: 2px;
+		background-color: $white;
+		left: 0;
+		transition: 0.5s ease-out;
 
-    &:first-child {
-      top: 0;
-    }
+		&:first-child {
+			top: 0;
+		}
 
-    &:nth-child(2) {
-      top: 50%;
-      margin-top: -1px;
-    }
+		&:nth-child(2) {
+			top: 50%;
+			margin-top: -1px;
+		}
 
-    &:last-child {
-      bottom: 0;
-    }
-  }
+		&:last-child {
+			bottom: 0;
+		}
+	}
 
-  &.active {
-    .burger_item {
-      &:first-child {
-        transform: rotate(45deg);
-        top: 7px;
-      }
+	&.active {
+		.burger_item {
+			&:first-child {
+				transform: rotate(45deg);
+				top: 7px;
+			}
 
-      &:nth-child(2) {
-        width: 0;
-      }
+			&:nth-child(2) {
+				width: 0;
+			}
 
-      &:last-child {
-        transform: rotate(-45deg);
-        bottom: 7px;
-      }
-    }
-  }
+			&:last-child {
+				transform: rotate(-45deg);
+				bottom: 7px;
+			}
+		}
+	}
 }

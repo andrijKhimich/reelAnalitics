@@ -1,48 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/style.min.css" />
+		<title>Project | Leaderboard</title>
+	</head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/style.min.css">
-  <title>Project | Leaderboard</title>
-</head>
-
-<body>
-  @@include("./html/_header.html")
-  <main class="main home-page">
-    <div class="hero hero__inner" style="background-image: url(./img/home/hero.jpg)">
-      <div class="hero-video">
-        <video loop muted autoplay>
-          <source src="./video/video.mp4" type="video/mp4">
-          <source src="./video/video.ogv" type="video/ogg">
-          <source src="./video/video.webm" type="video/webm">
-          Your browser doesn't support HTML5 video tag.
-        </video>
-      </div>
-      <div class="container">
-        <div class="hero__content">
-          <h5 class="subtitle">IGA Score Leaderboard</h5>
-          <h1> <span>Performance Rank</span> <br> & Comparison.</h1>
-          <p>Combine the power of AI, predictive analytics and advanced performance data tCombine the Combine the power
-            of AI, mbine the Combi</p>
-        </div>
-      </div>
-    </div>
-    <div class="section analitycs">
-      <div class="container">
-        <div class="analytics__title">
-          <h2> <span>Reel Analytics: </span> <br>
-            The Right Choice for Winners.</h2>
-          <p>Get the latest in recruiting innovation, RA whitepapers and other recruitment news.</p>
-        </div>
-        <div class="analytics__panel">
-          <div class="analytics__btns">
-            <a href="#" download="file" data-href="ranking" class="tab-btn btn active">Ranking</a>
-            <!-- <button data-href="compare" class="tab-btn btn">Compare</button> -->
-          </div>
-          <!-- <div class="analytics__select">
+	<body>
+		@@include("./html/_header.html")
+		<main class="main home-page">
+			<div
+				class="hero hero__inner"
+				style="background-image: url(./img/home/hero.jpg)">
+				<div class="hero-video">
+					<video loop muted autoplay>
+						<source src="./video/video.mp4" type="video/mp4" />
+						<source src="./video/video.ogv" type="video/ogg" />
+						<source src="./video/video.webm" type="video/webm" />
+						Your browser doesn't support HTML5 video tag.
+					</video>
+				</div>
+				<div class="container">
+					<div class="hero__content">
+						<h5 class="subtitle">IGA Score Leaderboard</h5>
+						<h1>
+							<span>Performance Rank</span> <br />
+							& Comparison.
+						</h1>
+						<p>
+							Combine the power of AI, predictive analytics and advanced
+							performance data tCombine the Combine the power of AI, mbine the
+							Combi
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="section analitycs">
+				<div class="container">
+					<div class="analytics__title">
+						<h2>
+							<span>Reel Analytics: </span> <br />
+							The Right Choice for Winners.
+						</h2>
+						<p>
+							Get the latest in recruiting innovation, RA whitepapers and other
+							recruitment news.
+						</p>
+					</div>
+					<div class="analytics__panel">
+						<div class="analytics__btns">
+							<a
+								href="#"
+								download="file"
+								data-href="ranking"
+								class="tab-btn btn active"
+								>Ranking</a
+							>
+							<!-- <button data-href="compare" class="tab-btn btn">Compare</button> -->
+						</div>
+						<!-- <div class="analytics__select">
             <form>
               <select class="select">
                 <option value="View">View</option>
@@ -51,418 +69,418 @@
               </select>
             </form>
           </div> -->
-        </div>
-        <div class="board">
-          <div class="board-content board-table" id="ranking">
-            <div class="board-scroll">
-              <table class="tableFixHead">
-                <thead>
-                  <tr>
-                    <th>name</th>
-                    <th>Position</th>
-                    <th>Height</th>
-                    <th>Weight</th>
-                    <th>Max Speed</th>
-                    <th>Athleticism Score</th>
-                    <th>Production Score</th>
-                    <th>Overall RA Score</th>
-                  </tr>
-                </thead>
+					</div>
+					<div class="board">
+						<div class="board-content board-table" id="ranking">
+							<div class="board-scroll">
+								<table class="tableFixHead">
+									<thead>
+										<tr>
+											<th>name</th>
+											<th>Position</th>
+											<th>Height</th>
+											<th>Weight</th>
+											<th>Max Speed</th>
+											<th>Athleticism Score</th>
+											<th>Production Score</th>
+											<th>Overall RA Score</th>
+										</tr>
+									</thead>
 
-                <tr>
-                  <td>
-                    <div class="table-user">
-                      <img src="./img/board/man-1.png" alt="man">
-                      <div class="table-name">
-                        <p>Matt</p>
-                        <p>Aguilera ‘22</p>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <span>WR</span>
-                    <p>Wide Receiver</p>
-                  </td>
-                  <td>
-                    <span>6’4</span>
-                    <p>feet/inches</p>
-                  </td>
-                  <td>
-                    <span>235</span>
-                    <p>pounds</p>
-                  </td>
-                  <td>
-                    <span>10.1</span>
-                    <p>miles per hour</p>
-                  </td>
-                  <td>
-                    <span>4.3</span>
-                    <p>out of 5</p>
-                  </td>
-                  <td>
-                    <span>10.1</span>
-                    <p>pounds</p>
-                  </td>
-                  <td>
-                    <span>4.3</span>
-                    <p>out of 10</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="table-user">
-                      <img src="./img/board/man-2.png" alt="man">
-                      <div class="table-name">
-                        <p>Matt</p>
-                        <p>Aguilera ‘22</p>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <span>WR</span>
-                    <p>Wide Receiver</p>
-                  </td>
-                  <td>
-                    <span>6’4</span>
-                    <p>feet/inches</p>
-                  </td>
-                  <td>
-                    <span>235</span>
-                    <p>pounds</p>
-                  </td>
-                  <td>
-                    <span>10.1</span>
-                    <p>miles per hour</p>
-                  </td>
-                  <td>
-                    <span>4.3</span>
-                    <p>out of 5</p>
-                  </td>
-                  <td>
-                    <span>10.1</span>
-                    <p>pounds</p>
-                  </td>
-                  <td>
-                    <span>4.3</span>
-                    <p>out of 10</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="table-user">
-                      <img src="./img/board/man-3.png" alt="man">
-                      <div class="table-name">
-                        <p>Matt</p>
-                        <p>Aguilera ‘22</p>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <span>WR</span>
-                    <p>Wide Receiver</p>
-                  </td>
-                  <td>
-                    <span>6’4</span>
-                    <p>feet/inches</p>
-                  </td>
-                  <td>
-                    <span>235</span>
-                    <p>pounds</p>
-                  </td>
-                  <td>
-                    <span>10.1</span>
-                    <p>miles per hour</p>
-                  </td>
-                  <td>
-                    <span>4.3</span>
-                    <p>out of 5</p>
-                  </td>
-                  <td>
-                    <span>10.1</span>
-                    <p>pounds</p>
-                  </td>
-                  <td>
-                    <span>4.3</span>
-                    <p>out of 10</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="table-user">
-                      <img src="./img/board/man-4.png" alt="man">
-                      <div class="table-name">
-                        <p>Matt</p>
-                        <p>Aguilera ‘22</p>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <span>WR</span>
-                    <p>Wide Receiver</p>
-                  </td>
-                  <td>
-                    <span>6’4</span>
-                    <p>feet/inches</p>
-                  </td>
-                  <td>
-                    <span>235</span>
-                    <p>pounds</p>
-                  </td>
-                  <td>
-                    <span>10.1</span>
-                    <p>miles per hour</p>
-                  </td>
-                  <td>
-                    <span>4.3</span>
-                    <p>out of 5</p>
-                  </td>
-                  <td>
-                    <span>10.1</span>
-                    <p>pounds</p>
-                  </td>
-                  <td>
-                    <span>4.3</span>
-                    <p>out of 10</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="table-user">
-                      <img src="./img/board/man-5.png" alt="man">
-                      <div class="table-name">
-                        <p>Matt</p>
-                        <p>Aguilera ‘22</p>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <span>WR</span>
-                    <p>Wide Receiver</p>
-                  </td>
-                  <td>
-                    <span>6’4</span>
-                    <p>feet/inches</p>
-                  </td>
-                  <td>
-                    <span>235</span>
-                    <p>pounds</p>
-                  </td>
-                  <td>
-                    <span>10.1</span>
-                    <p>miles per hour</p>
-                  </td>
-                  <td>
-                    <span>4.3</span>
-                    <p>out of 5</p>
-                  </td>
-                  <td>
-                    <span>10.1</span>
-                    <p>pounds</p>
-                  </td>
-                  <td>
-                    <span>4.3</span>
-                    <p>out of 10</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="table-user">
-                      <img src="./img/board/man-6.png" alt="man">
-                      <div class="table-name">
-                        <p>Matt</p>
-                        <p>Aguilera ‘22</p>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <span>WR</span>
-                    <p>Wide Receiver</p>
-                  </td>
-                  <td>
-                    <span>6’4</span>
-                    <p>feet/inches</p>
-                  </td>
-                  <td>
-                    <span>235</span>
-                    <p>pounds</p>
-                  </td>
-                  <td>
-                    <span>10.1</span>
-                    <p>miles per hour</p>
-                  </td>
-                  <td>
-                    <span>4.3</span>
-                    <p>out of 5</p>
-                  </td>
-                  <td>
-                    <span>10.1</span>
-                    <p>pounds</p>
-                  </td>
-                  <td>
-                    <span>4.3</span>
-                    <p>out of 10</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="table-user">
-                      <img src="./img/board/man-7.png" alt="man">
-                      <div class="table-name">
-                        <p>Matt</p>
-                        <p>Aguilera ‘22</p>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <span>WR</span>
-                    <p>Wide Receiver</p>
-                  </td>
-                  <td>
-                    <span>6’4</span>
-                    <p>feet/inches</p>
-                  </td>
-                  <td>
-                    <span>235</span>
-                    <p>pounds</p>
-                  </td>
-                  <td>
-                    <span>10.1</span>
-                    <p>miles per hour</p>
-                  </td>
-                  <td>
-                    <span>4.3</span>
-                    <p>out of 5</p>
-                  </td>
-                  <td>
-                    <span>10.1</span>
-                    <p>pounds</p>
-                  </td>
-                  <td>
-                    <span>4.3</span>
-                    <p>out of 10</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="table-user">
-                      <img src="./img/board/man-1.png" alt="man">
-                      <div class="table-name">
-                        <p>Matt</p>
-                        <p>Aguilera ‘22</p>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <span>WR</span>
-                    <p>Wide Receiver</p>
-                  </td>
-                  <td>
-                    <span>6’4</span>
-                    <p>feet/inches</p>
-                  </td>
-                  <td>
-                    <span>235</span>
-                    <p>pounds</p>
-                  </td>
-                  <td>
-                    <span>10.1</span>
-                    <p>miles per hour</p>
-                  </td>
-                  <td>
-                    <span>4.3</span>
-                    <p>out of 5</p>
-                  </td>
-                  <td>
-                    <span>10.1</span>
-                    <p>pounds</p>
-                  </td>
-                  <td>
-                    <span>4.3</span>
-                    <p>out of 10</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="table-user">
-                      <img src="./img/board/man-2.png" alt="man">
-                      <div class="table-name">
-                        <p>Matt</p>
-                        <p>Aguilera ‘22</p>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <span>WR</span>
-                    <p>Wide Receiver</p>
-                  </td>
-                  <td>
-                    <span>6’4</span>
-                    <p>feet/inches</p>
-                  </td>
-                  <td>
-                    <span>235</span>
-                    <p>pounds</p>
-                  </td>
-                  <td>
-                    <span>10.1</span>
-                    <p>miles per hour</p>
-                  </td>
-                  <td>
-                    <span>4.3</span>
-                    <p>out of 5</p>
-                  </td>
-                  <td>
-                    <span>10.1</span>
-                    <p>pounds</p>
-                  </td>
-                  <td>
-                    <span>4.3</span>
-                    <p>out of 10</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="table-user">
-                      <img src="./img/board/man-3.png" alt="man">
-                      <div class="table-name">
-                        <p>Matt</p>
-                        <p>Aguilera ‘22</p>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <span>WR</span>
-                    <p>Wide Receiver</p>
-                  </td>
-                  <td>
-                    <span>6’4</span>
-                    <p>feet/inches</p>
-                  </td>
-                  <td>
-                    <span>235</span>
-                    <p>pounds</p>
-                  </td>
-                  <td>
-                    <span>10.1</span>
-                    <p>miles per hour</p>
-                  </td>
-                  <td>
-                    <span>4.3</span>
-                    <p>out of 5</p>
-                  </td>
-                  <td>
-                    <span>10.1</span>
-                    <p>pounds</p>
-                  </td>
-                  <td>
-                    <span>4.3</span>
-                    <p>out of 10</p>
-                  </td>
-                </tr>
-              </table>
-            </div>
-          </div>
-          <!-- <div class="board-content board-items" id="compare">
+									<tr>
+										<td>
+											<div class="table-user">
+												<img src="./img/board/man-1.png" alt="man" />
+												<div class="table-name">
+													<p>Matt</p>
+													<p>Aguilera ‘22</p>
+												</div>
+											</div>
+										</td>
+										<td>
+											<span>WR</span>
+											<p>Wide Receiver</p>
+										</td>
+										<td>
+											<span>6’4</span>
+											<p>feet/inches</p>
+										</td>
+										<td>
+											<span>235</span>
+											<p>pounds</p>
+										</td>
+										<td>
+											<span>10.1</span>
+											<p>miles per hour</p>
+										</td>
+										<td>
+											<span>4.3</span>
+											<p>out of 5</p>
+										</td>
+										<td>
+											<span>10.1</span>
+											<p>pounds</p>
+										</td>
+										<td>
+											<span>4.3</span>
+											<p>out of 10</p>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="table-user">
+												<img src="./img/board/man-2.png" alt="man" />
+												<div class="table-name">
+													<p>Matt</p>
+													<p>Aguilera ‘22</p>
+												</div>
+											</div>
+										</td>
+										<td>
+											<span>WR</span>
+											<p>Wide Receiver</p>
+										</td>
+										<td>
+											<span>6’4</span>
+											<p>feet/inches</p>
+										</td>
+										<td>
+											<span>235</span>
+											<p>pounds</p>
+										</td>
+										<td>
+											<span>10.1</span>
+											<p>miles per hour</p>
+										</td>
+										<td>
+											<span>4.3</span>
+											<p>out of 5</p>
+										</td>
+										<td>
+											<span>10.1</span>
+											<p>pounds</p>
+										</td>
+										<td>
+											<span>4.3</span>
+											<p>out of 10</p>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="table-user">
+												<img src="./img/board/man-3.png" alt="man" />
+												<div class="table-name">
+													<p>Matt</p>
+													<p>Aguilera ‘22</p>
+												</div>
+											</div>
+										</td>
+										<td>
+											<span>WR</span>
+											<p>Wide Receiver</p>
+										</td>
+										<td>
+											<span>6’4</span>
+											<p>feet/inches</p>
+										</td>
+										<td>
+											<span>235</span>
+											<p>pounds</p>
+										</td>
+										<td>
+											<span>10.1</span>
+											<p>miles per hour</p>
+										</td>
+										<td>
+											<span>4.3</span>
+											<p>out of 5</p>
+										</td>
+										<td>
+											<span>10.1</span>
+											<p>pounds</p>
+										</td>
+										<td>
+											<span>4.3</span>
+											<p>out of 10</p>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="table-user">
+												<img src="./img/board/man-4.png" alt="man" />
+												<div class="table-name">
+													<p>Matt</p>
+													<p>Aguilera ‘22</p>
+												</div>
+											</div>
+										</td>
+										<td>
+											<span>WR</span>
+											<p>Wide Receiver</p>
+										</td>
+										<td>
+											<span>6’4</span>
+											<p>feet/inches</p>
+										</td>
+										<td>
+											<span>235</span>
+											<p>pounds</p>
+										</td>
+										<td>
+											<span>10.1</span>
+											<p>miles per hour</p>
+										</td>
+										<td>
+											<span>4.3</span>
+											<p>out of 5</p>
+										</td>
+										<td>
+											<span>10.1</span>
+											<p>pounds</p>
+										</td>
+										<td>
+											<span>4.3</span>
+											<p>out of 10</p>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="table-user">
+												<img src="./img/board/man-5.png" alt="man" />
+												<div class="table-name">
+													<p>Matt</p>
+													<p>Aguilera ‘22</p>
+												</div>
+											</div>
+										</td>
+										<td>
+											<span>WR</span>
+											<p>Wide Receiver</p>
+										</td>
+										<td>
+											<span>6’4</span>
+											<p>feet/inches</p>
+										</td>
+										<td>
+											<span>235</span>
+											<p>pounds</p>
+										</td>
+										<td>
+											<span>10.1</span>
+											<p>miles per hour</p>
+										</td>
+										<td>
+											<span>4.3</span>
+											<p>out of 5</p>
+										</td>
+										<td>
+											<span>10.1</span>
+											<p>pounds</p>
+										</td>
+										<td>
+											<span>4.3</span>
+											<p>out of 10</p>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="table-user">
+												<img src="./img/board/man-6.png" alt="man" />
+												<div class="table-name">
+													<p>Matt</p>
+													<p>Aguilera ‘22</p>
+												</div>
+											</div>
+										</td>
+										<td>
+											<span>WR</span>
+											<p>Wide Receiver</p>
+										</td>
+										<td>
+											<span>6’4</span>
+											<p>feet/inches</p>
+										</td>
+										<td>
+											<span>235</span>
+											<p>pounds</p>
+										</td>
+										<td>
+											<span>10.1</span>
+											<p>miles per hour</p>
+										</td>
+										<td>
+											<span>4.3</span>
+											<p>out of 5</p>
+										</td>
+										<td>
+											<span>10.1</span>
+											<p>pounds</p>
+										</td>
+										<td>
+											<span>4.3</span>
+											<p>out of 10</p>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="table-user">
+												<img src="./img/board/man-7.png" alt="man" />
+												<div class="table-name">
+													<p>Matt</p>
+													<p>Aguilera ‘22</p>
+												</div>
+											</div>
+										</td>
+										<td>
+											<span>WR</span>
+											<p>Wide Receiver</p>
+										</td>
+										<td>
+											<span>6’4</span>
+											<p>feet/inches</p>
+										</td>
+										<td>
+											<span>235</span>
+											<p>pounds</p>
+										</td>
+										<td>
+											<span>10.1</span>
+											<p>miles per hour</p>
+										</td>
+										<td>
+											<span>4.3</span>
+											<p>out of 5</p>
+										</td>
+										<td>
+											<span>10.1</span>
+											<p>pounds</p>
+										</td>
+										<td>
+											<span>4.3</span>
+											<p>out of 10</p>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="table-user">
+												<img src="./img/board/man-1.png" alt="man" />
+												<div class="table-name">
+													<p>Matt</p>
+													<p>Aguilera ‘22</p>
+												</div>
+											</div>
+										</td>
+										<td>
+											<span>WR</span>
+											<p>Wide Receiver</p>
+										</td>
+										<td>
+											<span>6’4</span>
+											<p>feet/inches</p>
+										</td>
+										<td>
+											<span>235</span>
+											<p>pounds</p>
+										</td>
+										<td>
+											<span>10.1</span>
+											<p>miles per hour</p>
+										</td>
+										<td>
+											<span>4.3</span>
+											<p>out of 5</p>
+										</td>
+										<td>
+											<span>10.1</span>
+											<p>pounds</p>
+										</td>
+										<td>
+											<span>4.3</span>
+											<p>out of 10</p>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="table-user">
+												<img src="./img/board/man-2.png" alt="man" />
+												<div class="table-name">
+													<p>Matt</p>
+													<p>Aguilera ‘22</p>
+												</div>
+											</div>
+										</td>
+										<td>
+											<span>WR</span>
+											<p>Wide Receiver</p>
+										</td>
+										<td>
+											<span>6’4</span>
+											<p>feet/inches</p>
+										</td>
+										<td>
+											<span>235</span>
+											<p>pounds</p>
+										</td>
+										<td>
+											<span>10.1</span>
+											<p>miles per hour</p>
+										</td>
+										<td>
+											<span>4.3</span>
+											<p>out of 5</p>
+										</td>
+										<td>
+											<span>10.1</span>
+											<p>pounds</p>
+										</td>
+										<td>
+											<span>4.3</span>
+											<p>out of 10</p>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="table-user">
+												<img src="./img/board/man-3.png" alt="man" />
+												<div class="table-name">
+													<p>Matt</p>
+													<p>Aguilera ‘22</p>
+												</div>
+											</div>
+										</td>
+										<td>
+											<span>WR</span>
+											<p>Wide Receiver</p>
+										</td>
+										<td>
+											<span>6’4</span>
+											<p>feet/inches</p>
+										</td>
+										<td>
+											<span>235</span>
+											<p>pounds</p>
+										</td>
+										<td>
+											<span>10.1</span>
+											<p>miles per hour</p>
+										</td>
+										<td>
+											<span>4.3</span>
+											<p>out of 5</p>
+										</td>
+										<td>
+											<span>10.1</span>
+											<p>pounds</p>
+										</td>
+										<td>
+											<span>4.3</span>
+											<p>out of 10</p>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<!-- <div class="board-content board-items" id="compare">
             <div class="board__row">
               <div class="board__col">
                 <div class="board-card">
@@ -658,85 +676,96 @@
               </div>
             </div>
           </div> -->
-        </div>
-      </div>
-    </div>
-    <div class="interested bg-blue section">
-      <div class="container">
-        <div class="interested__header">
-          <h2>Interested in <span>Recruiting Analytics?</span></h2>
-          <p>Get the latest in recruiting innovation, RA whitepapers and other recruitment news.</p>
-        </div>
-        <div class="interested__row">
-          <div class="interested__col">
-            <div class="article-card">
-              <a href="#" class="article-card__img">
-                <img src="./img/home/article-1.jpg" alt="article">
-              </a>
-              <a class="title-5" href="#">Media Inquiries</a>
-              <p>Get the latest in recruiting innovation, RA whitepapers and other recruitment news.</p>
-              <a href="#" class="link">LEARN MORE
-                <svg class="icon-arrow">
-                  <use xlink:href="img/svg/sprite.svg#arrow">
-                  </use>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <div class="interested__col">
-            <div class="article-card">
-              <a href="#" class="article-card__img">
-                <img src="./img/home/article-2.jpg" alt="article">
-              </a>
-              <a class="title-5" href="#">Investor Relations</a>
-              <p>Get the latest in recruiting innovation, RA whitepapers and other recruitment news.</p>
-              <a href="#" class="link">LEARN MORE
-                <svg class="icon-arrow">
-                  <use xlink:href="img/svg/sprite.svg#arrow">
-                  </use>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <div class="interested__col">
-            <div class="article-card">
-              <a href="#" class="article-card__img">
-                <img src="./img/home/article-3.jpg" alt="article">
-              </a>
-              <a class="title-5" href="#">RA Careers</a>
-              <p>Get the latest in recruiting innovation, RA whitepapers and other recruitment news.</p>
-              <a href="#" class="link">LEARN MORE
-                <svg class="icon-arrow">
-                  <use xlink:href="img/svg/sprite.svg#arrow">
-                  </use>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="cta">
-      <div class="container">
-        <div class="cta__title">
-          <h2 class="title-1">WANT FREE IN GAME ATHLETICISM SCORES?</h2>
-          <a href="#" class="btn btn_secondary">Get started
-            <svg class="icon-arrow">
-              <use xlink:href="img/svg/sprite.svg#arrow">
-              </use>
-            </svg>
-          </a>
-        </div>
-      </div>
-    </div>
-  </main>
-  @@include("./html/_footer.html")
-  <script
-  src="https://code.jquery.com/jquery-3.6.3.min.js"
-  integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
-  crossorigin="anonymous"></script>
-  <script src="./js/libs.min.js"></script>
-  <script src="./js/script.min.js"></script>
-</body>
-
+					</div>
+				</div>
+			</div>
+			<div class="interested bg-blue section">
+				<div class="container">
+					<div class="interested__header">
+						<h2>Interested in <span>Recruiting Analytics?</span></h2>
+						<p>
+							Get the latest in recruiting innovation, RA whitepapers and other
+							recruitment news.
+						</p>
+					</div>
+					<div class="interested__row">
+						<div class="interested__col">
+							<div class="article-card">
+								<a href="#" class="article-card__img">
+									<img src="./img/home/article-1.jpg" alt="article" />
+								</a>
+								<a class="title-5" href="#">Media Inquiries</a>
+								<p>
+									Get the latest in recruiting innovation, RA whitepapers and
+									other recruitment news.
+								</p>
+								<a href="#" class="link"
+									>LEARN MORE
+									<svg class="icon-arrow">
+										<use xlink:href="img/svg/sprite.svg#arrow"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<div class="interested__col">
+							<div class="article-card">
+								<a href="#" class="article-card__img">
+									<img src="./img/home/article-2.jpg" alt="article" />
+								</a>
+								<a class="title-5" href="#">Investor Relations</a>
+								<p>
+									Get the latest in recruiting innovation, RA whitepapers and
+									other recruitment news.
+								</p>
+								<a href="#" class="link"
+									>LEARN MORE
+									<svg class="icon-arrow">
+										<use xlink:href="img/svg/sprite.svg#arrow"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<div class="interested__col">
+							<div class="article-card">
+								<a href="#" class="article-card__img">
+									<img src="./img/home/article-3.jpg" alt="article" />
+								</a>
+								<a class="title-5" href="#">RA Careers</a>
+								<p>
+									Get the latest in recruiting innovation, RA whitepapers and
+									other recruitment news.
+								</p>
+								<a href="#" class="link"
+									>LEARN MORE
+									<svg class="icon-arrow">
+										<use xlink:href="img/svg/sprite.svg#arrow"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="cta">
+				<div class="container">
+					<div class="cta__title">
+						<h2 class="title-1">WANT FREE IN GAME ATHLETICISM SCORES?</h2>
+						<a href="#" class="btn btn_secondary"
+							>Get started
+							<svg class="icon-arrow">
+								<use xlink:href="img/svg/sprite.svg#arrow"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</main>
+		@@include("./html/_footer.html")
+		<script
+			src="https://code.jquery.com/jquery-3.6.3.min.js"
+			integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+			crossorigin="anonymous"></script>
+		<script src="./js/libs.min.js"></script>
+		<script src="./js/script.min.js"></script>
+	</body>
 </html>

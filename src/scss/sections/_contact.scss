@@ -1,70 +1,70 @@
 .contact {
-  padding-bottom: 160px;
+	padding-bottom: 160px;
 
-  @include d(1280) {
-    padding-bottom: 120px;
-  }
+	@include d(1280) {
+		padding-bottom: 120px;
+	}
 
-  @include d(992) {
-    padding: 80px 0 120px;
-  }
+	@include d(992) {
+		padding: 80px 0 120px;
+	}
 
-  &__row {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -15px;
-  }
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -15px;
+	}
 
-  &__col {
-    flex: 0 0 33.333%;
-    padding: 0 15px;
+	&__col {
+		flex: 0 0 33.333%;
+		padding: 0 15px;
 
-    @include d(768) {
-      flex: 0 0 100%;
-      margin-bottom: 15px;
-    }
-  }
+		@include d(768) {
+			flex: 0 0 100%;
+			margin-bottom: 15px;
+		}
+	}
 
-  &__item {
-    background-color: #F9F9F9;
-    padding: 40px;
-    height: 100%;
+	&__item {
+		background-color: #f9f9f9;
+		padding: 40px;
+		height: 100%;
 
-    @include d(992) {
-      padding: 20px;
-    }
+		@include d(992) {
+			padding: 20px;
+		}
 
-    @include d(768) {
-      text-align: center;
-    }
+		@include d(768) {
+			text-align: center;
+		}
 
-    h5 {
-      font-size: 20px;
-    }
+		h5 {
+			font-size: 20px;
+		}
 
-    p,
-    a {
-      font-size: 16px;
-    }
-  }
+		p,
+		a {
+			font-size: 16px;
+		}
+	}
 
-  &__icon {
-    width: 48px;
-    height: 48px;
-    background-color: $primary;
-    border-radius: 10px;
-    margin-bottom: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	&__icon {
+		width: 48px;
+		height: 48px;
+		background-color: $primary;
+		border-radius: 10px;
+		margin-bottom: 48px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
-    @include d(768) {
-      margin: 0 auto 48px auto;
-    }
+		@include d(768) {
+			margin: 0 auto 48px auto;
+		}
 
-    img {
-      width: 20px;
-      height: 20px;
-    }
-  }
+		img {
+			width: 20px;
+			height: 20px;
+		}
+	}
 }
