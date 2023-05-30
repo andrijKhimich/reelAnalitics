@@ -1,0 +1,86 @@
+.faq {
+	background-color: $blue;
+	color: $white;
+	padding-top: 160px;
+	&__title {
+		margin-bottom: 64px;
+		text-align: center;
+	}
+	&-accordion {
+		max-width: 1088px;
+		margin: 0 auto;
+		.accordion__btn {
+			position: relative;
+			color: $white;
+			cursor: pointer;
+			padding: 40px 40px 0 0;
+			margin-bottom: 24px;
+			width: 100%;
+			border: none;
+			border-top: 1px solid rgba($white, 0.2);
+			text-align: left;
+			outline: none;
+			font-size: 32px;
+			transition: 0.4s;
+			font-weight: 700;
+		}
+
+		.active {
+			color: $primary;
+			.plus {
+				background-color: $primary;
+				&::after {
+					transform: translate(-50%, -50%) rotate(90deg);
+					background-color: $white;
+				}
+			}
+		}
+
+		.accordion__panel {
+			margin-bottom: 16px;
+			// padding: ;
+			// padding-bottom: 40px;
+			// background-color: white;
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 0.2s ease-out;
+			color: $white;
+			p {
+				max-width: 860px;
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+
+.plus {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	display: inline-block;
+	right: 0;
+	top: 50%;
+	// transform: translate(0, -50%);
+	border: 1px solid $primary;
+	border-radius: 50%;
+	&::before,
+	&::after {
+		content: "";
+		background-color: $primary;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		position: absolute;
+	}
+
+	&::before {
+		width: 14px;
+		height: 2px;
+	}
+
+	&::after {
+		width: 2px;
+		height: 14px;
+		transition: transform $hover-duration $timing;
+	}
+}

@@ -1,0 +1,142 @@
+.pricing {
+	@include d(992) {
+		padding-bottom: 80px;
+	}
+	&__title {
+		margin-bottom: 80px;
+		h2 {
+			margin-bottom: 24px;
+		}
+	}
+	&__table {
+		overflow: auto;
+		// custom scrollbar
+		/* width */
+		::-webkit-scrollbar {
+			width: 4px;
+		}
+
+		/* Track */
+		::-webkit-scrollbar-track {
+			background: #444;
+		}
+
+		/* Handle */
+		::-webkit-scrollbar-thumb {
+			background: #666;
+			border-radius: 3px;
+		}
+
+		/* Handle on hover */
+		::-webkit-scrollbar-thumb:hover {
+			background: #555;
+		}
+		.table-head {
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			p {
+				width: 325px;
+			}
+		}
+		.table-footer {
+			position: relative;
+			p {
+				position: absolute;
+				text-align: center;
+				width: 100%;
+			}
+		}
+		table {
+			width: 1300px;
+			border-collapse: collapse;
+			tr {
+				&:first-child {
+					th {
+						&:first-child {
+							background-color: transparent;
+							min-width: 154px;
+							p {
+								display: flex;
+								align-items: center;
+								font-size: 18px;
+								margin-bottom: 16px;
+								color: $blue;
+								img {
+									width: 24px;
+									margin-right: 8px;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			th,
+			td {
+				padding: 24px 16px 48px 18px;
+				text-align: center;
+				border: 1px solid #e8e8e8;
+			}
+
+			th {
+				// height: 100%;
+				height: 358px;
+				vertical-align: top;
+				// display: flex;
+				// justify-content: space-between;
+				// flex-direction: column;
+				&:nth-child(odd) {
+					background-color: #f9f9f9;
+				}
+				strong {
+					font-size: 16px;
+					font-weight: 600;
+					line-height: 22px;
+					color: $blueDark;
+					margin-bottom: 8px;
+					display: inline-block;
+				}
+				p {
+					font-size: 12px;
+					font-weight: 500;
+					margin-bottom: 10px;
+					color: $blueLight;
+					&.btn_hint {
+						margin-bottom: 0;
+						text-transform: uppercase;
+						color: $blueDark;
+						font-size: 10px;
+						margin-top: 12px;
+					}
+				}
+				& .price {
+					font-size: 24px;
+					margin-bottom: 8px;
+					span {
+						font-size: 14px;
+						color: $gray;
+						font-weight: 400;
+					}
+				}
+			}
+			td {
+				padding: 24px;
+				height: 106px;
+				&:nth-child(odd) {
+					background-color: #f9f9f9;
+				}
+				p {
+					text-align: left;
+					font-weight: 700;
+					color: $blueDark;
+				}
+				img {
+					width: 32px;
+					margin: 0 auto;
+				}
+			}
+		}
+	}
+}
