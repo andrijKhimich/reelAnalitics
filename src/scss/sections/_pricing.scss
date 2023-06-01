@@ -37,7 +37,7 @@
 			flex-direction: column;
 			justify-content: space-between;
 			p {
-				width: 325px;
+				// width: 325px;
 			}
 		}
 		.table-footer {
@@ -124,6 +124,9 @@
 			td {
 				padding: 24px;
 				height: 106px;
+				&:first-child {
+					width: 210px;
+				}
 				&:nth-child(odd) {
 					background-color: #f9f9f9;
 				}
@@ -135,6 +138,16 @@
 				img {
 					width: 32px;
 					margin: 0 auto;
+				}
+			}
+		}
+
+		&_sm {
+			table {
+				tr {
+					td {
+						width: 25%;
+					}
 				}
 			}
 		}
