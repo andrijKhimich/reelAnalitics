@@ -40,6 +40,9 @@
 				// width: 325px;
 			}
 		}
+		.table-body {
+			max-width: 325px;
+		}
 		.table-footer {
 			position: relative;
 			p {
@@ -112,13 +115,25 @@
 					}
 				}
 				& .price {
-					font-size: 24px;
+					// font-size: 24px;
 					margin-bottom: 8px;
-					span {
+					p {
+						position: static;
 						font-size: 14px;
 						color: $gray;
 						font-weight: 400;
 					}
+					strong {
+						font-size: 24px;
+						// margin-bottom: 8px;
+						color: $blueDark;
+						font-weight: 700;
+					}
+					// span {
+					// 	font-size: 14px;
+					// 	color: $gray;
+					// 	font-weight: 400;
+					// }
 				}
 			}
 			td {

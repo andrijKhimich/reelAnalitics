@@ -70,11 +70,14 @@
 			font-size: 18px;
 		}
 
-		&__item,
-		li {
+		& > li {
 			position: relative;
 			transition: color $hover-duration $timing;
-
+			@include d(992) {
+				&:hover {
+					color: inherit;
+				}
+			}
 			&::before {
 				content: "";
 				background-color: $primary;
@@ -87,15 +90,20 @@
 				transition: transform $hover-duration $timing;
 			}
 
-			@include rh(992) {
-				&:hover {
-					color: $primary;
+			// @include rh(992) {
+			&:hover {
+				color: $primary;
 
-					&::before {
-						transform: scaleX(1);
-					}
+				&::before {
+					transform: scaleX(1);
+				}
+				.sub-menu {
+					opacity: 1;
+					pointer-events: initial;
+					transform: translate(0, 0);
 				}
 			}
+			// }
 
 			&.active {
 				color: $primary;
@@ -126,13 +134,56 @@
 				}
 			}
 		}
-
-		&__link,
-		a {
+		& > a {
 			text-transform: uppercase;
 			padding: 4px;
 			font-size: 16px;
 			line-height: 1.2em;
+		}
+	}
+}
+
+.sub-menu {
+	position: absolute;
+	top: calc(100% - 1px);
+	transform: translate(0, 5px);
+	left: 0;
+	width: 100%;
+	background-color: $white;
+	width: max-content;
+	color: $blue;
+	font-size: 16px;
+	padding: 10px 15px;
+	border-radius: 8px;
+	opacity: 0;
+	transition: opacity $hover-duration $timing, transform $hover-duration $timing;
+	pointer-events: none;
+	@include d(992) {
+		// position: static  ;
+		text-align: right;
+		left: auto;
+		right: 0;
+		background-color: transparent;
+		color: $white;
+		padding: 10px 0;
+		font-size: 18px;
+	}
+	& > li {
+		transition: color $hover-duration $timing;
+		line-height: 1em;
+		@include d(992) {
+			text-align: right;
+		}
+		&:not(:last-child) {
+			margin-bottom: 5px;
+		}
+		&:hover {
+			color: $primary;
+		}
+		@include d(992) {
+			&:hover {
+				color: inherit;
+			}
 		}
 	}
 }
